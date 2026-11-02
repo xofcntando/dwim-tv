@@ -789,6 +789,8 @@ async function init() {
         }
         // install new timed breaks (e.g. DWIM TV 1 Year) if the live schedule has none yet
         if (cat.schedule && fileCat.schedule && fileCat.schedule.breaks) cat.schedule.breaks = fileCat.schedule.breaks; // seed v9: DWIM TV breaks every 10 minutes
+        // seed v19: add the daily "Kids Moment" block (and the split afternoon) if the live schedule lacks it
+        if (cat.schedule && fileCat.schedule && fileCat.schedule.blocks && !(cat.schedule.blocks || []).some(b => b.id === 'kids')) cat.schedule.blocks = fileCat.schedule.blocks;
         // keep the original "Let It Rain" in the same category as its new versions
         for (const v of cat.videos) if (v.id === 'gc-rain' && fs_ && fs_.category) v.category = fs_.category;
         cat.seedVersion = fileCat.seedVersion;

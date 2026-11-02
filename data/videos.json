@@ -83,6 +83,11 @@
       "icon": "🎶"
     },
     {
+      "id": "ch-kids",
+      "name": "Kids Moment",
+      "icon": "🧒"
+    },
+    {
       "id": "ch-breaks",
       "name": "DWIM TV Breaks",
       "icon": "✨"
@@ -5448,13 +5453,237 @@
         "intl",
         "minstrel myra"
       ]
+    },
+    {
+      "id": "kid-9KqgI9",
+      "title": "Ndinoda Bible — Church Song for Children from Zimbabwe",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9KqgI95tRrA",
+      "duration": "0:36",
+      "thumb": "https://i.ytimg.com/vi/9KqgI95tRrA/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-Y2wSqu",
+      "title": "Tell the World — Hillsong Kids (Kids Praise Live)",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Y2wSqufGulI",
+      "duration": "3:44",
+      "thumb": "https://i.ytimg.com/vi/Y2wSqufGulI/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-X0swAj",
+      "title": "What a Beautiful Name — Hillsong Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=X0swAjogqSM",
+      "duration": "4:11",
+      "thumb": "https://i.ytimg.com/vi/X0swAjogqSM/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-puyEbK",
+      "title": "Running — Hillsong Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=puyEbKSn_ZM",
+      "duration": "3:05",
+      "thumb": "https://i.ytimg.com/vi/puyEbKSn_ZM/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-gd2IVP",
+      "title": "God Is Great — Hillsong Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=gd2IVPxtiAs",
+      "duration": "3:39",
+      "thumb": "https://i.ytimg.com/vi/gd2IVPxtiAs/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-9Cn46G",
+      "title": "The Blessing — Elevation Church Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9Cn46G4ucjE",
+      "duration": "4:27",
+      "thumb": "https://i.ytimg.com/vi/9Cn46G4ucjE/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-mxSIWP",
+      "title": "Out of This World — Yancy & Little Praise Party",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=m_SIWPWo7KE",
+      "duration": "16:39",
+      "thumb": "https://i.ytimg.com/vi/m_SIWPWo7KE/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-cUQzYo",
+      "title": "Joyful Noise — Yancy & Little Praise Party",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=cUQzYojcnVk",
+      "duration": "3:31",
+      "thumb": "https://i.ytimg.com/vi/cUQzYojcnVk/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-htkKcg",
+      "title": "Zacchaeus — Christian Songs for Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=htkKcg2THKg",
+      "duration": "1:46",
+      "thumb": "https://i.ytimg.com/vi/htkKcg2THKg/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-hzvkmk",
+      "title": "Father Abraham — Kids Songs, Hi Heaven",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=hzvkmkgbyAc",
+      "duration": "2:42",
+      "thumb": "https://i.ytimg.com/vi/hzvkmkgbyAc/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-recdOY",
+      "title": "This Little Light of Mine & Jesus Loves Me",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=recdOYUmSRQ",
+      "duration": "15:55",
+      "thumb": "https://i.ytimg.com/vi/recdOYUmSRQ/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-owx3ao",
+      "title": "Jesus Loves Me — Listener Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=owx3ao42kwI",
+      "duration": "2:50",
+      "thumb": "https://i.ytimg.com/vi/owx3ao42kwI/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-k7iof6",
+      "title": "David & Goliath — Animated Bible Story for Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=k7iof6kSZ4s",
+      "duration": "2:26",
+      "thumb": "https://i.ytimg.com/vi/k7iof6kSZ4s/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
+    },
+    {
+      "id": "kid-WdVVhy",
+      "title": "Noah and the Ark — Animated Bible Story for Kids",
+      "channel": "ch-kids",
+      "category": "Kids Moment",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=WdVVh-n2p9I",
+      "duration": "1:49",
+      "thumb": "https://i.ytimg.com/vi/WdVVh-n2p9I/hqdefault.jpg",
+      "desc": "Kids Moment on DWIM TV: songs and Bible stories for the little ones.",
+      "tags": [
+        "kids",
+        "children",
+        "kids moment"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 18,
+  "seedVersion": 19,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -5582,6 +5811,33 @@
         "name": "Afternoon Teaching",
         "icon": "🔥",
         "start": "14:00",
+        "end": "16:00",
+        "channels": [
+          "ch-sermons",
+          "ch-fwm",
+          "ch-classics",
+          "ch-services"
+        ],
+        "maxMinutes": 120,
+        "desc": "Teaching to build your faith."
+      },
+      {
+        "id": "kids",
+        "name": "Kids Moment",
+        "icon": "🧒",
+        "start": "16:00",
+        "end": "16:30",
+        "channels": [
+          "ch-kids"
+        ],
+        "maxMinutes": 8,
+        "desc": "Songs and Bible stories for the little ones, every day."
+      },
+      {
+        "id": "afternoon2",
+        "name": "Afternoon Teaching",
+        "icon": "🔥",
+        "start": "16:30",
         "end": "18:00",
         "channels": [
           "ch-sermons",
