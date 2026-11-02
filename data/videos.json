@@ -4842,13 +4842,30 @@
         "break",
         "zimbabwe"
       ]
+    },
+    {
+      "id": "gc-rain-19",
+      "title": "Open the Flood Gates of Heaven, Let It Rain",
+      "channel": "ch-gospel",
+      "category": "Let It Rain",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=YENnorU-PA0",
+      "duration": "8:31",
+      "thumb": "https://i.ytimg.com/vi/YENnorU-PA0/hqdefault.jpg",
+      "desc": "\"Let It Rain\" - Open the floodgates of heaven. Worship from Crown TV KE.",
+      "tags": [
+        "let it rain",
+        "worship",
+        "gospel",
+        "floodgates"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 9,
+  "seedVersion": 10,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
