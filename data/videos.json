@@ -3600,13 +3600,47 @@
         "zim",
         "charles charamba"
       ]
+    },
+    {
+      "id": "gc63",
+      "title": "Ndiyambutsei Rwizi — Carol Nyakuba",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=D_AfZnRk4To",
+      "duration": "4:04",
+      "thumb": "https://i.ytimg.com/vi/D_AfZnRk4To/hqdefault.jpg",
+      "desc": "\"Ndiyambutsei Rwizi\" by Carol Nyakuba. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "carol nyakuba"
+      ]
+    },
+    {
+      "id": "gc64",
+      "title": "Muhuvepo — Carol Nyakuba",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=wQ-k-W9L_rs",
+      "duration": "4:54",
+      "thumb": "https://i.ytimg.com/vi/wQ-k-W9L_rs/hqdefault.jpg",
+      "desc": "\"Muhuvepo\" by Carol Nyakuba. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "carol nyakuba"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 3,
+  "seedVersion": 4,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
