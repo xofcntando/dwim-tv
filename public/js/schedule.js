@@ -26,8 +26,11 @@ const DwimSchedule = (function () {
   function msAt(parts, secOfDay) { return Date.UTC(parts.y, parts.m - 1, parts.d) + secOfDay * 1000 - parts.offsetMs; }
 
   function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
-  function rng(seed) { let a = seed >>> 0; return function () { a += 0x6D2B79F5; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
-  function shuffle(arr, rand) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  // Stable "shuffle": every video gets a pseudo-random rank from (day + block + video id), so the order
+  // never depends on how the catalog happens to be stored, and adding/removing a video only moves that video.
+  function rankSort(arr, salt) {
+    return arr.map(v => ({ v, k: hashStr(salt + '|' + v.id) })).sort((a, b) => a.k - b.k || (a.v.id < b.v.id ? -1 : 1)).map(x => x.v);
+  }
 
   function blockApplies(b, dow) { return !b.days || b.days.indexOf(dow) >= 0; }
 
@@ -48,13 +51,13 @@ const DwimSchedule = (function () {
 
   // Deterministic playlist for a block on a given day - identical for every viewer
   function playlistFor(catalog, sc, block, dayKey) {
-    const rand = rng(hashStr(dayKey + '|' + block.id));
+    const salt = dayKey + '|' + block.id;
     const maxMin = block.maxMinutes || 180;
     const used = new Set();
     let list = [];
     if (block.mix && block.mix.length) {
       const groups = block.mix.map(g => {
-        const items = shuffle(eligible(catalog, sc, g.channels || [], maxMin, new Set()), rand);
+        const items = rankSort(eligible(catalog, sc, g.channels || [], maxMin, new Set()), salt);
         return { items, take: Math.max(1, g.take || 1) };
       });
       let left = true;
@@ -69,9 +72,9 @@ const DwimSchedule = (function () {
         }
       }
     } else {
-      list = shuffle(eligible(catalog, sc, block.channels || [], maxMin, used), rand);
+      list = rankSort(eligible(catalog, sc, block.channels || [], maxMin, used), salt);
     }
-    if (!list.length) list = shuffle(eligible(catalog, sc, (catalog.channels || []).map(c => c.id), maxMin, new Set()), rand);
+    if (!list.length) list = rankSort(eligible(catalog, sc, (catalog.channels || []).map(c => c.id), maxMin, new Set()), salt);
     return list;
   }
 
