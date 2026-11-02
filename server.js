@@ -378,6 +378,7 @@ app.post('/api/admin/videos', requireAdmin, async (req, res) => {
     source: 'https://www.youtube.com/watch?v=' + id,
     duration: String(body.duration || '—').trim(),
     thumb: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    author: String(meta.author_name || '').trim(),
     desc: String(body.desc || `Added via DWIM TV admin panel. From YouTube channel: ${meta.author_name}.`).trim(),
     tags: Array.isArray(body.tags) ? body.tags.map(String) :
       String(body.tags || '').split(',').map(s => s.trim()).filter(Boolean)

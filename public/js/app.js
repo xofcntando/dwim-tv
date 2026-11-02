@@ -172,12 +172,14 @@ function renderMain() {
           <img src="${esc(hero.thumb)}" alt="${esc(hero.title)}" onerror="this.style.display='none'">
           <div class="play-overlay"><span class="circle">&#9654;</span></div>
           <span class="brand-badge big" aria-hidden="true"></span>
+          ${hero.type === 'youtube' ? '<span class="yt-badge big"><span class="yt-badge-icon">&#9654;</span> YouTube</span>' : ''}
           <span class="duration">${esc(hero.duration || '')}</span>
         </div>
         <div class="featured-body">
           <span class="hero-badge">${esc(hero.category || 'MESSAGE')}</span>
           <h2 class="featured-title">${esc(hero.title)}</h2>
           <p class="hero-desc">${esc(hero.desc || '')}</p>
+          ${hero.type === 'youtube' && hero.author ? `<p class="card-src">Streamed from YouTube &middot; ${esc(hero.author)}</p>` : ''}
           <span class="btn-play-hero">&#9654; Watch Now</span>
         </div>
       </div>
@@ -204,6 +206,7 @@ function cardHTML(v) {
         <img src="${esc(v.thumb)}" alt="${esc(v.title)}" loading="lazy"
              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 180%22><rect fill=%22%2310182f%22 width=%22320%22 height=%22180%22/><text x=%22160%22 y=%2295%22 fill=%22%235f6890%22 font-size=%2216%22 text-anchor=%22middle%22 font-family=%22sans-serif%22>DWIM TV</text></svg>'">
         <span class="brand-badge" aria-hidden="true"></span>
+        ${v.type === 'youtube' ? '<span class="yt-badge" title="Streams from YouTube"><span class="yt-badge-icon">&#9654;</span> YouTube</span>' : ''}
         <span class="duration">${esc(v.duration || '')}</span>
         <div class="play-overlay"><span class="circle">&#9654;</span></div>
       </div>
@@ -214,6 +217,7 @@ function cardHTML(v) {
           <span>&#8226;</span>
           <span>${esc(v.channel ? (CATALOG.channels.find(c => c.id === v.channel) || {}).name || '' : '')}</span>
         </div>
+        ${v.type === 'youtube' && v.author ? `<div class="card-src">via YouTube &middot; ${esc(v.author)}</div>` : ''}
       </div>
     </article>`;
 }
@@ -252,7 +256,7 @@ function watchLive() {
   const live = CATALOG.live;
   if (live && live.source) {
     openPlayer(live.title || 'DWIM TV Live', live.type || 'youtube', live.source,
-      'ON AIR', 'Join the DWIM family live — distance is not a barrier. May the Lord bless you as you join us in worship, the Word and prayer.', 'LIVE', true);
+      'ON AIR', 'Join the DWIM family live — distance is not a barrier. May the Lord bless you as you join us in worship, the Word and prayer.', 'LIVE', true, 'DWIM TV on YouTube');
   } else {
     // no stream yet -> if a service is under way tell the viewer, else guide the viewer to the next service + latest message
     const latest = (CATALOG.videos || [])[0];
@@ -266,14 +270,24 @@ function watchLive() {
 function playVideo(id) {
   const v = CATALOG.videos.find(x => x.id === id);
   if (!v) return;
-  openPlayer(v.title || 'Now Playing', v.type, v.source, v.duration || '—', v.desc || '', v.category);
+  openPlayer(v.title || 'Now Playing', v.type, v.source, v.duration || '—', v.desc || '', v.category, false, v.author);
 }
 
-function openPlayer(title, type, source, duration, desc, category, isLive) {
+function openPlayer(title, type, source, duration, desc, category, isLive, author) {
   document.getElementById('playerTitle').textContent = title;
   document.getElementById('playerCat').textContent = category || 'DWIM TV';
   document.getElementById('playerDur').textContent = duration || '—';
   document.getElementById('playerDesc').textContent = desc || '';
+
+  // "Streamed from YouTube" source line
+  const srcEl = document.getElementById('playerSource');
+  const sid = type === 'youtube' ? ytId(source) : null;
+  if (sid) {
+    srcEl.style.display = '';
+    srcEl.innerHTML = `<span class="yt-pill"><span class="yt-pill-icon">&#9654;</span> YouTube</span>
+      <span>Streamed from YouTube${author ? ' &middot; Channel: <b>' + esc(author) + '</b>' : ''}</span>
+      <a href="https://www.youtube.com/watch?v=${sid}" target="_blank" rel="noopener">Open on YouTube &#8599;</a>`;
+  } else { srcEl.style.display = 'none'; srcEl.innerHTML = ''; }
 
   const frame = document.getElementById('playerFrame');
   const fake = { source, title };
