@@ -766,6 +766,11 @@ async function init() {
         // fill in missing durations from the seed (needed for the schedule clock)
         const seedDur = new Map((fileCat.videos || []).map(v => [v.id, v.duration]));
         for (const v of cat.videos) if (!/^\d+(:\d+)+$/.test(v.duration || '') && seedDur.get(v.id)) v.duration = seedDur.get(v.id);
+        // videos the seed explicitly retires (removed on purpose, so they must leave MongoDB too)
+        if (Array.isArray(fileCat.seedRemoveSources) && fileCat.seedRemoveSources.length) {
+          const gone = new Set(fileCat.seedRemoveSources);
+          cat.videos = cat.videos.filter(v => !gone.has(v.source));
+        }
         if (!cat.schedule && fileCat.schedule) cat.schedule = fileCat.schedule;
         // shuffle all versions of the signature song (e.g. every "Let It Rain") instead of a single video
         const fs_ = fileCat.schedule && fileCat.schedule.signature;

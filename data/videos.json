@@ -2838,38 +2838,19 @@
     },
     {
       "id": "gc-rain-18",
-      "title": "Let It Rain / Ngainaye (Shona) — Rev John Chawarika & WAYA Praise",
+      "title": "Let It Rain (Live) — Worship Moments S2E2, Muzaeni",
       "channel": "ch-gospel",
       "category": "Let It Rain",
       "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=6CcIq52QjWw",
-      "duration": "6:06",
-      "thumb": "https://i.ytimg.com/vi/6CcIq52QjWw/hqdefault.jpg",
-      "desc": "The Shona version of \"Let It Rain\" (Ngainaye), led by Rev John Chawarika and WAYA Praise.",
+      "source": "https://www.youtube.com/watch?v=0fKUrW6l2mw",
+      "duration": "6:35",
+      "thumb": "https://i.ytimg.com/vi/0fKUrW6l2mw/hqdefault.jpg",
+      "desc": "\"Let It Rain\" - live worship from Muzaeni, Worship Moments (Season 2, Episode 2).",
       "tags": [
         "let it rain",
-        "shona",
-        "zimbabwe gospel",
         "worship",
-        "ngainaye"
-      ]
-    },
-    {
-      "id": "gc-rain-19",
-      "title": "Let It Rain / Ngakunaye (Shona) — Doreker Mugari Mabhutsu",
-      "channel": "ch-gospel",
-      "category": "Let It Rain",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=GjdCvHpHIFU",
-      "duration": "5:15",
-      "thumb": "https://i.ytimg.com/vi/GjdCvHpHIFU/hqdefault.jpg",
-      "desc": "The Shona version of \"Let It Rain\" (Ngakunaye) by Doreker Mugari Mabhutsu.",
-      "tags": [
-        "let it rain",
-        "shona",
-        "zimbabwe gospel",
-        "worship",
-        "ngainaye"
+        "gospel",
+        "muzaeni"
       ]
     },
     {
@@ -4781,7 +4762,7 @@
   "tv": {
     "enabled": true
   },
-  "seedVersion": 6,
+  "seedVersion": 7,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -4958,5 +4939,9 @@
         "desc": "Close the day with the Word and prayer."
       }
     ]
-  }
+  },
+  "seedRemoveSources": [
+    "https://www.youtube.com/watch?v=6CcIq52QjWw",
+    "https://www.youtube.com/watch?v=GjdCvHpHIFU"
+  ]
 }
