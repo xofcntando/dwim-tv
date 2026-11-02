@@ -3515,13 +3515,98 @@
         "intl",
         "joyous celebration"
       ]
+    },
+    {
+      "id": "gc58",
+      "title": "King of My Heart — Kim Walker-Smith",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=bxlMeR4u5a0",
+      "duration": "7:09",
+      "thumb": "https://i.ytimg.com/vi/bxlMeR4u5a0/hqdefault.jpg",
+      "desc": "\"King of My Heart\" by Kim Walker-Smith. Spirit-filled worship.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "kim walker-smith"
+      ]
+    },
+    {
+      "id": "gc59",
+      "title": "Goodness of God — Bethel Music & Jenn Johnson",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=n0FBb6hnwTo",
+      "duration": "5:04",
+      "thumb": "https://i.ytimg.com/vi/n0FBb6hnwTo/hqdefault.jpg",
+      "desc": "\"Goodness of God\" by Bethel Music & Jenn Johnson. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "bethel music & jenn johnson"
+      ]
+    },
+    {
+      "id": "gc60",
+      "title": "Imagine Me — Kirk Franklin",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=I66SDeRQSJ4",
+      "duration": "4:38",
+      "thumb": "https://i.ytimg.com/vi/I66SDeRQSJ4/hqdefault.jpg",
+      "desc": "\"Imagine Me\" by Kirk Franklin. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "kirk franklin"
+      ]
+    },
+    {
+      "id": "gc61",
+      "title": "Dombo — Mathias Mhere ft. Minister Linos",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=TZbpNZxPUB4",
+      "duration": "10:13",
+      "thumb": "https://i.ytimg.com/vi/TZbpNZxPUB4/hqdefault.jpg",
+      "desc": "\"Dombo\" by Mathias Mhere ft. Minister Linos. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "mathias mhere"
+      ]
+    },
+    {
+      "id": "gc62",
+      "title": "Sodom neGomorrah — Charles Charamba",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=WnhauJHeKA0",
+      "duration": "5:30",
+      "thumb": "https://i.ytimg.com/vi/WnhauJHeKA0/hqdefault.jpg",
+      "desc": "\"Sodom neGomorrah\" by Charles Charamba. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "charles charamba"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 2,
+  "seedVersion": 3,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
