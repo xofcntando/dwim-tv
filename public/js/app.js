@@ -118,6 +118,7 @@ function render() {
 
 function renderChannels() {
   const wrap = document.getElementById('channels');
+  if (tvEnabled()) { wrap.style.display = 'none'; const sw = document.querySelector('.searchwrap'); if (sw) sw.style.display = 'none'; return; }
   const chips = CATALOG.channels.map(ch => `
     <button class="chip ${ch.id === activeChannel ? 'active' : ''}" onclick="setChannel('${esc(ch.id)}')">
       <span>${esc(ch.icon || '&#128250;')}</span> ${esc(ch.name)}
@@ -141,8 +142,11 @@ function filtered() {
   return list.slice().sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 }
 
+function tvEnabled() { return !(CATALOG.tv && CATALOG.tv.enabled === false); }
+
 function renderMain() {
   const main = document.getElementById('main');
+  if (tvEnabled()) { TV.mount(CATALOG); return; }
   const list = filtered();
 
   if (!list.length) {
@@ -208,6 +212,7 @@ function cardHTML(v) {
 
 /* ---------- Interactions ---------- */
 function setChannel(id) {
+  if (tvEnabled()) { const w = document.getElementById('watch'); if (w) w.scrollIntoView({ behavior: 'smooth' }); return; }
   activeChannel = id;
   render();
   const watch = document.getElementById('watch');
@@ -231,6 +236,7 @@ document.getElementById('search').addEventListener('input', (e) => {
 
 /* Play the first video of a given channel (e.g. "Pray Along Now") */
 function playFirstOf(channelId) {
+  if (tvEnabled()) { const w = document.getElementById('watch'); if (w) w.scrollIntoView({ behavior: 'smooth' }); return; }
   const v = (CATALOG.videos || []).find(x => x.channel === channelId);
   if (v) playVideo(v.id);
 }
@@ -246,12 +252,13 @@ function watchLive() {
     const latest = (CATALOG.videos || [])[0];
     const target = document.getElementById('hero');
     if (target) target.scrollIntoView({ behavior: 'smooth' });
-    if (latest) setTimeout(() => playVideo(latest.id), 400);
+    if (latest && !tvEnabled()) setTimeout(() => playVideo(latest.id), 400);
   }
 }
 
 /* ---------- Player ---------- */
 function playVideo(id) {
+  if (tvEnabled()) return; // TV mode: viewers cannot choose videos
   const v = CATALOG.videos.find(x => x.id === id);
   if (!v) return;
   openPlayer(v.title || 'Now Playing', v.type, v.source, v.duration || '—', v.desc || '', v.category, false, v.thumb, v.id);
@@ -294,6 +301,7 @@ function openPlayer(title, type, source, duration, desc, category, isLive, thumb
     chat.style.display = 'none'; actions.style.display = 'none'; box.classList.remove('is-live-theatre');
   }
 
+  if (typeof TV !== 'undefined') TV.pause();
   document.getElementById('playerModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -307,6 +315,7 @@ function toggleFrameFullscreen() {
 
 function closePlayer() {
   document.getElementById('playerModal').classList.remove('open');
+  if (typeof TV !== 'undefined') TV.resume();
   if (activePlayer) { activePlayer.destroy(); activePlayer = null; }
   document.getElementById('playerFrame').innerHTML = '';
   document.getElementById('liveChatBody').innerHTML = '';

@@ -47,6 +47,7 @@
     const resumeKey = opts.resumeKey ? 'dwimtv:pos:' + opts.resumeKey : null;
 
     host.classList.add('dp');
+    if (opts.bare) host.classList.add('dp-bare'); // TV mode: no viewer controls
     host.innerHTML = `
       <video class="dp-video" playsinline preload="metadata" ${opts.poster ? `poster="${opts.poster.replace(/"/g, '&quot;')}"` : ''}></video>
       <div class="dp-brand"><span class="dp-brand-logo"></span><span class="dp-brand-text">DWIM <b>TV</b></span></div>
@@ -293,10 +294,14 @@
       kickHide();
     });
 
+    if (opts.onended) video.addEventListener('ended', opts.onended);
+    if (opts.onerror) video.addEventListener('error', opts.onerror);
+    if (opts.muted) video.muted = true;
     if (opts.autoplay) video.play().catch(() => { video.muted = true; video.play().catch(() => {}); });
     syncVol(); syncPlay();
 
     return {
+      video,
       destroy() {
         document.removeEventListener('fullscreenchange', onFs);
         clearTimeout(hideT);
