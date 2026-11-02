@@ -41,6 +41,7 @@ function youtubeSrc(video) {
     'playsinline=1',
     'modestbranding=1',
     'enablejsapi=1',
+    'fs=0',
     `origin=${origin}`
   ].join('&');
   const watchUrl = `https://www.youtube.com/watch?v=${id}`;
@@ -49,7 +50,6 @@ function youtubeSrc(video) {
       src="https://www.youtube-nocookie.com/embed/${id}?${params}${t}"
       title="${esc(video.title)}"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
       loading="lazy"
       referrerpolicy="strict-origin-when-cross-origin"></iframe>
     <div class="yt-fallback">
@@ -171,6 +171,7 @@ function renderMain() {
         <div class="featured-thumb">
           <img src="${esc(hero.thumb)}" alt="${esc(hero.title)}" onerror="this.style.display='none'">
           <div class="play-overlay"><span class="circle">&#9654;</span></div>
+          <span class="brand-badge big" aria-hidden="true"></span>
           <span class="duration">${esc(hero.duration || '')}</span>
         </div>
         <div class="featured-body">
@@ -202,6 +203,7 @@ function cardHTML(v) {
       <div class="thumbwrap">
         <img src="${esc(v.thumb)}" alt="${esc(v.title)}" loading="lazy"
              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 180%22><rect fill=%22%2310182f%22 width=%22320%22 height=%22180%22/><text x=%22160%22 y=%2295%22 fill=%22%235f6890%22 font-size=%2216%22 text-anchor=%22middle%22 font-family=%22sans-serif%22>DWIM TV</text></svg>'">
+        <span class="brand-badge" aria-hidden="true"></span>
         <span class="duration">${esc(v.duration || '')}</span>
         <div class="play-overlay"><span class="circle">&#9654;</span></div>
       </div>
@@ -279,6 +281,11 @@ function openPlayer(title, type, source, duration, desc, category, isLive) {
   else if (type === 'direct') frame.innerHTML = directSrc(fake);
   else frame.innerHTML = embedSrc(fake);
 
+  // DWIM TV watermark + our own fullscreen button (keeps the logo visible in fullscreen)
+  frame.insertAdjacentHTML('beforeend',
+    `<div class="dwim-mark" aria-hidden="true"><span class="dwim-mark-logo"></span><span class="dwim-mark-text">DWIM <b>TV</b></span></div>
+     <button class="dwim-fs" type="button" onclick="toggleFrameFullscreen()" title="Fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>`);
+
   // live theatre: YouTube live chat beside the player + prayer / give / share actions
   const box = document.getElementById('playerBox');
   const chat = document.getElementById('liveChat');
@@ -295,6 +302,13 @@ function openPlayer(title, type, source, duration, desc, category, isLive) {
 
   document.getElementById('playerModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+}
+
+function toggleFrameFullscreen() {
+  const f = document.getElementById('playerFrame');
+  if (document.fullscreenElement) document.exitFullscreen();
+  else if (f.requestFullscreen) f.requestFullscreen();
+  else if (f.webkitRequestFullscreen) f.webkitRequestFullscreen();
 }
 
 function closePlayer() {
