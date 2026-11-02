@@ -18,7 +18,11 @@
   <meta property="og:title" content="DWIM TV — Live Sunday Services & Sermons">
   <meta property="og:description" content="Join Destiny Word International Ministries live every Sunday at 11:00 AM CAT. Distance is not a barrier!">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/ui-v2.css">
 </head>
 <body>
 
@@ -28,7 +32,8 @@
       <span class="tv-icon"><img src="img/logo-64.png" alt="DWIM TV"></span>
       <span class="brand-name">DWIM <b>TV</b></span>
     </a>
-    <nav class="topnav">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="topnav"><span></span><span></span><span></span></button>
+    <nav class="topnav" id="topnav">
       <a href="#watch">Watch</a>
       <a href="#prayer">Prayer</a>
       <a href="#testimonies">Testimonies</a>
@@ -194,10 +199,6 @@
     <h3 class="purpose-vh">The DWIM TV Videos</h3>
     <p class="purpose-vsub">These short videos play on air every 10 minutes as a break. The sermon is never cut: it carries on exactly where it stopped.</p>
     <div class="purpose-videos">
-      <figure><video controls preload="none" playsinline poster="breaks/dwimtv-purpose.jpg" src="breaks/dwimtv-purpose.mp4"></video><figcaption>Our Purpose</figcaption></figure>
-      <figure><video controls preload="none" playsinline poster="breaks/dwimtv-distance.jpg" src="breaks/dwimtv-distance.mp4"></video><figcaption>Distance Is Not a Barrier</figcaption></figure>
-      <figure><video controls preload="none" playsinline poster="breaks/dwimtv-worship.jpg" src="breaks/dwimtv-worship.mp4"></video><figcaption>Worship, the Word and Prayer</figcaption></figure>
-      <figure><video controls preload="none" playsinline poster="breaks/dwimtv-builder.jpg" src="breaks/dwimtv-builder.mp4"></video><figcaption>Built in Zimbabwe</figcaption></figure>
       <figure><video controls preload="none" playsinline poster="breaks/dwimtv-prayer.jpg" src="breaks/dwimtv-prayer.mp4"></video><figcaption>Prayer &amp; Deliverance</figcaption></figure>
       <figure><video controls preload="none" playsinline poster="breaks/dwimtv-sunday.jpg" src="breaks/dwimtv-sunday.mp4"></video><figcaption>Join Us Every Sunday</figcaption></figure>
       <figure><video controls preload="none" playsinline poster="breaks/dwimtv-1year.png" src="breaks/dwimtv-1year.mp4"></video><figcaption>DWIM TV 1 Year</figcaption></figure>
@@ -346,5 +347,6 @@
   <script src="js/tv.js"></script>
   <script src="js/app.js"></script>
   <script src="js/prayer.js"></script>
+  <script src="js/ui-v2.js"></script>
 </body>
 </html>
