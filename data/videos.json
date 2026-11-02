@@ -2837,6 +2837,42 @@
       ]
     },
     {
+      "id": "gc-rain-18",
+      "title": "Let It Rain / Ngainaye (Shona) — Rev John Chawarika & WAYA Praise",
+      "channel": "ch-gospel",
+      "category": "Let It Rain",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=6CcIq52QjWw",
+      "duration": "6:06",
+      "thumb": "https://i.ytimg.com/vi/6CcIq52QjWw/hqdefault.jpg",
+      "desc": "The Shona version of \"Let It Rain\" (Ngainaye), led by Rev John Chawarika and WAYA Praise.",
+      "tags": [
+        "let it rain",
+        "shona",
+        "zimbabwe gospel",
+        "worship",
+        "ngainaye"
+      ]
+    },
+    {
+      "id": "gc-rain-19",
+      "title": "Let It Rain / Ngakunaye (Shona) — Doreker Mugari Mabhutsu",
+      "channel": "ch-gospel",
+      "category": "Let It Rain",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=GjdCvHpHIFU",
+      "duration": "5:15",
+      "thumb": "https://i.ytimg.com/vi/GjdCvHpHIFU/hqdefault.jpg",
+      "desc": "The Shona version of \"Let It Rain\" (Ngakunaye) by Doreker Mugari Mabhutsu.",
+      "tags": [
+        "let it rain",
+        "shona",
+        "zimbabwe gospel",
+        "worship",
+        "ngainaye"
+      ]
+    },
+    {
       "id": "gc2",
       "title": "Rooftops — Jesus Culture",
       "channel": "ch-gospel",
@@ -4745,7 +4781,7 @@
   "tv": {
     "enabled": true
   },
-  "seedVersion": 5,
+  "seedVersion": 6,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
