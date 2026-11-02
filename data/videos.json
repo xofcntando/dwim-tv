@@ -131,6 +131,23 @@
       ]
     },
     {
+      "id": "s1",
+      "title": "I Love You Lord — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=lFMcyWBCVlk",
+      "duration": "8:21",
+      "thumb": "https://i.ytimg.com/vi/lFMcyWBCVlk/hqdefault.jpg",
+      "desc": "I love You Lord, greater than anything. The beloved original composition of Prophet T.B. Joshua, sung by the Emmanuel TV choir.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "i love you lord",
+        "worship"
+      ]
+    },
+    {
       "id": "c18",
       "title": "How to Receive and Maintain Deliverance — Prophet T.B. Joshua",
       "channel": "ch-services",
@@ -162,6 +179,23 @@
         "purpose",
         "teaching",
         "classic sermon"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "I Love You Lord — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Zov84MmRrZE",
+      "duration": "17:45",
+      "thumb": "https://i.ytimg.com/vi/Zov84MmRrZE/hqdefault.jpg",
+      "desc": "An extended rendition of the cherished composition of Prophet T.B. Joshua, sung by the SCOAN choir.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "i love you lord",
+        "scoan choir"
       ]
     },
     {
@@ -216,6 +250,23 @@
       ]
     },
     {
+      "id": "s3",
+      "title": "Son of David, Have Mercy on Me — T.B. Joshua Composition",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=65krlZYWfjk",
+      "duration": "9:00",
+      "thumb": "https://i.ytimg.com/vi/65krlZYWfjk/hqdefault.jpg",
+      "desc": "Son of David, have mercy on me — the original song composed by Prophet T.B. Joshua, sung by the SCOAN choir.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "son of david",
+        "scoan choir"
+      ]
+    },
+    {
       "id": "c20",
       "title": "Prophet T.B. Joshua's Extraordinary Anointing",
       "channel": "ch-sermons",
@@ -246,6 +297,23 @@
         "early ministry",
         "holy spirit",
         "prayer"
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Oluranlowo (You Are My Helper) — T.B. Joshua Composition",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=pPudXRrCh_I",
+      "duration": "9:00",
+      "thumb": "https://i.ytimg.com/vi/pPudXRrCh_I/hqdefault.jpg",
+      "desc": "Oluranlowo — My Helper, oh God You are. An original Yoruba-English composition of Prophet T.B. Joshua, sung by the Emmanuel TV choir.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "oluranlowo",
+        "my helper"
       ]
     },
     {
@@ -299,74 +367,6 @@
       ]
     },
     {
-      "id": "s1",
-      "title": "I Love You Lord — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=lFMcyWBCVlk",
-      "duration": "8:21",
-      "thumb": "https://i.ytimg.com/vi/lFMcyWBCVlk/hqdefault.jpg",
-      "desc": "I love You Lord, greater than anything. The beloved original composition of Prophet T.B. Joshua, sung by the Emmanuel TV choir.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "i love you lord",
-        "worship"
-      ]
-    },
-    {
-      "id": "s2",
-      "title": "I Love You Lord — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=Zov84MmRrZE",
-      "duration": "17:45",
-      "thumb": "https://i.ytimg.com/vi/Zov84MmRrZE/hqdefault.jpg",
-      "desc": "An extended rendition of the cherished composition of Prophet T.B. Joshua, sung by the SCOAN choir.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "i love you lord",
-        "scoan choir"
-      ]
-    },
-    {
-      "id": "s3",
-      "title": "Son of David, Have Mercy on Me — T.B. Joshua Composition",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=65krlZYWfjk",
-      "duration": "9:00",
-      "thumb": "https://i.ytimg.com/vi/65krlZYWfjk/hqdefault.jpg",
-      "desc": "Son of David, have mercy on me — the original song composed by Prophet T.B. Joshua, sung by the SCOAN choir.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "son of david",
-        "scoan choir"
-      ]
-    },
-    {
-      "id": "s4",
-      "title": "Oluranlowo (You Are My Helper) — T.B. Joshua Composition",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=pPudXRrCh_I",
-      "duration": "9:00",
-      "thumb": "https://i.ytimg.com/vi/pPudXRrCh_I/hqdefault.jpg",
-      "desc": "Oluranlowo — My Helper, oh God You are. An original Yoruba-English composition of Prophet T.B. Joshua, sung by the Emmanuel TV choir.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "oluranlowo",
-        "my helper"
-      ]
-    },
-    {
       "id": "s5",
       "title": "Thank You Lord — Composed by Prophet T.B. Joshua",
       "channel": "ch-songs",
@@ -381,125 +381,6 @@
         "songs",
         "thank you lord",
         "gratitude"
-      ]
-    },
-    {
-      "id": "s6",
-      "title": "Hallelujah — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=manmmps6tZY",
-      "duration": "8:53",
-      "thumb": "https://i.ytimg.com/vi/manmmps6tZY/hqdefault.jpg",
-      "desc": "Hallelujah! An original song composed by Prophet T.B. Joshua, lifted by the Emmanuel TV singers.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "hallelujah",
-        "praise"
-      ]
-    },
-    {
-      "id": "s7",
-      "title": "Come and Dwell — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=b-XK2RpfT9Y",
-      "duration": "8:38",
-      "thumb": "https://i.ytimg.com/vi/b-XK2RpfT9Y/hqdefault.jpg",
-      "desc": "Come and dwell in me, Holy Spirit — the original composition of Prophet T.B. Joshua.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "come and dwell",
-        "holy spirit"
-      ]
-    },
-    {
-      "id": "s8",
-      "title": "Acknowledge God — SCOAN Choir (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=m3_ATYU-9J4",
-      "duration": "7:21",
-      "thumb": "https://i.ytimg.com/vi/m3_ATYU-9J4/hqdefault.jpg",
-      "desc": "Acknowledge God in all your ways. The SCOAN choir sings the original composition of Prophet T.B. Joshua.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "acknowledge god",
-        "scoan choir"
-      ]
-    },
-    {
-      "id": "s9",
-      "title": "I Am Loved by God — Emmanuel TV Singers (T.B. Joshua Composition)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=RFdOkiPEQJI",
-      "duration": "6:09",
-      "thumb": "https://i.ytimg.com/vi/RFdOkiPEQJI/hqdefault.jpg",
-      "desc": "I am loved by God — worship with the Emmanuel TV singers in this original T.B. Joshua composition.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "i am loved by god",
-        "worship"
-      ]
-    },
-    {
-      "id": "s10",
-      "title": "I Belong to You — Emmanuel Singers (SCOAN)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=jSZMcKssvYw",
-      "duration": "16:09",
-      "thumb": "https://i.ytimg.com/vi/jSZMcKssvYw/hqdefault.jpg",
-      "desc": "I belong to You — the Emmanuel singers of SCOAN in worshipful song.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "i belong to you",
-        "emmanuel singers"
-      ]
-    },
-    {
-      "id": "s11",
-      "title": "Lighten the Word — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=IXgmsSDfGRY",
-      "duration": "14:42",
-      "thumb": "https://i.ytimg.com/vi/IXgmsSDfGRY/hqdefault.jpg",
-      "desc": "Lighten the Word of God in our hearts — an original song composed by Prophet T.B. Joshua.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "lighten the word",
-        "worship"
-      ]
-    },
-    {
-      "id": "s12",
-      "title": "Free Access — Original Song (Composed by T.B. Joshua)",
-      "channel": "ch-songs",
-      "category": "Worship & Songs",
-      "type": "youtube",
-      "source": "https://www.youtube.com/watch?v=p32BRY2xCvo",
-      "duration": "7:56",
-      "thumb": "https://i.ytimg.com/vi/p32BRY2xCvo/hqdefault.jpg",
-      "desc": "Free access — through the blood of Jesus. An original song composed by Prophet T.B. Joshua, sung by the Emmanuel TV singers.",
-      "tags": [
-        "tb joshua",
-        "songs",
-        "free access",
-        "worship"
       ]
     },
     {
@@ -534,6 +415,23 @@
         "1992",
         "crusade",
         "early ministry"
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "Hallelujah — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=manmmps6tZY",
+      "duration": "8:53",
+      "thumb": "https://i.ytimg.com/vi/manmmps6tZY/hqdefault.jpg",
+      "desc": "Hallelujah! An original song composed by Prophet T.B. Joshua, lifted by the Emmanuel TV singers.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "hallelujah",
+        "praise"
       ]
     },
     {
@@ -588,6 +486,23 @@
       ]
     },
     {
+      "id": "s7",
+      "title": "Come and Dwell — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=b-XK2RpfT9Y",
+      "duration": "8:38",
+      "thumb": "https://i.ytimg.com/vi/b-XK2RpfT9Y/hqdefault.jpg",
+      "desc": "Come and dwell in me, Holy Spirit — the original composition of Prophet T.B. Joshua.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "come and dwell",
+        "holy spirit"
+      ]
+    },
+    {
       "id": "c6",
       "title": "Rare Footage — T.B. Joshua Early Church",
       "channel": "ch-archive",
@@ -619,6 +534,23 @@
         "early ministry",
         "documentary",
         "prophet"
+      ]
+    },
+    {
+      "id": "s8",
+      "title": "Acknowledge God — SCOAN Choir (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=m3_ATYU-9J4",
+      "duration": "7:21",
+      "thumb": "https://i.ytimg.com/vi/m3_ATYU-9J4/hqdefault.jpg",
+      "desc": "Acknowledge God in all your ways. The SCOAN choir sings the original composition of Prophet T.B. Joshua.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "acknowledge god",
+        "scoan choir"
       ]
     },
     {
@@ -673,6 +605,23 @@
       ]
     },
     {
+      "id": "s9",
+      "title": "I Am Loved by God — Emmanuel TV Singers (T.B. Joshua Composition)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=RFdOkiPEQJI",
+      "duration": "6:09",
+      "thumb": "https://i.ytimg.com/vi/RFdOkiPEQJI/hqdefault.jpg",
+      "desc": "I am loved by God — worship with the Emmanuel TV singers in this original T.B. Joshua composition.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "i am loved by god",
+        "worship"
+      ]
+    },
+    {
       "id": "tj1",
       "title": "Trusting God - Prophet T.B. Joshua",
       "channel": "ch-sermons",
@@ -707,6 +656,23 @@
       ]
     },
     {
+      "id": "s10",
+      "title": "I Belong to You — Emmanuel Singers (SCOAN)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=jSZMcKssvYw",
+      "duration": "16:09",
+      "thumb": "https://i.ytimg.com/vi/jSZMcKssvYw/hqdefault.jpg",
+      "desc": "I belong to You — the Emmanuel singers of SCOAN in worshipful song.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "i belong to you",
+        "emmanuel singers"
+      ]
+    },
+    {
       "id": "tj3",
       "title": "Making Jesus a Reality to You - Prophet T.B. Joshua",
       "channel": "ch-sermons",
@@ -738,6 +704,23 @@
         "scoan",
         "sermon",
         "teaching"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Lighten the Word — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=IXgmsSDfGRY",
+      "duration": "14:42",
+      "thumb": "https://i.ytimg.com/vi/IXgmsSDfGRY/hqdefault.jpg",
+      "desc": "Lighten the Word of God in our hearts — an original song composed by Prophet T.B. Joshua.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "lighten the word",
+        "worship"
       ]
     },
     {
@@ -792,6 +775,23 @@
       ]
     },
     {
+      "id": "s12",
+      "title": "Free Access — Original Song (Composed by T.B. Joshua)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=p32BRY2xCvo",
+      "duration": "7:56",
+      "thumb": "https://i.ytimg.com/vi/p32BRY2xCvo/hqdefault.jpg",
+      "desc": "Free access — through the blood of Jesus. An original song composed by Prophet T.B. Joshua, sung by the Emmanuel TV singers.",
+      "tags": [
+        "tb joshua",
+        "songs",
+        "free access",
+        "worship"
+      ]
+    },
+    {
       "id": "tj8",
       "title": "Everyone Has Been Tempted - Prophet T.B. Joshua",
       "channel": "ch-sermons",
@@ -823,6 +823,21 @@
         "scoan",
         "sermon",
         "teaching"
+      ]
+    },
+    {
+      "id": "v46",
+      "title": "I SPEAK YOUR NAME!!   Original Song Composed By TB Joshua",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ufyylS1t0i8",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/ufyylS1t0i8/hqdefault.jpg",
+      "desc": "I SPEAK YOUR NAME!!   Original Song Composed By TB Joshua - from Emmanuel TV Connect on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -877,6 +892,21 @@
       ]
     },
     {
+      "id": "v47",
+      "title": "SPIRIT PRAY THROUGH ME!!!  Original Song Composed By TB Joshua",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=zqMYvSuQBxM",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/zqMYvSuQBxM/hqdefault.jpg",
+      "desc": "SPIRIT PRAY THROUGH ME!!!  Original Song Composed By TB Joshua - from Emmanuel TV Connect on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "tj13",
       "title": "Refuse to Be Offended - Prophet T.B. Joshua",
       "channel": "ch-sermons",
@@ -907,6 +937,21 @@
         "tb joshua",
         "scoan",
         "prayer"
+      ]
+    },
+    {
+      "id": "v48",
+      "title": "PRAISE & WORSHIP NIGHT IN HONOR OF PROPHET T.B. JOSHUA | 5TH JUNE 2024 | LIVE",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=sWM6BkoMVy0",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/sWM6BkoMVy0/hqdefault.jpg",
+      "desc": "PRAISE & WORSHIP NIGHT IN HONOR OF PROPHET T.B. JOSHUA | 5TH JUNE 2024 | LIVE - from Emmanuel TV Connect on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -958,6 +1003,21 @@
       ]
     },
     {
+      "id": "v49",
+      "title": "26/04/2026 SCOAN Praise and Worship With Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=hwCWB7KgMiU",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/hwCWB7KgMiU/hqdefault.jpg",
+      "desc": "26/04/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "tj18",
       "title": "Anointed Prayer with Prophet T.B. Joshua - Prophet T.B. Joshua",
       "channel": "ch-prayer",
@@ -987,6 +1047,21 @@
         "tb joshua",
         "scoan",
         "sunday service"
+      ]
+    },
+    {
+      "id": "v50",
+      "title": "11/01/2026 SCOAN Praise and Worship with Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=5o-mVGN1LLE",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/5o-mVGN1LLE/hqdefault.jpg",
+      "desc": "11/01/2026 SCOAN Praise and Worship with Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1038,6 +1113,21 @@
       ]
     },
     {
+      "id": "v51",
+      "title": "09/08/2026 SCOAN Praise and Worship With Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=A87A9mIDidQ",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/A87A9mIDidQ/hqdefault.jpg",
+      "desc": "09/08/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "tj23",
       "title": "Full Live Sunday Service - 15 June 2014 - SCOAN, T.B. Joshua",
       "channel": "ch-services",
@@ -1068,6 +1158,21 @@
         "faith world ministries",
         "sermon",
         "zimbabwe"
+      ]
+    },
+    {
+      "id": "v52",
+      "title": "24/05/2026 SCOAN Praise and Worship With Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=UpHO-YIfYIQ",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/UpHO-YIfYIQ/hqdefault.jpg",
+      "desc": "24/05/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1102,6 +1207,21 @@
         "faith world ministries",
         "sermon",
         "zimbabwe"
+      ]
+    },
+    {
+      "id": "v53",
+      "title": "12/04/2026 SCOAN Praise and Worship with Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=mMRs6kuyHLE",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/mMRs6kuyHLE/hqdefault.jpg",
+      "desc": "12/04/2026 SCOAN Praise and Worship with Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1156,6 +1276,21 @@
       ]
     },
     {
+      "id": "v54",
+      "title": "21/06/2026 SCOAN Praise and Worship With Emmanuel TV Singers ",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=NS4ccqj2qVc",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/NS4ccqj2qVc/hqdefault.jpg",
+      "desc": "21/06/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "fw7",
       "title": "The Gifts of God Are for Everyone - Archbishop Dr. B. Manjoro",
       "channel": "ch-fwm",
@@ -1187,6 +1322,21 @@
         "faith world ministries",
         "sermon",
         "zimbabwe"
+      ]
+    },
+    {
+      "id": "v55",
+      "title": "SCOAN 10/11/19: POWERFUL SPIRIT FILLED PRAISES & WORSHIP WITH EMMANUEL TV SINGERS",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=koaVtAvhjxQ",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/koaVtAvhjxQ/hqdefault.jpg",
+      "desc": "SCOAN 10/11/19: POWERFUL SPIRIT FILLED PRAISES & WORSHIP WITH EMMANUEL TV SINGERS - from Momi si on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1241,6 +1391,21 @@
       ]
     },
     {
+      "id": "v56",
+      "title": "Worship by Emmanuel TV Choir | 12/12/2021",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=6_uNkdpg-hU",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/6_uNkdpg-hU/hqdefault.jpg",
+      "desc": "Worship by Emmanuel TV Choir | 12/12/2021 - from Mannety AgapE on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "fw12",
       "title": "My Journey From a Tender Age - Archbishop Dr. B. Manjoro",
       "channel": "ch-fwm",
@@ -1272,6 +1437,21 @@
         "faith world ministries",
         "testimony",
         "zimbabwe"
+      ]
+    },
+    {
+      "id": "v57",
+      "title": "Under His Eyes -   Emmanuel tv Choir",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=K1ItxmV18dA",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/K1ItxmV18dA/hqdefault.jpg",
+      "desc": "Under His Eyes -   Emmanuel tv Choir - from LAKER on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1325,6 +1505,21 @@
       ]
     },
     {
+      "id": "v58",
+      "title": "A Vision Man/Prophet TB JOSHUA/Songs",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=y98W8Q7p1mM",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/y98W8Q7p1mM/hqdefault.jpg",
+      "desc": "A Vision Man/Prophet TB JOSHUA/Songs - from LOVETV on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "fw17",
       "title": "Ndinomutenda - Faith World Ministries",
       "channel": "ch-fwm",
@@ -1354,6 +1549,21 @@
         "faith world ministries",
         "worship",
         "zimbabwe"
+      ]
+    },
+    {
+      "id": "v59",
+      "title": "WORSHIP NIGHT | Prophet Uebert Angel",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=5kNPiOQHZWo",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/5kNPiOQHZWo/hqdefault.jpg",
+      "desc": "WORSHIP NIGHT | Prophet Uebert Angel - from Uebert Angel on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1401,6 +1611,21 @@
       ]
     },
     {
+      "id": "v60",
+      "title": "Uebert Angel - Worship",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=fD5ibbp5hNs",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/fD5ibbp5hNs/hqdefault.jpg",
+      "desc": "Uebert Angel - Worship - from Uebert Angel on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v3",
       "title": "PRAYER OF HEALING AND DELIVERANCE | Mass Prayer 11.02.2024 #tbjoshua #emmanueltv  #scoan",
       "channel": "ch-prayer",
@@ -1429,6 +1654,21 @@
       ]
     },
     {
+      "id": "v61",
+      "title": "Songs Of The Spirit | Prophet Uebert Angel",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=rBrqj0aKsGY",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/rBrqj0aKsGY/hqdefault.jpg",
+      "desc": "Songs Of The Spirit | Prophet Uebert Angel - from Uebert Angel Plus on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v5",
       "title": "HEAVEN IS FIGHTING FOR YOUR FREEDOM! | SCOAN Mass Prayer 24.05.2026",
       "channel": "ch-prayer",
@@ -1454,6 +1694,21 @@
       "desc": "JESUS HAS OVERCOME FOR YOU! | SCOAN Mass Prayer 23.08.2026 - from Emmanuel TV Live on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v62",
+      "title": "Song For Protection with Prophet Uebert Angel",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=hsEAzqim9W4",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/hsEAzqim9W4/hqdefault.jpg",
+      "desc": "Song For Protection with Prophet Uebert Angel - from Uebert Angel on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1499,6 +1754,21 @@
       ]
     },
     {
+      "id": "v63",
+      "title": "HERA - Song Of The Spirit | Prophet Uebert Angel",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=8TYSUCH-hZ0",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/8TYSUCH-hZ0/hqdefault.jpg",
+      "desc": "HERA - Song Of The Spirit | Prophet Uebert Angel - from Uebert Angel Plus on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v10",
       "title": "GRACE TO MOVE ON - Prophet TB Joshua SERMON",
       "channel": "ch-sermons",
@@ -1524,6 +1794,21 @@
       "desc": "IS IT FROM GOD? | Prophet T.B. Joshua Sermon - from Emmanuel TV Live on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v64",
+      "title": "PRAISE SUNDAY | Prophet Uebert Angel",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=NBMD-8oQwNY",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/NBMD-8oQwNY/hqdefault.jpg",
+      "desc": "PRAISE SUNDAY | Prophet Uebert Angel - from Uebert Angel on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1569,6 +1854,21 @@
       ]
     },
     {
+      "id": "v65",
+      "title": "SINACH: WITH ALL MY HEART",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=e4bQqjnaxLw",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/e4bQqjnaxLw/hqdefault.jpg",
+      "desc": "SINACH: WITH ALL MY HEART - from SINACH on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v15",
       "title": "The Holy Spirit and You | Billy Graham Classic Sermon",
       "channel": "ch-sermons",
@@ -1594,6 +1894,21 @@
       "desc": "Narrow is the Road | Billy Graham Classic Sermon - from Billy Graham Evangelistic Association on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v66",
+      "title": "SINACH - You Are Good (Ulungile) (Official Music Video)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9zjRQ-rdWsI",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/9zjRQ-rdWsI/hqdefault.jpg",
+      "desc": "SINACH - You Are Good (Ulungile) (Official Music Video) - from SINACH on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1639,6 +1954,21 @@
       ]
     },
     {
+      "id": "v67",
+      "title": "SINACH: GREATEST LORD (LIVE)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=PbCqDK_c_0I",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/PbCqDK_c_0I/hqdefault.jpg",
+      "desc": "SINACH: GREATEST LORD (LIVE) - from SINACH on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v20",
       "title": "Laws and Principles For Success In Life | Dr. Myles Munroe | MunroeGlobal.com",
       "channel": "ch-sermons",
@@ -1664,6 +1994,21 @@
       "desc": "Why Your Ignorance Is Blocking Your Success  | MunroeGlobal.com - from Munroe Global on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v68",
+      "title": "Joyous Celebration - Praise Medley (Live at the Moses Mabhida Stadium, Durban, 2016)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=lrK4Clu-BJc",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/lrK4Clu-BJc/hqdefault.jpg",
+      "desc": "Joyous Celebration - Praise Medley (Live at the Moses Mabhida Stadium, Durban, 2016) - from joyousVEVO on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1709,6 +2054,21 @@
       ]
     },
     {
+      "id": "v69",
+      "title": "Joyous Celebration - Wakhazimula",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=QKMVxKl0GOA",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/QKMVxKl0GOA/hqdefault.jpg",
+      "desc": "Joyous Celebration - Wakhazimula - from joyousVEVO on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v25",
       "title": "THE GRACE TO LAST || RUN CONFERENCE 2026 || STREAMS OF JOY UMUAHIA-ABIA || APOSTLE JOSHUA SELMAN",
       "channel": "ch-sermons",
@@ -1737,6 +2097,21 @@
       ]
     },
     {
+      "id": "v70",
+      "title": "Joyous Celebration - Ngena Nathi (Live At The Emperors Palace / 2023)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=byXPZFkQdd0",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/byXPZFkQdd0/hqdefault.jpg",
+      "desc": "Joyous Celebration - Ngena Nathi (Live At The Emperors Palace / 2023) - from joyousVEVO on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v27",
       "title": "The Cross in My Life - Part 1 | Derek Prince",
       "channel": "ch-sermons",
@@ -1762,6 +2137,21 @@
       "desc": "The Cross at the Center - Part 1 | Derek Prince - from Derek Prince on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v71",
+      "title": "Nathaniel Bassey   Hallelujah Challenge Praise Medley",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=cleQjLtKNGM",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/cleQjLtKNGM/hqdefault.jpg",
+      "desc": "Nathaniel Bassey   Hallelujah Challenge Praise Medley - from Nathaniel Bassey Main on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1807,6 +2197,21 @@
       ]
     },
     {
+      "id": "v72",
+      "title": "Nathaniel Bassey -  Hallelujah Challenge Worship Medley",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=i5vC1lzhWS4",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/i5vC1lzhWS4/hqdefault.jpg",
+      "desc": "Nathaniel Bassey -  Hallelujah Challenge Worship Medley - from Nathaniel Bassey Main on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v32",
       "title": "T.D. Jakes: These Bumps in the Road Mean That You're Close to Your BREAKTHROUGH! | TBN",
       "channel": "ch-sermons",
@@ -1832,6 +2237,21 @@
       "desc": "The Holy Spirit: Filling the Believer – Dr. Charles Stanley - from In Touch Ministries on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v73",
+      "title": "SO BE IT | Elevation Worship (feat. Tiffany Hudson & Chris Brown)",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=edZVnKxKEUU",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/edZVnKxKEUU/hqdefault.jpg",
+      "desc": "SO BE IT | Elevation Worship (feat. Tiffany Hudson & Chris Brown) - from Elevation Worship on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1877,6 +2297,21 @@
       ]
     },
     {
+      "id": "v74",
+      "title": "One More Day (Live) | Elevation Worship & Sons Of Sunday",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=eJshpEZQQqU",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/eJshpEZQQqU/hqdefault.jpg",
+      "desc": "One More Day (Live) | Elevation Worship & Sons Of Sunday - from Elevation Worship on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v37",
       "title": "Fully Persuaded | David Wilkerson",
       "channel": "ch-sermons",
@@ -1902,6 +2337,21 @@
       "desc": "Stand Still and See the Salvation of the Lord - David Wilkerson - April 20, 1997 - from World Challenge on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v75",
+      "title": "Living Hope / Glorify Thy Name (Spontaneous) - Bethel Music, Kristene DiMarco",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=nTHNnfnfIrE",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/nTHNnfnfIrE/hqdefault.jpg",
+      "desc": "Living Hope / Glorify Thy Name (Spontaneous) - Bethel Music, Kristene DiMarco - from Bethel Music on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     },
     {
@@ -1947,6 +2397,21 @@
       ]
     },
     {
+      "id": "v76",
+      "title": "One Hour of Deep Old Zimbabwe Worship Songs- Blessing Jeduthun",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=HpbQVArlRX0",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/HpbQVArlRX0/hqdefault.jpg",
+      "desc": "One Hour of Deep Old Zimbabwe Worship Songs- Blessing Jeduthun - from Blessing Jeduthun Official on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v42",
       "title": "What Does Love Look Like?-FULL SERMON | Joyce Meyer",
       "channel": "ch-sermons",
@@ -1975,6 +2440,21 @@
       ]
     },
     {
+      "id": "v77",
+      "title": "Achapindura  -  Zim Gospel Hub",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9CXluNSidRY",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/9CXluNSidRY/hqdefault.jpg",
+      "desc": "Achapindura  -  Zim Gospel Hub - from Zim Gospel Hub on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
+      ]
+    },
+    {
       "id": "v44",
       "title": "Lay Aside Every Weight || WORD TO GO with Pastor Mensa Otabil Episode 2288 ",
       "channel": "ch-sermons",
@@ -2000,6 +2480,21 @@
       "desc": "The Holy Spirit has Sent You! | Reinhard Bonnke - from Global Awakening on YouTube.",
       "tags": [
         "sermon"
+      ]
+    },
+    {
+      "id": "v78",
+      "title": "Don Moen Nonstop Praise and Worship Playlist",
+      "channel": "ch-songs",
+      "category": "Worship & Songs",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Kp-XfPtsReI",
+      "duration": "—",
+      "thumb": "https://i.ytimg.com/vi/Kp-XfPtsReI/hqdefault.jpg",
+      "desc": "Don Moen Nonstop Praise and Worship Playlist - from DonMoenTV on YouTube.",
+      "tags": [
+        "worship",
+        "praise"
       ]
     }
   ],
