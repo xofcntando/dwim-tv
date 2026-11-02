@@ -4859,13 +4859,45 @@
         "gospel",
         "floodgates"
       ]
+    },
+    {
+      "id": "brk-prayer",
+      "title": "DWIM TV — Prayer & Deliverance",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-prayer.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-prayer.jpg",
+      "desc": "Send your prayer request. Distance is not a barrier.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "brk-sunday",
+      "title": "DWIM TV — Join Us Every Sunday",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-sunday.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-sunday.jpg",
+      "desc": "Sunday Service at 11:00 AM CAT, live on DWIM TV from Old Ascot, Gweru.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 10,
+  "seedVersion": 11,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -5050,6 +5082,8 @@
           "brk-distance",
           "brk-worship",
           "brk-builder",
+          "brk-prayer",
+          "brk-sunday",
           "brk-1year"
         ],
         "everyMinutes": 10
