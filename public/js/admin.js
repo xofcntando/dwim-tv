@@ -65,6 +65,7 @@ function showDash() {
   loadChurch();
   loadLiveStatus();
   loadPrayers();
+  loadSchedule();
 }
 
 /* ---------- catalog ---------- */
@@ -625,3 +626,23 @@ async function prayerDelete(id) {
   await fetch('/api/admin/prayers/' + id, { method: 'DELETE' });
   loadPrayers();
 }
+
+
+/* ---------- TV schedule editor ---------- */
+async function loadSchedule() {
+  const ta = document.getElementById('schedJson');
+  if (!ta) return;
+  const j = await (await fetch('/api/admin/schedule')).json();
+  ta.value = j.schedule ? JSON.stringify(j.schedule, null, 2) : '';
+}
+document.getElementById('schedForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const m = document.getElementById('schedMsg');
+  let sc;
+  try { sc = JSON.parse(document.getElementById('schedJson').value); }
+  catch (err) { m.textContent = 'Invalid JSON: ' + err.message; m.className = 'form-msg err'; return; }
+  const r = await fetch('/api/admin/schedule', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ schedule: sc }) });
+  const j = await r.json();
+  m.textContent = j.ok ? 'Schedule saved. Viewers get it within a few minutes.' : (j.error || 'Could not save');
+  m.className = 'form-msg ' + (j.ok ? 'ok' : 'err');
+});

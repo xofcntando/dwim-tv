@@ -175,6 +175,14 @@
         </table>
       </div>
 
+      <h2 style="margin-top:38px">&#128197; TV Schedule</h2>
+      <p class="hint">The daily programme (Zimbabwe time). Each <b>block</b> has a start/end time and pulls videos from its channels; the <b>signature</b> song (Let It Rain) plays at the listed times every day. Edit carefully, then Save. Blocks can use <code>"days":[0]</code> (0 = Sunday) for day-specific programming.</p>
+      <form id="schedForm" class="add-card">
+        <textarea id="schedJson" rows="16" spellcheck="false" style="width:100%;font-family:monospace;font-size:12.5px"></textarea>
+        <div class="form-msg" id="schedMsg"></div>
+        <button class="btn-admin-primary" type="submit">&#128190; Save Schedule</button>
+      </form>
+
       <h2 style="margin-top:38px">&#128591; Prayer Requests <span id="prStats" class="stat-pill"></span></h2>
       <p class="hint">Requests sent from the website's prayer form. Tap <b>Prayed</b> once the team has prayed. <span id="prStorage"></span></p>
       <div id="prList" class="add-card"><p class="hint">Loading…</p></div>

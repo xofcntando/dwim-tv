@@ -551,6 +551,45 @@ app.put('/api/admin/videos-order', requireAdmin, async (req, res) => {
 });
 
 /* =========================================================
+   TV SCHEDULE — daily programme (edited as JSON in the admin panel)
+   ========================================================= */
+function validateSchedule(sc, cat) {
+  if (!sc || typeof sc !== 'object') return 'Schedule must be an object';
+  const hm = /^([01]?\d|2[0-4]):[0-5]\d$/;
+  if (!Array.isArray(sc.blocks) || !sc.blocks.length) return 'Schedule needs a "blocks" list';
+  const chIds = new Set((cat.channels || []).map(c => c.id));
+  for (const b of sc.blocks) {
+    if (!b.id || !b.name) return 'Every block needs "id" and "name"';
+    if (!hm.test(b.start || '') || !hm.test(b.end || '')) return `Block "${b.name}": start/end must look like "18:00"`;
+    const chans = [].concat(b.channels || [], ...(b.mix || []).map(m => m.channels || []));
+    if (!chans.length) return `Block "${b.name}" needs "channels" or "mix"`;
+    const bad = chans.find(c => !chIds.has(c));
+    if (bad) return `Block "${b.name}": unknown channel "${bad}"`;
+  }
+  if (sc.signature) {
+    if (!(cat.videos || []).some(v => v.id === sc.signature.videoId)) return 'Signature videoId not found in the catalog';
+    if (!Array.isArray(sc.signature.times) || sc.signature.times.some(t => !hm.test(t))) return 'Signature times must look like ["06:00","18:00"]';
+  }
+  try { new Intl.DateTimeFormat('en-US', { timeZone: sc.timezone || 'Africa/Harare' }); } catch (e) { return 'Unknown timezone'; }
+  return null;
+}
+
+app.get('/api/admin/schedule', requireAdmin, (req, res) => {
+  res.json({ ok: true, schedule: readCatalog().schedule || null });
+});
+
+app.put('/api/admin/schedule', requireAdmin, async (req, res) => {
+  const cat = readCatalog();
+  const sc = (req.body || {}).schedule;
+  const err = validateSchedule(sc, cat);
+  if (err) return res.status(400).json({ ok: false, error: err });
+  cat.schedule = sc;
+  await writeCatalog(cat);
+  const gh = await syncCatalogToGitHub();
+  res.json({ ok: true, schedule: sc, github: gh });
+});
+
+/* =========================================================
    PRAYER REQUESTS — public form -> MongoDB, admin inbox
    (without MongoDB they go to a temp file: they survive restarts
    but NOT redeploys, so set MONGODB_URI in production)
@@ -710,6 +749,25 @@ async function init() {
         cat = readCatalogFile(); // first run: seed MongoDB from data/videos.json
         await db.saveCatalog(cat);
         console.log(`🌱 MongoDB seeded from data/videos.json (${(cat.videos || []).length} videos)`);
+      }
+      // New seed content shipped in data/videos.json (higher seedVersion) is merged in ONCE:
+      // missing channels/videos are added and the schedule is installed. Admin edits/deletes are not overwritten.
+      const fileCat = readCatalogFile();
+      if ((fileCat.seedVersion || 0) > (cat.seedVersion || 0)) {
+        cat.channels = cat.channels || []; cat.videos = cat.videos || [];
+        const haveCh = new Set(cat.channels.map(c => c.id));
+        for (const c of fileCat.channels || []) if (!haveCh.has(c.id)) cat.channels.push(c);
+        const haveV = new Set(cat.videos.map(v => v.id));
+        const haveSrc = new Set(cat.videos.map(v => v.source));
+        let added = 0;
+        for (const v of fileCat.videos || []) if (!haveV.has(v.id) && !haveSrc.has(v.source)) { cat.videos.push(v); added++; }
+        // fill in missing durations from the seed (needed for the schedule clock)
+        const seedDur = new Map((fileCat.videos || []).map(v => [v.id, v.duration]));
+        for (const v of cat.videos) if (!/^\d+(:\d+)+$/.test(v.duration || '') && seedDur.get(v.id)) v.duration = seedDur.get(v.id);
+        if (!cat.schedule && fileCat.schedule) cat.schedule = fileCat.schedule;
+        cat.seedVersion = fileCat.seedVersion;
+        await db.saveCatalog(cat);
+        console.log(`🌱 Seed v${cat.seedVersion} merged into MongoDB (+${added} videos)`);
       }
       catalogCache = cat;
       const savedLive = await db.loadLive();

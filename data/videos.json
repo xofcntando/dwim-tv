@@ -76,6 +76,11 @@
       "id": "ch-classics",
       "name": "Classic Messages",
       "icon": "🕊"
+    },
+    {
+      "id": "ch-gospel",
+      "name": "Gospel Music · Jesus Culture & Zimbabwe",
+      "icon": "🎶"
     }
   ],
   "videos": [
@@ -120,7 +125,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=7fkS2aJRsCk",
-      "duration": "—",
+      "duration": "7:09",
       "thumb": "https://i.ytimg.com/vi/7fkS2aJRsCk/hqdefault.jpg",
       "desc": "Bringing everything in obedience to Christ (Chant) - Min. Theophilus Sunday - from MAMRE MEDIA on YouTube.",
       "tags": [
@@ -135,7 +140,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=dybTyi2FTuE",
-      "duration": "—",
+      "duration": "24:40",
       "thumb": "https://i.ytimg.com/vi/dybTyi2FTuE/hqdefault.jpg",
       "desc": "Bringing Everything in Obedience to Christ || Min Theophilus Sunday  - from Bamidele Ajiboye on YouTube.",
       "tags": [
@@ -150,7 +155,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=6NDEztPNGB8",
-      "duration": "—",
+      "duration": "3:22:15",
       "thumb": "https://i.ytimg.com/vi/6NDEztPNGB8/hqdefault.jpg",
       "desc": "50 DANGEROUS DECLARATIONS | Prophet Uebert Angel - from Uebert Angel on YouTube.",
       "tags": [
@@ -877,7 +882,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=ufyylS1t0i8",
-      "duration": "—",
+      "duration": "10:17",
       "thumb": "https://i.ytimg.com/vi/ufyylS1t0i8/hqdefault.jpg",
       "desc": "I SPEAK YOUR NAME!!   Original Song Composed By TB Joshua - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -943,7 +948,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=zqMYvSuQBxM",
-      "duration": "—",
+      "duration": "12:48",
       "thumb": "https://i.ytimg.com/vi/zqMYvSuQBxM/hqdefault.jpg",
       "desc": "SPIRIT PRAY THROUGH ME!!!  Original Song Composed By TB Joshua - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -991,7 +996,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=sWM6BkoMVy0",
-      "duration": "—",
+      "duration": "7:19:44",
       "thumb": "https://i.ytimg.com/vi/sWM6BkoMVy0/hqdefault.jpg",
       "desc": "PRAISE & WORSHIP NIGHT IN HONOR OF PROPHET T.B. JOSHUA | 5TH JUNE 2024 | LIVE - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -1054,7 +1059,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=hwCWB7KgMiU",
-      "duration": "—",
+      "duration": "8:14",
       "thumb": "https://i.ytimg.com/vi/hwCWB7KgMiU/hqdefault.jpg",
       "desc": "26/04/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1101,7 +1106,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=5o-mVGN1LLE",
-      "duration": "—",
+      "duration": "54:20",
       "thumb": "https://i.ytimg.com/vi/5o-mVGN1LLE/hqdefault.jpg",
       "desc": "11/01/2026 SCOAN Praise and Worship with Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1164,7 +1169,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=A87A9mIDidQ",
-      "duration": "—",
+      "duration": "13:33",
       "thumb": "https://i.ytimg.com/vi/A87A9mIDidQ/hqdefault.jpg",
       "desc": "09/08/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1212,7 +1217,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=UpHO-YIfYIQ",
-      "duration": "—",
+      "duration": "8:36",
       "thumb": "https://i.ytimg.com/vi/UpHO-YIfYIQ/hqdefault.jpg",
       "desc": "24/05/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1261,7 +1266,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=mMRs6kuyHLE",
-      "duration": "—",
+      "duration": "43:18",
       "thumb": "https://i.ytimg.com/vi/mMRs6kuyHLE/hqdefault.jpg",
       "desc": "12/04/2026 SCOAN Praise and Worship with Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1327,7 +1332,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=NS4ccqj2qVc",
-      "duration": "—",
+      "duration": "14:41",
       "thumb": "https://i.ytimg.com/vi/NS4ccqj2qVc/hqdefault.jpg",
       "desc": "21/06/2026 SCOAN Praise and Worship With Emmanuel TV Singers  - from SCOAN Generation on YouTube.",
       "tags": [
@@ -1376,7 +1381,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=koaVtAvhjxQ",
-      "duration": "—",
+      "duration": "1:26:21",
       "thumb": "https://i.ytimg.com/vi/koaVtAvhjxQ/hqdefault.jpg",
       "desc": "SCOAN 10/11/19: POWERFUL SPIRIT FILLED PRAISES & WORSHIP WITH EMMANUEL TV SINGERS - from Momi si on YouTube.",
       "tags": [
@@ -1442,7 +1447,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=6_uNkdpg-hU",
-      "duration": "—",
+      "duration": "1:22:14",
       "thumb": "https://i.ytimg.com/vi/6_uNkdpg-hU/hqdefault.jpg",
       "desc": "Worship by Emmanuel TV Choir | 12/12/2021 - from Mannety AgapE on YouTube.",
       "tags": [
@@ -1491,7 +1496,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=K1ItxmV18dA",
-      "duration": "—",
+      "duration": "5:47",
       "thumb": "https://i.ytimg.com/vi/K1ItxmV18dA/hqdefault.jpg",
       "desc": "Under His Eyes -   Emmanuel tv Choir - from LAKER on YouTube.",
       "tags": [
@@ -1556,7 +1561,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=y98W8Q7p1mM",
-      "duration": "—",
+      "duration": "7:57",
       "thumb": "https://i.ytimg.com/vi/y98W8Q7p1mM/hqdefault.jpg",
       "desc": "A Vision Man/Prophet TB JOSHUA/Songs - from LOVETV on YouTube.",
       "tags": [
@@ -1603,7 +1608,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=5kNPiOQHZWo",
-      "duration": "—",
+      "duration": "2:25:22",
       "thumb": "https://i.ytimg.com/vi/5kNPiOQHZWo/hqdefault.jpg",
       "desc": "WORSHIP NIGHT | Prophet Uebert Angel - from Uebert Angel on YouTube.",
       "tags": [
@@ -1634,7 +1639,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=61R1qmZh0x4",
-      "duration": "—",
+      "duration": "5:45",
       "thumb": "https://i.ytimg.com/vi/61R1qmZh0x4/hqdefault.jpg",
       "desc": "GET OUT OF YOUR DRY PIT   Viewers Prayer With Prophet TB  Joshua - from Emmanuel TV Replay on YouTube.",
       "tags": [
@@ -1648,7 +1653,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=_qDvMl8fe-c",
-      "duration": "—",
+      "duration": "8:10",
       "thumb": "https://i.ytimg.com/vi/_qDvMl8fe-c/hqdefault.jpg",
       "desc": "SEE THE LIGHT OF GOD! - TB Joshua's Anointed Prayer for Viewers #emmanueltv #tbjoshua - from Emmanuel TV Replay on YouTube.",
       "tags": [
@@ -1662,7 +1667,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=fD5ibbp5hNs",
-      "duration": "—",
+      "duration": "30:00",
       "thumb": "https://i.ytimg.com/vi/fD5ibbp5hNs/hqdefault.jpg",
       "desc": "Uebert Angel - Worship - from Uebert Angel on YouTube.",
       "tags": [
@@ -1677,7 +1682,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=zLlkFS8ohGY",
-      "duration": "—",
+      "duration": "25:39",
       "thumb": "https://i.ytimg.com/vi/zLlkFS8ohGY/hqdefault.jpg",
       "desc": "PRAYER OF HEALING AND DELIVERANCE | Mass Prayer 11.02.2024 #tbjoshua #emmanueltv  #scoan - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -1691,7 +1696,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=1_4XUQOd51o",
-      "duration": "—",
+      "duration": "22:06",
       "thumb": "https://i.ytimg.com/vi/1_4XUQOd51o/hqdefault.jpg",
       "desc": "POWERFUL PRAYER FOR HEALING AND DELIVERANCE | SCOAN Mass Prayer 06.10.2024 #EmmanuelTV #Scoan - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -1705,7 +1710,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=rBrqj0aKsGY",
-      "duration": "—",
+      "duration": "26:10",
       "thumb": "https://i.ytimg.com/vi/rBrqj0aKsGY/hqdefault.jpg",
       "desc": "Songs Of The Spirit | Prophet Uebert Angel - from Uebert Angel Plus on YouTube.",
       "tags": [
@@ -1720,7 +1725,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=qWS0N3LJB8w",
-      "duration": "—",
+      "duration": "29:24",
       "thumb": "https://i.ytimg.com/vi/qWS0N3LJB8w/hqdefault.jpg",
       "desc": "HEAVEN IS FIGHTING FOR YOUR FREEDOM! | SCOAN Mass Prayer 24.05.2026 - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1734,7 +1739,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=ULWJi-IuKXo",
-      "duration": "—",
+      "duration": "29:41",
       "thumb": "https://i.ytimg.com/vi/ULWJi-IuKXo/hqdefault.jpg",
       "desc": "JESUS HAS OVERCOME FOR YOU! | SCOAN Mass Prayer 23.08.2026 - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1748,7 +1753,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=hsEAzqim9W4",
-      "duration": "—",
+      "duration": "8:23",
       "thumb": "https://i.ytimg.com/vi/hsEAzqim9W4/hqdefault.jpg",
       "desc": "Song For Protection with Prophet Uebert Angel - from Uebert Angel on YouTube.",
       "tags": [
@@ -1763,7 +1768,7 @@
       "category": "Prayer & Deliverance",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=Kpi2QiFAcME",
-      "duration": "—",
+      "duration": "29:09",
       "thumb": "https://i.ytimg.com/vi/Kpi2QiFAcME/hqdefault.jpg",
       "desc": "EVERY OPPOSITION, GIVE WAY! | SCOAN Mass Prayer 30.08.2026 - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1777,7 +1782,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=j32ppH0nFVM",
-      "duration": "—",
+      "duration": "20:27",
       "thumb": "https://i.ytimg.com/vi/j32ppH0nFVM/hqdefault.jpg",
       "desc": "HOW MUCH WE NEED GOD | Prophet T.B. Joshua Sermon - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1791,7 +1796,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=-NDNcleRA98",
-      "duration": "—",
+      "duration": "18:51",
       "thumb": "https://i.ytimg.com/vi/-NDNcleRA98/hqdefault.jpg",
       "desc": "A NEW DREAM FOR YOU! | Prophet T.B. Joshua Sermon - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1805,7 +1810,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=8TYSUCH-hZ0",
-      "duration": "—",
+      "duration": "11:21",
       "thumb": "https://i.ytimg.com/vi/8TYSUCH-hZ0/hqdefault.jpg",
       "desc": "HERA - Song Of The Spirit | Prophet Uebert Angel - from Uebert Angel Plus on YouTube.",
       "tags": [
@@ -1820,7 +1825,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=5LS5uJSv6Rc",
-      "duration": "—",
+      "duration": "32:48",
       "thumb": "https://i.ytimg.com/vi/5LS5uJSv6Rc/hqdefault.jpg",
       "desc": "GRACE TO MOVE ON - Prophet TB Joshua SERMON - from Emmanuel TV Replay on YouTube.",
       "tags": [
@@ -1834,7 +1839,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=irpFQ_hiwkE",
-      "duration": "—",
+      "duration": "25:30",
       "thumb": "https://i.ytimg.com/vi/irpFQ_hiwkE/hqdefault.jpg",
       "desc": "IS IT FROM GOD? | Prophet T.B. Joshua Sermon - from Emmanuel TV Live on YouTube.",
       "tags": [
@@ -1848,7 +1853,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=NBMD-8oQwNY",
-      "duration": "—",
+      "duration": "4:02:31",
       "thumb": "https://i.ytimg.com/vi/NBMD-8oQwNY/hqdefault.jpg",
       "desc": "PRAISE SUNDAY | Prophet Uebert Angel - from Uebert Angel on YouTube.",
       "tags": [
@@ -1863,7 +1868,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=M9Vbr7JefNQ",
-      "duration": "—",
+      "duration": "11:51",
       "thumb": "https://i.ytimg.com/vi/M9Vbr7JefNQ/hqdefault.jpg",
       "desc": "PRAYER FRUIT - PROPHET TB JOSHUA SERMON #emmanueltv #tbjoshua - from Emmanuel TV Replay on YouTube.",
       "tags": [
@@ -1877,7 +1882,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=jviNINfpiw0",
-      "duration": "—",
+      "duration": "28:01",
       "thumb": "https://i.ytimg.com/vi/jviNINfpiw0/hqdefault.jpg",
       "desc": "🌱 FAITH GROWS SPONTANEOUSLY | Prophet T.B. Joshua Sermon #EmmanuelTV #TBJoshuaLegacy - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -1891,7 +1896,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=pzhvNTJB2wg",
-      "duration": "—",
+      "duration": "21:31",
       "thumb": "https://i.ytimg.com/vi/pzhvNTJB2wg/hqdefault.jpg",
       "desc": "THE SECRET OF FAITH | Prophet T.B. Joshua Sermon - from Emmanuel TV Connect on YouTube.",
       "tags": [
@@ -1905,7 +1910,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=e4bQqjnaxLw",
-      "duration": "—",
+      "duration": "7:34",
       "thumb": "https://i.ytimg.com/vi/e4bQqjnaxLw/hqdefault.jpg",
       "desc": "SINACH: WITH ALL MY HEART - from SINACH on YouTube.",
       "tags": [
@@ -1920,7 +1925,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=zbKXkpiLcfk",
-      "duration": "—",
+      "duration": "27:32",
       "thumb": "https://i.ytimg.com/vi/zbKXkpiLcfk/hqdefault.jpg",
       "desc": "The Holy Spirit and You | Billy Graham Classic Sermon - from Billy Graham Evangelistic Association on YouTube.",
       "tags": [
@@ -1934,7 +1939,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=reG7zezrH9E",
-      "duration": "—",
+      "duration": "27:32",
       "thumb": "https://i.ytimg.com/vi/reG7zezrH9E/hqdefault.jpg",
       "desc": "Narrow is the Road | Billy Graham Classic Sermon - from Billy Graham Evangelistic Association on YouTube.",
       "tags": [
@@ -1948,7 +1953,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=9zjRQ-rdWsI",
-      "duration": "—",
+      "duration": "15:08",
       "thumb": "https://i.ytimg.com/vi/9zjRQ-rdWsI/hqdefault.jpg",
       "desc": "SINACH - You Are Good (Ulungile) (Official Music Video) - from SINACH on YouTube.",
       "tags": [
@@ -1963,7 +1968,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=PubCxNxZiBM",
-      "duration": "—",
+      "duration": "27:32",
       "thumb": "https://i.ytimg.com/vi/PubCxNxZiBM/hqdefault.jpg",
       "desc": "Another Road, Another Chance | Billy Graham Classic Sermon - from Billy Graham Evangelistic Association on YouTube.",
       "tags": [
@@ -1977,7 +1982,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=hAtWsWxzYto",
-      "duration": "—",
+      "duration": "27:32",
       "thumb": "https://i.ytimg.com/vi/hAtWsWxzYto/hqdefault.jpg",
       "desc": "The Power of the Cross | Billy Graham Classic Sermon - from Billy Graham Evangelistic Association on YouTube.",
       "tags": [
@@ -1991,7 +1996,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=lYEdva76pok",
-      "duration": "—",
+      "duration": "37:10",
       "thumb": "https://i.ytimg.com/vi/lYEdva76pok/hqdefault.jpg",
       "desc": "The Power and Purpose of The Family | Dr. Myles Munroe | MunroeGlobal.com - from Munroe Global on YouTube.",
       "tags": [
@@ -2005,7 +2010,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=PbCqDK_c_0I",
-      "duration": "—",
+      "duration": "10:59",
       "thumb": "https://i.ytimg.com/vi/PbCqDK_c_0I/hqdefault.jpg",
       "desc": "SINACH: GREATEST LORD (LIVE) - from SINACH on YouTube.",
       "tags": [
@@ -2020,7 +2025,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=3v7PPviuYMk",
-      "duration": "—",
+      "duration": "48:38",
       "thumb": "https://i.ytimg.com/vi/3v7PPviuYMk/hqdefault.jpg",
       "desc": "Laws and Principles For Success In Life | Dr. Myles Munroe | MunroeGlobal.com - from Munroe Global on YouTube.",
       "tags": [
@@ -2034,7 +2039,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=WFFqoCi7LCI",
-      "duration": "—",
+      "duration": "1:59:39",
       "thumb": "https://i.ytimg.com/vi/WFFqoCi7LCI/hqdefault.jpg",
       "desc": "Why Your Ignorance Is Blocking Your Success  | MunroeGlobal.com - from Munroe Global on YouTube.",
       "tags": [
@@ -2048,7 +2053,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=lrK4Clu-BJc",
-      "duration": "—",
+      "duration": "11:42",
       "thumb": "https://i.ytimg.com/vi/lrK4Clu-BJc/hqdefault.jpg",
       "desc": "Joyous Celebration - Praise Medley (Live at the Moses Mabhida Stadium, Durban, 2016) - from joyousVEVO on YouTube.",
       "tags": [
@@ -2063,7 +2068,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=YN9BL--Eh-g",
-      "duration": "—",
+      "duration": "46:13",
       "thumb": "https://i.ytimg.com/vi/YN9BL--Eh-g/hqdefault.jpg",
       "desc": "Keys To Living Above The Storm | Dr. Myles Munroe | MunroeGlobal.com - from Munroe Global on YouTube.",
       "tags": [
@@ -2077,7 +2082,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=lqrSLgDiXbI",
-      "duration": "—",
+      "duration": "45:05",
       "thumb": "https://i.ytimg.com/vi/lqrSLgDiXbI/hqdefault.jpg",
       "desc": "How To Live Effectively In Time | Dr. Myles Munroe - from Munroe Global on YouTube.",
       "tags": [
@@ -2091,7 +2096,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=_GbkE8935e4",
-      "duration": "—",
+      "duration": "5:22:15",
       "thumb": "https://i.ytimg.com/vi/_GbkE8935e4/hqdefault.jpg",
       "desc": "EARTHEN VESSELS (RECEIVING THE MINISTRY OF MEN) WITH APOSTLE JOSHUA SELMAN ||20||09||26|| - from Koinonia Global on YouTube.",
       "tags": [
@@ -2105,7 +2110,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=QKMVxKl0GOA",
-      "duration": "—",
+      "duration": "8:33",
       "thumb": "https://i.ytimg.com/vi/QKMVxKl0GOA/hqdefault.jpg",
       "desc": "Joyous Celebration - Wakhazimula - from joyousVEVO on YouTube.",
       "tags": [
@@ -2120,7 +2125,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=KiimVak-hQs",
-      "duration": "—",
+      "duration": "1:21:22",
       "thumb": "https://i.ytimg.com/vi/KiimVak-hQs/hqdefault.jpg",
       "desc": "THE GRACE TO LAST || RUN CONFERENCE 2026 || STREAMS OF JOY UMUAHIA-ABIA || APOSTLE JOSHUA SELMAN - from Koinonia Global on YouTube.",
       "tags": [
@@ -2134,7 +2139,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=EeRjq40XEIc",
-      "duration": "—",
+      "duration": "5:08:06",
       "thumb": "https://i.ytimg.com/vi/EeRjq40XEIc/hqdefault.jpg",
       "desc": "GUARD YOUR HEART (THE RESPONSIBILITY OF CONSECRATION) WITH APOSTLE JOSHUA SELMAN ||13||09||26|| - from Koinonia Global on YouTube.",
       "tags": [
@@ -2148,7 +2153,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=byXPZFkQdd0",
-      "duration": "—",
+      "duration": "7:08",
       "thumb": "https://i.ytimg.com/vi/byXPZFkQdd0/hqdefault.jpg",
       "desc": "Joyous Celebration - Ngena Nathi (Live At The Emperors Palace / 2023) - from joyousVEVO on YouTube.",
       "tags": [
@@ -2163,7 +2168,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=LQuEq63Qh3A",
-      "duration": "—",
+      "duration": "57:52",
       "thumb": "https://i.ytimg.com/vi/LQuEq63Qh3A/hqdefault.jpg",
       "desc": "The Cross in My Life - Part 1 | Derek Prince - from Derek Prince on YouTube.",
       "tags": [
@@ -2177,7 +2182,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=rbkRlBZUMRE",
-      "duration": "—",
+      "duration": "58:08",
       "thumb": "https://i.ytimg.com/vi/rbkRlBZUMRE/hqdefault.jpg",
       "desc": "The Cross at the Center - Part 1 | Derek Prince - from Derek Prince on YouTube.",
       "tags": [
@@ -2191,7 +2196,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=cleQjLtKNGM",
-      "duration": "—",
+      "duration": "13:48",
       "thumb": "https://i.ytimg.com/vi/cleQjLtKNGM/hqdefault.jpg",
       "desc": "Nathaniel Bassey   Hallelujah Challenge Praise Medley - from Nathaniel Bassey Main on YouTube.",
       "tags": [
@@ -2206,7 +2211,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=qDATPdstytc",
-      "duration": "—",
+      "duration": "1:11:20",
       "thumb": "https://i.ytimg.com/vi/qDATPdstytc/hqdefault.jpg",
       "desc": "Discerning the Right Moment - Bishop T.D. Jakes - from The Potter’s House of Dallas on YouTube.",
       "tags": [
@@ -2220,7 +2225,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=XAWcu1gCgb0",
-      "duration": "—",
+      "duration": "42:20",
       "thumb": "https://i.ytimg.com/vi/XAWcu1gCgb0/hqdefault.jpg",
       "desc": "T.D. Jakes: Shift Your MINDSET to Receive Your Promise From God | Full Sermons on TBN - from TBN: Full Sermons & Teachings on YouTube.",
       "tags": [
@@ -2234,7 +2239,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=qERfwmZHzv8",
-      "duration": "—",
+      "duration": "41:17",
       "thumb": "https://i.ytimg.com/vi/qERfwmZHzv8/hqdefault.jpg",
       "desc": "T.D. Jakes: God Is Preparing You for GREATNESS; Here's What You NEED to Know | Full Sermons on TBN - from TBN: Full Sermons & Teachings on YouTube.",
       "tags": [
@@ -2248,7 +2253,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=i5vC1lzhWS4",
-      "duration": "—",
+      "duration": "10:45",
       "thumb": "https://i.ytimg.com/vi/i5vC1lzhWS4/hqdefault.jpg",
       "desc": "Nathaniel Bassey -  Hallelujah Challenge Worship Medley - from Nathaniel Bassey Main on YouTube.",
       "tags": [
@@ -2263,7 +2268,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=11KwqBOiKFo",
-      "duration": "—",
+      "duration": "47:17",
       "thumb": "https://i.ytimg.com/vi/11KwqBOiKFo/hqdefault.jpg",
       "desc": "T.D. Jakes: These Bumps in the Road Mean That You're Close to Your BREAKTHROUGH! | TBN - from TBN on YouTube.",
       "tags": [
@@ -2277,7 +2282,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=8bjJP1CjfkI",
-      "duration": "—",
+      "duration": "24:21",
       "thumb": "https://i.ytimg.com/vi/8bjJP1CjfkI/hqdefault.jpg",
       "desc": "The Holy Spirit: Filling the Believer – Dr. Charles Stanley - from In Touch Ministries on YouTube.",
       "tags": [
@@ -2291,7 +2296,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=edZVnKxKEUU",
-      "duration": "—",
+      "duration": "5:50",
       "thumb": "https://i.ytimg.com/vi/edZVnKxKEUU/hqdefault.jpg",
       "desc": "SO BE IT | Elevation Worship (feat. Tiffany Hudson & Chris Brown) - from Elevation Worship on YouTube.",
       "tags": [
@@ -2306,7 +2311,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=6WITgymwqJ4",
-      "duration": "—",
+      "duration": "30:07",
       "thumb": "https://i.ytimg.com/vi/6WITgymwqJ4/hqdefault.jpg",
       "desc": "A God We Can Trust – Dr. Charles Stanley - from In Touch Ministries on YouTube.",
       "tags": [
@@ -2320,7 +2325,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=7BXRiYuKRwU",
-      "duration": "—",
+      "duration": "30:18",
       "thumb": "https://i.ytimg.com/vi/7BXRiYuKRwU/hqdefault.jpg",
       "desc": "Walking with God Through the Dark Times – Dr. Charles Stanley - from In Touch Ministries on YouTube.",
       "tags": [
@@ -2334,7 +2339,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=zMkjwXtZY2Q",
-      "duration": "—",
+      "duration": "30:37",
       "thumb": "https://i.ytimg.com/vi/zMkjwXtZY2Q/hqdefault.jpg",
       "desc": "The Troublemaker Within Us – Dr. Charles Stanley - from In Touch Ministries on YouTube.",
       "tags": [
@@ -2348,7 +2353,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=eJshpEZQQqU",
-      "duration": "—",
+      "duration": "7:34",
       "thumb": "https://i.ytimg.com/vi/eJshpEZQQqU/hqdefault.jpg",
       "desc": "One More Day (Live) | Elevation Worship & Sons Of Sunday - from Elevation Worship on YouTube.",
       "tags": [
@@ -2363,7 +2368,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=ggPkNFsFv9M",
-      "duration": "—",
+      "duration": "40:50",
       "thumb": "https://i.ytimg.com/vi/ggPkNFsFv9M/hqdefault.jpg",
       "desc": "Fully Persuaded | David Wilkerson - from World Challenge on YouTube.",
       "tags": [
@@ -2377,7 +2382,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=MQERQGq7O_M",
-      "duration": "—",
+      "duration": "46:02",
       "thumb": "https://i.ytimg.com/vi/MQERQGq7O_M/hqdefault.jpg",
       "desc": "Stand Still and See the Salvation of the Lord - David Wilkerson - April 20, 1997 - from World Challenge on YouTube.",
       "tags": [
@@ -2391,7 +2396,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=nTHNnfnfIrE",
-      "duration": "—",
+      "duration": "18:39",
       "thumb": "https://i.ytimg.com/vi/nTHNnfnfIrE/hqdefault.jpg",
       "desc": "Living Hope / Glorify Thy Name (Spontaneous) - Bethel Music, Kristene DiMarco - from Bethel Music on YouTube.",
       "tags": [
@@ -2406,7 +2411,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=dGSohfVtP4Y",
-      "duration": "—",
+      "duration": "50:15",
       "thumb": "https://i.ytimg.com/vi/dGSohfVtP4Y/hqdefault.jpg",
       "desc": "The Power of a Godly Life | David Wilkerson - from World Challenge on YouTube.",
       "tags": [
@@ -2420,7 +2425,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=tl5xifrTeus",
-      "duration": "—",
+      "duration": "1:10:25",
       "thumb": "https://i.ytimg.com/vi/tl5xifrTeus/hqdefault.jpg",
       "desc": "Stop Limiting What God Can Do-FULL SERMON | Joyce Meyer - from Joyce Meyer Ministries on YouTube.",
       "tags": [
@@ -2434,7 +2439,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=JOujmS308T8",
-      "duration": "—",
+      "duration": "43:49",
       "thumb": "https://i.ytimg.com/vi/JOujmS308T8/hqdefault.jpg",
       "desc": "Don't Give Up Yet-FULL SERMON | Joyce Meyer - from Joyce Meyer Ministries on YouTube.",
       "tags": [
@@ -2448,7 +2453,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=HpbQVArlRX0",
-      "duration": "—",
+      "duration": "59:11",
       "thumb": "https://i.ytimg.com/vi/HpbQVArlRX0/hqdefault.jpg",
       "desc": "One Hour of Deep Old Zimbabwe Worship Songs- Blessing Jeduthun - from Blessing Jeduthun Official on YouTube.",
       "tags": [
@@ -2463,7 +2468,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=or2dFPAuiNQ",
-      "duration": "—",
+      "duration": "1:15:33",
       "thumb": "https://i.ytimg.com/vi/or2dFPAuiNQ/hqdefault.jpg",
       "desc": "What Does Love Look Like?-FULL SERMON | Joyce Meyer - from Joyce Meyer Ministries on YouTube.",
       "tags": [
@@ -2477,7 +2482,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=fxaNMm6d94Q",
-      "duration": "—",
+      "duration": "35:38",
       "thumb": "https://i.ytimg.com/vi/fxaNMm6d94Q/hqdefault.jpg",
       "desc": "Take Bold Steps 1 | Pastor Mensa Otabil | ICGC Christ Temple - from Mensa Otabil on YouTube.",
       "tags": [
@@ -2491,7 +2496,7 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=9CXluNSidRY",
-      "duration": "—",
+      "duration": "5:00",
       "thumb": "https://i.ytimg.com/vi/9CXluNSidRY/hqdefault.jpg",
       "desc": "Achapindura  -  Zim Gospel Hub - from Zim Gospel Hub on YouTube.",
       "tags": [
@@ -2506,7 +2511,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=flVCag6irbY",
-      "duration": "—",
+      "duration": "5:03",
       "thumb": "https://i.ytimg.com/vi/flVCag6irbY/hqdefault.jpg",
       "desc": "Lay Aside Every Weight || WORD TO GO with Pastor Mensa Otabil Episode 2288  - from Mensa Otabil on YouTube.",
       "tags": [
@@ -2520,7 +2525,7 @@
       "category": "Sermons & Messages",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=5i7p8XLa2gE",
-      "duration": "—",
+      "duration": "21:35",
       "thumb": "https://i.ytimg.com/vi/5i7p8XLa2gE/hqdefault.jpg",
       "desc": "The Holy Spirit has Sent You! | Reinhard Bonnke - from Global Awakening on YouTube.",
       "tags": [
@@ -2534,17 +2539,1162 @@
       "category": "Worship & Songs",
       "type": "youtube",
       "source": "https://www.youtube.com/watch?v=Kp-XfPtsReI",
-      "duration": "—",
+      "duration": "2:04:20",
       "thumb": "https://i.ytimg.com/vi/Kp-XfPtsReI/hqdefault.jpg",
       "desc": "Don Moen Nonstop Praise and Worship Playlist - from DonMoenTV on YouTube.",
       "tags": [
         "worship",
         "praise"
       ]
+    },
+    {
+      "id": "gc-rain",
+      "title": "Let It Rain — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=LcOgmMgKKg0",
+      "duration": "7:00",
+      "thumb": "https://i.ytimg.com/vi/LcOgmMgKKg0/hqdefault.jpg",
+      "desc": "\"Let It Rain\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc2",
+      "title": "Rooftops — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=PLIKjKRU0YY",
+      "duration": "7:50",
+      "thumb": "https://i.ytimg.com/vi/PLIKjKRU0YY/hqdefault.jpg",
+      "desc": "\"Rooftops\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc3",
+      "title": "Break Every Chain — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=0XwbVCI_mkw",
+      "duration": "8:08",
+      "thumb": "https://i.ytimg.com/vi/0XwbVCI_mkw/hqdefault.jpg",
+      "desc": "\"Break Every Chain\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc4",
+      "title": "Come Away — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ZZoOfGiqZ7Y",
+      "duration": "7:47",
+      "thumb": "https://i.ytimg.com/vi/ZZoOfGiqZ7Y/hqdefault.jpg",
+      "desc": "\"Come Away\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc5",
+      "title": "In The River — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=kYWN3ywCfSs",
+      "duration": "4:38",
+      "thumb": "https://i.ytimg.com/vi/kYWN3ywCfSs/hqdefault.jpg",
+      "desc": "\"In The River\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc6",
+      "title": "Holy Spirit — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=qNwnOfZ5N8A",
+      "duration": "8:09",
+      "thumb": "https://i.ytimg.com/vi/qNwnOfZ5N8A/hqdefault.jpg",
+      "desc": "\"Holy Spirit\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc7",
+      "title": "Set A Fire — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=lZiqgrtNT6s",
+      "duration": "5:15",
+      "thumb": "https://i.ytimg.com/vi/lZiqgrtNT6s/hqdefault.jpg",
+      "desc": "\"Set A Fire\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc8",
+      "title": "Your Love Never Fails — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=IoezWBPGRAc",
+      "duration": "7:58",
+      "thumb": "https://i.ytimg.com/vi/IoezWBPGRAc/hqdefault.jpg",
+      "desc": "\"Your Love Never Fails\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc9",
+      "title": "Where You Go I Go — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=c2U3PU-E32E",
+      "duration": "7:38",
+      "thumb": "https://i.ytimg.com/vi/c2U3PU-E32E/hqdefault.jpg",
+      "desc": "\"Where You Go I Go\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc10",
+      "title": "My Soul Longs For You — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=6GgNw2neYrU",
+      "duration": "9:44",
+      "thumb": "https://i.ytimg.com/vi/6GgNw2neYrU/hqdefault.jpg",
+      "desc": "\"My Soul Longs For You\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc11",
+      "title": "Show Me Your Glory — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=BOQf2KcoSQs",
+      "duration": "7:55",
+      "thumb": "https://i.ytimg.com/vi/BOQf2KcoSQs/hqdefault.jpg",
+      "desc": "\"Show Me Your Glory\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc12",
+      "title": "Center Of Your Love — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=bsk-6l4gEqw",
+      "duration": "9:37",
+      "thumb": "https://i.ytimg.com/vi/bsk-6l4gEqw/hqdefault.jpg",
+      "desc": "\"Center Of Your Love\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc13",
+      "title": "Fearless — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=eC52MWRuOLo",
+      "duration": "4:40",
+      "thumb": "https://i.ytimg.com/vi/eC52MWRuOLo/hqdefault.jpg",
+      "desc": "\"Fearless\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc14",
+      "title": "Fresh Outpouring — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Cyrr2cXZ7KI",
+      "duration": "15:30",
+      "thumb": "https://i.ytimg.com/vi/Cyrr2cXZ7KI/hqdefault.jpg",
+      "desc": "\"Fresh Outpouring\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc15",
+      "title": "Fierce — Jesus Culture",
+      "channel": "ch-gospel",
+      "category": "Jesus Culture",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=II1JKBuz-AY",
+      "duration": "4:07",
+      "thumb": "https://i.ytimg.com/vi/II1JKBuz-AY/hqdefault.jpg",
+      "desc": "\"Fierce\" by Jesus Culture. Spirit-filled worship from Jesus Culture.",
+      "tags": [
+        "worship",
+        "gospel",
+        "jc",
+        "jesus culture"
+      ]
+    },
+    {
+      "id": "gc16",
+      "title": "Ishe Komborera — Pastor G",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=kxH6d-t3cLM",
+      "duration": "7:16",
+      "thumb": "https://i.ytimg.com/vi/kxH6d-t3cLM/hqdefault.jpg",
+      "desc": "\"Ishe Komborera\" by Pastor G. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "pastor g"
+      ]
+    },
+    {
+      "id": "gc17",
+      "title": "Mweya Mutsvene — Pastor G",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=344U9PFIyrQ",
+      "duration": "6:02",
+      "thumb": "https://i.ytimg.com/vi/344U9PFIyrQ/hqdefault.jpg",
+      "desc": "\"Mweya Mutsvene\" by Pastor G. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "pastor g"
+      ]
+    },
+    {
+      "id": "gc18",
+      "title": "Anything — Pastor G & Oneheart Worship",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=MTevH_lT4dI",
+      "duration": "4:26",
+      "thumb": "https://i.ytimg.com/vi/MTevH_lT4dI/hqdefault.jpg",
+      "desc": "\"Anything\" by Pastor G & Oneheart Worship. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "pastor g & oneheart worship"
+      ]
+    },
+    {
+      "id": "gc19",
+      "title": "Mweya Mutsvene — The Unveiled",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Wg3fipHRjx0",
+      "duration": "6:01",
+      "thumb": "https://i.ytimg.com/vi/Wg3fipHRjx0/hqdefault.jpg",
+      "desc": "\"Mweya Mutsvene\" by The Unveiled. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "the unveiled"
+      ]
+    },
+    {
+      "id": "gc20",
+      "title": "Mwari Wazadza — The Unveiled",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=eh4jV5NRkLI",
+      "duration": "9:21",
+      "thumb": "https://i.ytimg.com/vi/eh4jV5NRkLI/hqdefault.jpg",
+      "desc": "\"Mwari Wazadza\" by The Unveiled. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "the unveiled"
+      ]
+    },
+    {
+      "id": "gc21",
+      "title": "Zvichaita Chete — The Unveiled",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Ci0y9qnsUfo",
+      "duration": "3:39",
+      "thumb": "https://i.ytimg.com/vi/Ci0y9qnsUfo/hqdefault.jpg",
+      "desc": "\"Zvichaita Chete\" by The Unveiled. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "the unveiled"
+      ]
+    },
+    {
+      "id": "gc22",
+      "title": "Tichakwira Pamusoro — Fungisai Zvakavapano-Mashavave & Dorcas Moyo",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=2pugeH-VDMo",
+      "duration": "5:00",
+      "thumb": "https://i.ytimg.com/vi/2pugeH-VDMo/hqdefault.jpg",
+      "desc": "\"Tichakwira Pamusoro\" by Fungisai Zvakavapano-Mashavave & Dorcas Moyo. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "fungisai zvakavapano-mashavave & dorcas moyo"
+      ]
+    },
+    {
+      "id": "gc23",
+      "title": "I Belong To Jesus — Fungisai Zvakavapano-Mashavave",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=GNU5ys1iwCw",
+      "duration": "5:34",
+      "thumb": "https://i.ytimg.com/vi/GNU5ys1iwCw/hqdefault.jpg",
+      "desc": "\"I Belong To Jesus\" by Fungisai Zvakavapano-Mashavave. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "fungisai zvakavapano-mashavave"
+      ]
+    },
+    {
+      "id": "gc24",
+      "title": "Jehovah Kudzwai — Fungisai Zvakavapano-Mashavave",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=PciMgdSq5pM",
+      "duration": "3:03",
+      "thumb": "https://i.ytimg.com/vi/PciMgdSq5pM/hqdefault.jpg",
+      "desc": "\"Jehovah Kudzwai\" by Fungisai Zvakavapano-Mashavave. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "fungisai zvakavapano-mashavave"
+      ]
+    },
+    {
+      "id": "gc25",
+      "title": "Vapei Mazuva — Fungisai Zvakavapano-Mashavave",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=mhIQ2LKoD-w",
+      "duration": "5:54",
+      "thumb": "https://i.ytimg.com/vi/mhIQ2LKoD-w/hqdefault.jpg",
+      "desc": "\"Vapei Mazuva\" by Fungisai Zvakavapano-Mashavave. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "fungisai zvakavapano-mashavave"
+      ]
+    },
+    {
+      "id": "gc26",
+      "title": "Abraham — Sabastian Magacha",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=jzt4I1hH1fw",
+      "duration": "5:04",
+      "thumb": "https://i.ytimg.com/vi/jzt4I1hH1fw/hqdefault.jpg",
+      "desc": "\"Abraham\" by Sabastian Magacha. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "sabastian magacha"
+      ]
+    },
+    {
+      "id": "gc27",
+      "title": "Nzira — Sabastian Magacha",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=_A3fNfDjZoM",
+      "duration": "5:14",
+      "thumb": "https://i.ytimg.com/vi/_A3fNfDjZoM/hqdefault.jpg",
+      "desc": "\"Nzira\" by Sabastian Magacha. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "sabastian magacha"
+      ]
+    },
+    {
+      "id": "gc28",
+      "title": "Bvunza Mweya — Mathias Mhere",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=PpLhM7mT10g",
+      "duration": "6:32",
+      "thumb": "https://i.ytimg.com/vi/PpLhM7mT10g/hqdefault.jpg",
+      "desc": "\"Bvunza Mweya\" by Mathias Mhere. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "mathias mhere"
+      ]
+    },
+    {
+      "id": "gc29",
+      "title": "Nyengetera Uone — Mathias Mhere",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=0v3WR5eGooE",
+      "duration": "4:26",
+      "thumb": "https://i.ytimg.com/vi/0v3WR5eGooE/hqdefault.jpg",
+      "desc": "\"Nyengetera Uone\" by Mathias Mhere. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "mathias mhere"
+      ]
+    },
+    {
+      "id": "gc30",
+      "title": "Regera Kundisiya — Charles Charamba",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=KRoO7ndFY9s",
+      "duration": "5:02",
+      "thumb": "https://i.ytimg.com/vi/KRoO7ndFY9s/hqdefault.jpg",
+      "desc": "\"Regera Kundisiya\" by Charles Charamba. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "charles charamba"
+      ]
+    },
+    {
+      "id": "gc31",
+      "title": "Ndinovimba Nemi — Charles Charamba",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=v05_ToH1nmM",
+      "duration": "5:31",
+      "thumb": "https://i.ytimg.com/vi/v05_ToH1nmM/hqdefault.jpg",
+      "desc": "\"Ndinovimba Nemi\" by Charles Charamba. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "charles charamba"
+      ]
+    },
+    {
+      "id": "gc32",
+      "title": "Mhinduro Iripo — Charles Charamba & Fishers of Men",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=M0rzk-WLOWs",
+      "duration": "6:24",
+      "thumb": "https://i.ytimg.com/vi/M0rzk-WLOWs/hqdefault.jpg",
+      "desc": "\"Mhinduro Iripo\" by Charles Charamba & Fishers of Men. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "charles charamba & fishers of men"
+      ]
+    },
+    {
+      "id": "gc33",
+      "title": "Mirira Mangwanani — Shingisai Suluma",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=OSQPbIrdA88",
+      "duration": "5:03",
+      "thumb": "https://i.ytimg.com/vi/OSQPbIrdA88/hqdefault.jpg",
+      "desc": "\"Mirira Mangwanani\" by Shingisai Suluma. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "shingisai suluma"
+      ]
+    },
+    {
+      "id": "gc34",
+      "title": "Oh Ndiye Jesu — Shingisai Suluma",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=KMVR_7xXEy0",
+      "duration": "6:22",
+      "thumb": "https://i.ytimg.com/vi/KMVR_7xXEy0/hqdefault.jpg",
+      "desc": "\"Oh Ndiye Jesu\" by Shingisai Suluma. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "shingisai suluma"
+      ]
+    },
+    {
+      "id": "gc35",
+      "title": "Maitiro Enyu — Shingisai Suluma",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=16xdALFRZE4",
+      "duration": "5:07",
+      "thumb": "https://i.ytimg.com/vi/16xdALFRZE4/hqdefault.jpg",
+      "desc": "\"Maitiro Enyu\" by Shingisai Suluma. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "shingisai suluma"
+      ]
+    },
+    {
+      "id": "gc36",
+      "title": "Apo Jesu Achionekwa — Tino Mbasera",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=FoC6uJCC_N8",
+      "duration": "6:26",
+      "thumb": "https://i.ytimg.com/vi/FoC6uJCC_N8/hqdefault.jpg",
+      "desc": "\"Apo Jesu Achionekwa\" by Tino Mbasera. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "tino mbasera"
+      ]
+    },
+    {
+      "id": "gc37",
+      "title": "Mwari Wezvishamiso — Tino Mbasera ft. Blessing Jeduthan",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=B0eSP1yuhx4",
+      "duration": "6:51",
+      "thumb": "https://i.ytimg.com/vi/B0eSP1yuhx4/hqdefault.jpg",
+      "desc": "\"Mwari Wezvishamiso\" by Tino Mbasera ft. Blessing Jeduthan. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "tino mbasera"
+      ]
+    },
+    {
+      "id": "gc38",
+      "title": "Moto — Batsirai Shasha ft. Awakened Worship",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=YRE682usRck",
+      "duration": "5:18",
+      "thumb": "https://i.ytimg.com/vi/YRE682usRck/hqdefault.jpg",
+      "desc": "\"Moto\" by Batsirai Shasha ft. Awakened Worship. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "batsirai shasha"
+      ]
+    },
+    {
+      "id": "gc39",
+      "title": "Ndiri Mukundi (Victory Anthem) — FIG Worship Culture",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=r-dKqm622vw",
+      "duration": "5:22",
+      "thumb": "https://i.ytimg.com/vi/r-dKqm622vw/hqdefault.jpg",
+      "desc": "\"Ndiri Mukundi (Victory Anthem)\" by FIG Worship Culture. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "fig worship culture"
+      ]
+    },
+    {
+      "id": "gc40",
+      "title": "Nditenderei — BCC Worship ZW ft. Josh Mtima",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=l-4Ej164dK8",
+      "duration": "9:38",
+      "thumb": "https://i.ytimg.com/vi/l-4Ej164dK8/hqdefault.jpg",
+      "desc": "\"Nditenderei\" by BCC Worship ZW ft. Josh Mtima. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "bcc worship zw"
+      ]
+    },
+    {
+      "id": "gc41",
+      "title": "Tangai Manamata — Mudiwa Hood ft. Jah Prayzah",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=KE2JqgTqe-E",
+      "duration": "4:02",
+      "thumb": "https://i.ytimg.com/vi/KE2JqgTqe-E/hqdefault.jpg",
+      "desc": "\"Tangai Manamata\" by Mudiwa Hood ft. Jah Prayzah. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "mudiwa hood"
+      ]
+    },
+    {
+      "id": "gc42",
+      "title": "Hakuna Zvinorema — Joyous Celebration",
+      "channel": "ch-gospel",
+      "category": "Zimbabwe Gospel",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=P4mrhYXrS7o",
+      "duration": "10:20",
+      "thumb": "https://i.ytimg.com/vi/P4mrhYXrS7o/hqdefault.jpg",
+      "desc": "\"Hakuna Zvinorema\" by Joyous Celebration. Zimbabwean gospel worship to lift your spirit.",
+      "tags": [
+        "worship",
+        "gospel",
+        "zim",
+        "joyous celebration"
+      ]
+    },
+    {
+      "id": "gc43",
+      "title": "Way Maker — Sinach",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=QM8jQHE5AAk",
+      "duration": "8:46",
+      "thumb": "https://i.ytimg.com/vi/QM8jQHE5AAk/hqdefault.jpg",
+      "desc": "\"Way Maker\" by Sinach. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "sinach"
+      ]
+    },
+    {
+      "id": "gc44",
+      "title": "I Know Who I Am — Sinach",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=frtZ4XfoXxM",
+      "duration": "6:11",
+      "thumb": "https://i.ytimg.com/vi/frtZ4XfoXxM/hqdefault.jpg",
+      "desc": "\"I Know Who I Am\" by Sinach. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "sinach"
+      ]
+    },
+    {
+      "id": "gc45",
+      "title": "What A Beautiful Name — Hillsong Worship",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=nQWFzMvCfLE",
+      "duration": "5:43",
+      "thumb": "https://i.ytimg.com/vi/nQWFzMvCfLE/hqdefault.jpg",
+      "desc": "\"What A Beautiful Name\" by Hillsong Worship. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "hillsong worship"
+      ]
+    },
+    {
+      "id": "gc46",
+      "title": "Oceans (Where Feet May Fail) — Hillsong UNITED",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=OP-00EwLdiU",
+      "duration": "9:37",
+      "thumb": "https://i.ytimg.com/vi/OP-00EwLdiU/hqdefault.jpg",
+      "desc": "\"Oceans (Where Feet May Fail)\" by Hillsong UNITED. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "hillsong united"
+      ]
+    },
+    {
+      "id": "gc47",
+      "title": "Jireh — Elevation Worship & Maverick City",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=mC-zw0zCCtg",
+      "duration": "9:59",
+      "thumb": "https://i.ytimg.com/vi/mC-zw0zCCtg/hqdefault.jpg",
+      "desc": "\"Jireh\" by Elevation Worship & Maverick City. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "elevation worship & maverick city"
+      ]
+    },
+    {
+      "id": "gc48",
+      "title": "Raise A Hallelujah — Bethel Music",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=G2XtRuPfaAU",
+      "duration": "7:51",
+      "thumb": "https://i.ytimg.com/vi/G2XtRuPfaAU/hqdefault.jpg",
+      "desc": "\"Raise A Hallelujah\" by Bethel Music. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "bethel music"
+      ]
+    },
+    {
+      "id": "gc49",
+      "title": "O Come to the Altar — Elevation Worship",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=rYQ5yXCc_CA",
+      "duration": "5:54",
+      "thumb": "https://i.ytimg.com/vi/rYQ5yXCc_CA/hqdefault.jpg",
+      "desc": "\"O Come to the Altar\" by Elevation Worship. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "elevation worship"
+      ]
+    },
+    {
+      "id": "gc50",
+      "title": "Nothing Is Impossible — Planetshakers",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=tuDNkda8X3E",
+      "duration": "5:01",
+      "thumb": "https://i.ytimg.com/vi/tuDNkda8X3E/hqdefault.jpg",
+      "desc": "\"Nothing Is Impossible\" by Planetshakers. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "planetshakers"
+      ]
+    },
+    {
+      "id": "gc51",
+      "title": "How Great Is Our God — Chris Tomlin",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=XV4nOVmWW2A",
+      "duration": "5:46",
+      "thumb": "https://i.ytimg.com/vi/XV4nOVmWW2A/hqdefault.jpg",
+      "desc": "\"How Great Is Our God\" by Chris Tomlin. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "chris tomlin"
+      ]
+    },
+    {
+      "id": "gc52",
+      "title": "Gracefully Broken — Tasha Cobbs Leonard",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=AzZC3EbH6iE",
+      "duration": "5:37",
+      "thumb": "https://i.ytimg.com/vi/AzZC3EbH6iE/hqdefault.jpg",
+      "desc": "\"Gracefully Broken\" by Tasha Cobbs Leonard. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "tasha cobbs leonard"
+      ]
+    },
+    {
+      "id": "gc53",
+      "title": "Atmosphere Shift — Phil Thompson",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=CvMSmpJiQiE",
+      "duration": "6:15",
+      "thumb": "https://i.ytimg.com/vi/CvMSmpJiQiE/hqdefault.jpg",
+      "desc": "\"Atmosphere Shift\" by Phil Thompson. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "phil thompson"
+      ]
+    },
+    {
+      "id": "gc54",
+      "title": "Spirit — Dunsin Oyekan",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=zUFC3C-bank",
+      "duration": "15:18",
+      "thumb": "https://i.ytimg.com/vi/zUFC3C-bank/hqdefault.jpg",
+      "desc": "\"Spirit\" by Dunsin Oyekan. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "dunsin oyekan"
+      ]
+    },
+    {
+      "id": "gc55",
+      "title": "Excess Love — Mercy Chinwo",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=awexlghI7gM",
+      "duration": "6:37",
+      "thumb": "https://i.ytimg.com/vi/awexlghI7gM/hqdefault.jpg",
+      "desc": "\"Excess Love\" by Mercy Chinwo. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "mercy chinwo"
+      ]
+    },
+    {
+      "id": "gc56",
+      "title": "In The Shadow — Joyous Celebration",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=lRnFrO-nQ0M",
+      "duration": "9:45",
+      "thumb": "https://i.ytimg.com/vi/lRnFrO-nQ0M/hqdefault.jpg",
+      "desc": "\"In The Shadow\" by Joyous Celebration. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "joyous celebration"
+      ]
+    },
+    {
+      "id": "gc57",
+      "title": "Wongigcina Ngci — Joyous Celebration",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=sNqT46TviY0",
+      "duration": "4:31",
+      "thumb": "https://i.ytimg.com/vi/sNqT46TviY0/hqdefault.jpg",
+      "desc": "\"Wongigcina Ngci\" by Joyous Celebration. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "joyous celebration"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
+  },
+  "seedVersion": 2,
+  "schedule": {
+    "version": 1,
+    "timezone": "Africa/Harare",
+    "note": "Times are Zimbabwe time (CAT). The whole world sees the same programme at the same moment.",
+    "signature": {
+      "videoId": "gc-rain",
+      "label": "Let It Rain",
+      "times": [
+        "00:00",
+        "06:00",
+        "14:00",
+        "18:00"
+      ]
+    },
+    "blocks": [
+      {
+        "id": "sunday",
+        "name": "Sunday Service",
+        "icon": "⛪",
+        "days": [
+          0
+        ],
+        "start": "11:00",
+        "end": "14:00",
+        "channels": [
+          "ch-services"
+        ],
+        "maxMinutes": 150,
+        "desc": "Sunday services and anointed messages while the church gathers."
+      },
+      {
+        "id": "midnight",
+        "name": "Midnight Watch",
+        "icon": "🌙",
+        "start": "00:00",
+        "end": "04:00",
+        "mix": [
+          {
+            "channels": [
+              "ch-prayer"
+            ],
+            "take": 1
+          },
+          {
+            "channels": [
+              "ch-gospel"
+            ],
+            "take": 2
+          },
+          {
+            "channels": [
+              "ch-songs"
+            ],
+            "take": 1
+          }
+        ],
+        "maxMinutes": 40,
+        "desc": "Prayer and worship through the midnight hour."
+      },
+      {
+        "id": "dawn",
+        "name": "Dawn Prayer",
+        "icon": "🕊",
+        "start": "04:00",
+        "end": "06:00",
+        "channels": [
+          "ch-prayer"
+        ],
+        "maxMinutes": 60,
+        "desc": "Start the day at the altar: prayer and deliverance."
+      },
+      {
+        "id": "morning",
+        "name": "Morning Glory",
+        "icon": "🌅",
+        "start": "06:00",
+        "end": "09:00",
+        "mix": [
+          {
+            "channels": [
+              "ch-gospel"
+            ],
+            "take": 2
+          },
+          {
+            "channels": [
+              "ch-songs"
+            ],
+            "take": 1
+          }
+        ],
+        "maxMinutes": 25,
+        "desc": "Fresh worship to open your day."
+      },
+      {
+        "id": "word",
+        "name": "The Word Hour",
+        "icon": "📖",
+        "start": "09:00",
+        "end": "12:00",
+        "channels": [
+          "ch-sermons",
+          "ch-classics"
+        ],
+        "maxMinutes": 120,
+        "desc": "Anointed teaching and sermons."
+      },
+      {
+        "id": "midday",
+        "name": "Midday Miracles",
+        "icon": "☀️",
+        "start": "12:00",
+        "end": "14:00",
+        "channels": [
+          "ch-prayer",
+          "ch-fwm"
+        ],
+        "maxMinutes": 120,
+        "desc": "Prayer, deliverance and faith messages."
+      },
+      {
+        "id": "afternoon",
+        "name": "Afternoon Teaching",
+        "icon": "🔥",
+        "start": "14:00",
+        "end": "18:00",
+        "channels": [
+          "ch-sermons",
+          "ch-fwm",
+          "ch-classics",
+          "ch-services"
+        ],
+        "maxMinutes": 120,
+        "desc": "Teaching to build your faith."
+      },
+      {
+        "id": "worship",
+        "name": "Worship Hour",
+        "icon": "🎶",
+        "start": "18:00",
+        "end": "20:00",
+        "mix": [
+          {
+            "channels": [
+              "ch-gospel"
+            ],
+            "take": 2
+          },
+          {
+            "channels": [
+              "ch-songs"
+            ],
+            "take": 1
+          }
+        ],
+        "maxMinutes": 25,
+        "desc": "Two hours of pure worship: Jesus Culture, Zimbabwe gospel, Sinach, Hillsong and more."
+      },
+      {
+        "id": "evening",
+        "name": "Evening Word & Prayer",
+        "icon": "🌙",
+        "start": "20:00",
+        "end": "24:00",
+        "channels": [
+          "ch-services",
+          "ch-sermons",
+          "ch-prayer",
+          "ch-archive"
+        ],
+        "maxMinutes": 120,
+        "desc": "Close the day with the Word and prayer."
+      }
+    ]
   }
 }

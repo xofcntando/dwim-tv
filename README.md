@@ -67,6 +67,26 @@ PWAs require HTTPS, which Render provides. Bump `VERSION` in `public/sw.js` to f
 
 The **Submit a Prayer Request** button opens a form; requests are stored in MongoDB (rate-limited, spam honeypot) and appear in the admin panel under **Prayer Requests**, where the team can mark them *Prayed* or delete them.
 
+## TV Schedule (Zimbabwe time, CAT)
+
+DWIM TV runs a real daily programme, the same for every viewer worldwide. The plan lives in `schedule` inside the catalog and can be edited in the admin panel under **TV Schedule**.
+
+| Time (CAT) | Block |
+|---|---|
+| 00:00 - 04:00 | Midnight Watch (prayer + worship) |
+| 04:00 - 06:00 | Dawn Prayer |
+| 06:00 - 09:00 | Morning Glory (worship) |
+| 09:00 - 12:00 | The Word Hour (sermons) |
+| 12:00 - 14:00 | Midday Miracles (prayer + faith messages) |
+| 14:00 - 18:00 | Afternoon Teaching |
+| **18:00 - 20:00** | **Worship Hour** (Jesus Culture, Zimbabwe gospel, Sinach, Hillsong, Elevation and more) |
+| 20:00 - 24:00 | Evening Word & Prayer |
+| Sundays 11:00 - 14:00 | Sunday Service |
+
+**Let It Rain** (Jesus Culture) plays every day at **00:00, 06:00, 14:00 and 18:00** (midnight, morning, afternoon, evening).
+
+Blocks pull from channels (`channels` or a weighted `mix`), skip videos longer than `maxMinutes`, and are shuffled with a daily seed so everyone sees the same order. New gospel songs are in the **Gospel Music** channel (`ch-gospel`). Existing MongoDB databases receive the new songs and schedule automatically once (via `seedVersion`).
+
 ## How to add videos (never touch Render!)
 
 ### Option 0 — the Admin Panel (easiest, no code!)
