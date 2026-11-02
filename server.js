@@ -2,28 +2,41 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const db = require('./db');
 
 const app = express();
+app.set('trust proxy', 1); // behind Render's proxy, so req.ip is the real visitor
 const PORT = process.env.PORT || 3000;
 
 // DWIM TV — Destiny Word International Ministries
 console.log('⏳ DWIM TV (Destiny Word International Ministries) starting…');
 
 // Serve frontend
+// Service worker + manifest must always be revalidated so app updates reach installed phones/PCs
+app.get(['/sw.js', '/manifest.webmanifest'], (req, res, next) => { res.set('Cache-Control', 'no-cache'); next(); });
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // ---- API: the catalog (this is our "storage") ----
 const CATALOG_PATH = path.join(__dirname, 'data', 'videos.json');
 
-function readCatalog() {
+// In-memory copy of the catalog. MongoDB (when MONGODB_URI is set) is the source of truth;
+// otherwise data/videos.json is. Reads are served from memory, writes go to the store.
+let catalogCache = null;
+let writeChain = Promise.resolve(); // keeps MongoDB writes in order
+
+function readCatalogFile() {
   try {
-    const raw = fs.readFileSync(CATALOG_PATH, 'utf8');
-    return JSON.parse(raw);
+    return JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
   } catch (err) {
     console.error('Failed to read videos.json:', err.message);
     return { channels: [], videos: [] };
   }
+}
+
+function readCatalog() {
+  if (!catalogCache) catalogCache = readCatalogFile();
+  return JSON.parse(JSON.stringify(catalogCache)); // copy, so a rejected edit never corrupts the cache
 }
 
 /* ---- Live state: held in memory (and a temp file), NEVER committed to GitHub.
@@ -31,10 +44,13 @@ function readCatalog() {
 const LIVE_FILE = path.join(require('os').tmpdir(), 'dwim-live.json');
 const LIVE_MAX_MS = 10 * 3600 * 1000; // auto-end after 10h in case nobody taps End Live
 let liveNow = null;
-try {
-  const saved = JSON.parse(fs.readFileSync(LIVE_FILE, 'utf8'));
-  if (saved && saved.source && Date.now() - saved.startedAt < LIVE_MAX_MS) liveNow = saved;
-} catch (e) { /* none saved */ }
+function loadLiveFromFile() {
+  try {
+    const saved = JSON.parse(fs.readFileSync(LIVE_FILE, 'utf8'));
+    if (saved && saved.source && Date.now() - saved.startedAt < LIVE_MAX_MS) liveNow = saved;
+  } catch (e) { /* none saved */ }
+}
+loadLiveFromFile();
 
 function getLive() {
   if (liveNow && Date.now() - liveNow.startedAt >= LIVE_MAX_MS) { liveNow = null; persistLive(); }
@@ -43,10 +59,23 @@ function getLive() {
     : { title: 'DWIM TV Live — Sunday Service', type: 'youtube', source: '' };
 }
 function persistLive() {
+  if (db.isConnected()) {
+    db.saveLive(liveNow).catch(e => console.error('MongoDB: saving live state failed:', e.message));
+    return;
+  }
   try { liveNow ? fs.writeFileSync(LIVE_FILE, JSON.stringify(liveNow)) : fs.rmSync(LIVE_FILE, { force: true }); } catch (e) { /* ignore */ }
 }
 
-function writeCatalog(cat) {
+async function writeCatalog(cat) {
+  catalogCache = JSON.parse(JSON.stringify(cat));
+  if (db.isConnected()) {
+    const snapshot = catalogCache;
+    writeChain = writeChain.then(() => db.saveCatalog(snapshot)).catch(e => {
+      console.error('MongoDB: saving catalog failed:', e.message);
+    });
+    await writeChain;
+    return;
+  }
   fs.writeFileSync(CATALOG_PATH, JSON.stringify(cat, null, 2) + '\n', 'utf8');
 }
 
@@ -103,7 +132,7 @@ app.get('/api/channels', (req, res) => {
 
 // Health check (Render uses this to know the app is alive)
 app.get('/healthz', (req, res) => {
-  res.status(200).send('ok');
+  res.status(200).send(db.isConnected() ? 'ok (mongodb)' : 'ok');
 });
 
 /* =========================================================
@@ -236,7 +265,7 @@ app.put('/api/admin/church', requireAdmin, async (req, res) => {
   };
 
   cat.church = church;
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, church, github: gh });
 });
@@ -261,7 +290,7 @@ app.put('/api/admin/channels/:id', requireAdmin, async (req, res) => {
   ch.name = newName;
   if (body.icon !== undefined) ch.icon = String(body.icon).trim() || ch.icon;
   // keep the video "category" label in sync when it mirrors the old channel name
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, channel: ch, github: gh });
 });
@@ -286,7 +315,7 @@ app.delete('/api/admin/channels/:id', requireAdmin, async (req, res) => {
   }
 
   cat.channels.splice(idx, 1);
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, removed: ch, movedVideos: videosInChannel.length, github: gh });
 });
@@ -307,7 +336,7 @@ app.put('/api/admin/channels-order', requireAdmin, async (req, res) => {
   for (const c of cat.channels) if (!order.includes(c.id)) reordered.push(c);
 
   cat.channels = reordered;
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, channels: cat.channels, github: gh });
 });
@@ -384,7 +413,7 @@ app.post('/api/admin/videos', requireAdmin, async (req, res) => {
   };
 
   cat.videos.push(video);
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
 
   res.json({ ok: true, video, github: gh, channels: cat.channels });
@@ -422,7 +451,7 @@ app.post('/api/admin/videos/own', requireAdmin, async (req, res) => {
     tags: String(body.tags || '').split(',').map(s => s.trim()).filter(Boolean)
   };
   cat.videos.push(video);
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, video, github: gh });
 });
@@ -433,7 +462,7 @@ app.delete('/api/admin/videos/:id', requireAdmin, async (req, res) => {
   const idx = (cat.videos || []).findIndex(v => v.id === req.params.id);
   if (idx === -1) return res.status(404).json({ ok: false, error: 'Video not found' });
   const removed = cat.videos.splice(idx, 1)[0];
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, removed, github: gh });
 });
@@ -480,7 +509,7 @@ app.put('/api/admin/videos/:id', requireAdmin, async (req, res) => {
     }
   }
 
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, video, github: gh });
 });
@@ -496,7 +525,7 @@ app.post('/api/admin/videos/:id/feature', requireAdmin, async (req, res) => {
   if (!video) return res.status(404).json({ ok: false, error: 'Video not found' });
   const body = req.body || {};
   video.featured = body.featured !== undefined ? !!body.featured : !video.featured;
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, video, github: gh });
 });
@@ -516,9 +545,89 @@ app.put('/api/admin/videos-order', requireAdmin, async (req, res) => {
   for (const v of cat.videos) if (!order.includes(v.id)) reordered.push(v); // keep anything not mentioned, defensively
 
   cat.videos = reordered;
-  writeCatalog(cat);
+  await writeCatalog(cat);
   const gh = await syncCatalogToGitHub();
   res.json({ ok: true, videos: cat.videos, github: gh });
+});
+
+/* =========================================================
+   PRAYER REQUESTS — public form -> MongoDB, admin inbox
+   (without MongoDB they go to a temp file: they survive restarts
+   but NOT redeploys, so set MONGODB_URI in production)
+   ========================================================= */
+const PRAYER_FILE = path.join(require('os').tmpdir(), 'dwim-prayers.json');
+let prayersMem = null;
+function prayersLoadFile() {
+  if (!prayersMem) { try { prayersMem = JSON.parse(fs.readFileSync(PRAYER_FILE, 'utf8')); } catch (e) { prayersMem = []; } }
+  return prayersMem;
+}
+function prayersSaveFile() { try { fs.writeFileSync(PRAYER_FILE, JSON.stringify(prayersMem)); } catch (e) { /* ignore */ } }
+
+const prayerHits = new Map(); // ip -> [timestamps]  (max 5 requests / hour)
+function prayerRateOk(ip) {
+  const now = Date.now();
+  const hits = (prayerHits.get(ip) || []).filter(t => now - t < 3600 * 1000);
+  if (hits.length >= 5) { prayerHits.set(ip, hits); return false; }
+  hits.push(now); prayerHits.set(ip, hits);
+  return true;
+}
+
+app.post('/api/prayer', async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true }); // honeypot: bots fill hidden fields
+  const text = String(b.request || '').trim().slice(0, 1500);
+  if (text.length < 5) return res.status(400).json({ ok: false, error: 'Please write your prayer request.' });
+  if (!prayerRateOk(req.ip)) return res.status(429).json({ ok: false, error: 'Too many requests. Please try again later.' });
+  const clean = (v, n) => String(v || '').trim().slice(0, n);
+  const doc = {
+    _id: crypto.randomBytes(8).toString('hex'),
+    name: clean(b.name, 80) || 'Anonymous',
+    location: clean(b.location, 80),
+    contact: clean(b.contact, 120),
+    category: clean(b.category, 40) || 'General',
+    request: text,
+    prayed: false,
+    createdAt: new Date()
+  };
+  try {
+    if (db.isConnected()) await db.addPrayer(doc);
+    else { prayersLoadFile().unshift({ ...doc, createdAt: doc.createdAt.toISOString() }); prayersSaveFile(); }
+    res.json({ ok: true });
+  } catch (e) {
+    console.error('Saving prayer request failed:', e.message);
+    res.status(500).json({ ok: false, error: 'Could not save your request. Please try again.' });
+  }
+});
+
+app.get('/api/admin/prayers', requireAdmin, async (req, res) => {
+  try {
+    const list = db.isConnected() ? await db.listPrayers() : prayersLoadFile();
+    res.json({ ok: true, storage: db.isConnected() ? 'mongodb' : 'temp-file', prayers: list.map(p => ({ ...p, id: p._id })) });
+  } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+app.post('/api/admin/prayers/:id/prayed', requireAdmin, async (req, res) => {
+  const prayed = (req.body || {}).prayed !== false;
+  try {
+    if (db.isConnected()) {
+      const r = await db.setPrayerPrayed(req.params.id, prayed);
+      if (!r) return res.status(404).json({ ok: false, error: 'Not found' });
+    } else {
+      const p = prayersLoadFile().find(x => x._id === req.params.id);
+      if (!p) return res.status(404).json({ ok: false, error: 'Not found' });
+      p.prayed = prayed; prayersSaveFile();
+    }
+    res.json({ ok: true });
+  } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+app.delete('/api/admin/prayers/:id', requireAdmin, async (req, res) => {
+  try {
+    let ok;
+    if (db.isConnected()) ok = await db.deletePrayer(req.params.id);
+    else { const l = prayersLoadFile(); const i = l.findIndex(x => x._id === req.params.id); ok = i >= 0; if (ok) { l.splice(i, 1); prayersSaveFile(); } }
+    res.status(ok ? 200 : 404).json({ ok });
+  } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
 
 /* ---- Live stream: Go Live / End Live (memory only, instant for every phone) ---- */
@@ -549,6 +658,7 @@ app.post('/api/admin/live', requireAdmin, (req, res) => {
 /* ---- GitHub sync: commits data/videos.json so changes survive
         Render free-tier restarts (Render auto-redeploys from repo) ---- */
 async function syncCatalogToGitHub() {
+  if (db.isConnected()) return { ok: true, mongo: true }; // MongoDB persists everything; no commit/redeploy needed
   if (!GITHUB_TOKEN) return { ok: false, skipped: true, reason: 'GITHUB_TOKEN not set — saved to disk only' };
   try {
     const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/data/videos.json`;
@@ -590,7 +700,30 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`✝️ DWIM TV — Destiny Word International Ministries is live on port ${PORT}`);
-  console.log('   Raising a people of destiny through the Word.');
-});
+async function init() {
+  const uri = process.env.MONGODB_URI || process.env.MONGO_URL || '';
+  if (uri) {
+    try {
+      await db.connect(uri);
+      let cat = await db.loadCatalog();
+      if (!cat) {
+        cat = readCatalogFile(); // first run: seed MongoDB from data/videos.json
+        await db.saveCatalog(cat);
+        console.log(`🌱 MongoDB seeded from data/videos.json (${(cat.videos || []).length} videos)`);
+      }
+      catalogCache = cat;
+      const savedLive = await db.loadLive();
+      if (savedLive && savedLive.source && Date.now() - savedLive.startedAt < LIVE_MAX_MS) liveNow = savedLive;
+      console.log(`🍃 MongoDB connected — ${(cat.videos || []).length} videos, ${(cat.channels || []).length} channels`);
+    } catch (e) {
+      console.error('⚠️  MongoDB connection failed, falling back to data/videos.json:', e.message);
+    }
+  } else {
+    console.log('ℹ️  MONGODB_URI not set — using data/videos.json');
+  }
+  app.listen(PORT, () => {
+    console.log(`✝️ DWIM TV — Destiny Word International Ministries is live on port ${PORT}`);
+    console.log('   Raising a people of destiny through the Word.');
+  });
+}
+init();

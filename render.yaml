@@ -7,3 +7,12 @@ services:
     startCommand: node server.js
     healthCheckPath: /healthz
     autoDeploy: true
+    envVars:
+      - key: MONGODB_URI
+        sync: false   # paste your MongoDB Atlas connection string in the Render dashboard
+      - key: MONGODB_DB
+        value: dwimtv
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false

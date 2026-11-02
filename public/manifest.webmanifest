@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "DWIM TV — Destiny Word International Ministries",
+  "short_name": "DWIM TV",
+  "description": "Watch live Sunday services, sermons, worship, prayer and testimonies from Destiny Word International Ministries.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#070b18",
+  "theme_color": "#070b18",
+  "categories": ["lifestyle", "entertainment", "education"],
+  "icons": [
+    { "src": "/img/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/img/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/img/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Watch Live", "short_name": "Live", "url": "/?source=pwa#hero", "icons": [{ "src": "/img/logo-192.png", "sizes": "192x192" }] },
+    { "name": "Sermons & Videos", "short_name": "Watch", "url": "/?source=pwa#watch", "icons": [{ "src": "/img/logo-192.png", "sizes": "192x192" }] },
+    { "name": "Prayer Request", "short_name": "Prayer", "url": "/?source=pwa#prayer", "icons": [{ "src": "/img/logo-192.png", "sizes": "192x192" }] }
+  ]
+}

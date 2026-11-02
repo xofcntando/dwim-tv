@@ -42,6 +42,31 @@ npm start
 4. Deploy — you get `https://dwim-tv.onrender.com` (or your custom name).
 5. Keep it alive: free tier services sleep after 15 min of inactivity. A free uptime pinger ([cron-job.org](https://cron-job.org) or [UptimeRobot](https://uptimerobot.com)) pinging `https://YOURAPP.onrender.com/healthz` every 10 minutes prevents sleep.
 
+## MongoDB (persistent storage)
+
+DWIM TV stores its catalog (channels, videos, church info), the live-stream state and **prayer requests** in MongoDB when `MONGODB_URI` is set. Admin-panel edits are saved instantly and survive Render redeploys, with no GitHub commits needed.
+
+1. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (M0), add a database user, and under *Network Access* allow `0.0.0.0/0`.
+2. Copy the connection string (`mongodb+srv://USER:PASS@cluster.mongodb.net/`).
+3. In Render → Environment add `MONGODB_URI` (optional: `MONGODB_DB`, default `dwimtv`).
+4. Deploy. On first start MongoDB is seeded automatically from `data/videos.json`.
+
+Without `MONGODB_URI` the app still works exactly as before using `data/videos.json` (and GitHub sync).
+
+## Install on phones and PCs (PWA)
+
+DWIM TV is an installable Progressive Web App (manifest + service worker):
+
+- **Android / Chrome / Edge (phone or PC):** tap the **Install App** button in the top bar (or the browser's install icon).
+- **iPhone / iPad:** Safari → Share → **Add to Home Screen** (the Install App button shows these steps).
+- **Windows / Mac / Linux:** Chrome or Edge → install icon in the address bar. It opens in its own window like a normal app.
+
+PWAs require HTTPS, which Render provides. Bump `VERSION` in `public/sw.js` to force installed apps to refresh their cache.
+
+## Prayer requests
+
+The **Submit a Prayer Request** button opens a form; requests are stored in MongoDB (rate-limited, spam honeypot) and appear in the admin panel under **Prayer Requests**, where the team can mark them *Prayed* or delete them.
+
 ## How to add videos (never touch Render!)
 
 ### Option 0 — the Admin Panel (easiest, no code!)

@@ -64,6 +64,7 @@ function showDash() {
   loadCatalog();
   loadChurch();
   loadLiveStatus();
+  loadPrayers();
 }
 
 /* ---------- catalog ---------- */
@@ -270,7 +271,7 @@ async function addVideo(e) {
     });
     const j = await r.json();
     if (j.ok) {
-      let extra = j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
+      let extra = j.github && j.github.mongo ? ' · Saved to MongoDB ✓' : j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
       msg(msgEl, 'Added: ' + j.video.title + extra, true);
       document.getElementById('addForm').reset();
       document.getElementById('verifyBox').style.display = 'none';
@@ -537,7 +538,7 @@ async function saveChurch(e) {
     });
     const j = await r.json();
     if (j.ok) {
-      let extra = j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
+      let extra = j.github && j.github.mongo ? ' · Saved to MongoDB ✓' : j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
       msg(msgEl, 'Church info saved.' + extra, true);
       refreshPublicCatalog();
     } else {
@@ -579,7 +580,7 @@ document.getElementById('ownForm').addEventListener('submit', async (e) => {
     });
     const j = await r.json();
     if (j.ok) {
-      const extra = j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
+      const extra = j.github && j.github.mongo ? ' · Saved to MongoDB ✓' : j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
       msg(msgEl, 'Added: ' + j.video.title + extra, true);
       document.getElementById('ownForm').reset();
       loadCatalog();
@@ -587,3 +588,40 @@ document.getElementById('ownForm').addEventListener('submit', async (e) => {
     } else msg(msgEl, j.error || 'Failed to add', false);
   } catch (err) { msg(msgEl, 'Add failed: ' + err.message, false); }
 });
+
+
+/* ---------- prayer requests inbox ---------- */
+async function loadPrayers() {
+  const box = document.getElementById('prList');
+  if (!box) return;
+  try {
+    const r = await fetch('/api/admin/prayers');
+    const j = await r.json();
+    if (!j.ok) { box.innerHTML = '<p class="hint">' + esc(j.error || 'Could not load') + '</p>'; return; }
+    const open = j.prayers.filter(p => !p.prayed).length;
+    document.getElementById('prStats').textContent = open + ' new / ' + j.prayers.length + ' total';
+    document.getElementById('prStorage').innerHTML = j.storage === 'mongodb' ? 'Stored in MongoDB.' :
+      '<b>Warning:</b> MongoDB is not connected, so requests are only kept temporarily. Set MONGODB_URI.';
+    if (!j.prayers.length) { box.innerHTML = '<p class="hint">No prayer requests yet.</p>'; return; }
+    box.innerHTML = j.prayers.map(p => {
+      const when = new Date(p.createdAt).toLocaleString();
+      const meta = [p.category, p.location].filter(Boolean).map(esc).join(' · ');
+      return '<div class="pr-item" style="border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0;' + (p.prayed ? 'opacity:.55' : '') + '">' +
+        '<div><b>' + esc(p.name) + '</b> <small>' + meta + ' · ' + esc(when) + '</small></div>' +
+        '<div style="white-space:pre-wrap;margin:6px 0">' + esc(p.request) + '</div>' +
+        (p.contact ? '<div><small>Contact: ' + esc(p.contact) + '</small></div>' : '') +
+        '<div style="margin-top:8px;display:flex;gap:8px">' +
+        '<button class="btn-edit" onclick="prayerToggle(\'' + p.id + '\',' + !p.prayed + ')">' + (p.prayed ? 'Mark as new' : '&#10003; Prayed') + '</button>' +
+        '<button class="btn-del" onclick="prayerDelete(\'' + p.id + '\')">Delete</button></div></div>';
+    }).join('');
+  } catch (e) { box.innerHTML = '<p class="hint">Error: ' + esc(e.message) + '</p>'; }
+}
+async function prayerToggle(id, prayed) {
+  await fetch('/api/admin/prayers/' + id + '/prayed', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prayed }) });
+  loadPrayers();
+}
+async function prayerDelete(id) {
+  if (!confirm('Delete this prayer request?')) return;
+  await fetch('/api/admin/prayers/' + id, { method: 'DELETE' });
+  loadPrayers();
+}

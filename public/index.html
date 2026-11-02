@@ -9,6 +9,11 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/logo-192.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta name="theme-color" content="#070b18">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="DWIM TV">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta property="og:type" content="website">
   <meta property="og:title" content="DWIM TV — Live Sunday Services & Sermons">
   <meta property="og:description" content="Join Destiny Word International Ministries live every Sunday at 11:00 AM CAT. Distance is not a barrier!">
@@ -36,6 +41,7 @@
       <span class="icon">&#9903;</span>
       <input id="search" type="text" placeholder="Search sermons, songs, prayers…" autocomplete="off">
     </div>
+    <button class="btn-install" data-install-app hidden title="Install DWIM TV on this device">&#11015; Install App</button>
     <button class="btn-live-sm" onclick="watchLive()">&#9654; Watch Live</button>
   </header>
 
@@ -104,7 +110,8 @@
       <p>Whatever you are facing — sickness, bondage, lack, family struggles — bring it to the altar of God. Send us your prayer request and our prayer team will stand with you in faith, wherever you are in the world.</p>
       <p class="scripture">“Call unto me, and I will answer thee, and shew thee great and mighty things, which thou knowest not.” — Jeremiah 33:3</p>
       <div class="block-actions">
-        <a class="btn-gold" id="prayerBtn" href="#prayer">&#9993; Send a Prayer Request</a>
+        <button class="btn-gold" id="prayerFormBtn" type="button">&#128591; Submit a Prayer Request</button>
+        <a class="btn-outline-light" id="prayerBtn" href="#prayer">&#9993; Send a Prayer Request</a>
         <button class="btn-outline-light" onclick="playFirstOf('ch-prayer')">&#9654; Pray Along Now</button>
       </div>
     </div>
@@ -242,6 +249,7 @@
         <a href="#testimonies">Testimonies</a>
         <a href="#giving">Give &amp; Partner</a>
         <a href="#visit">Visit Us</a>
+        <a href="#" data-install-app hidden onclick="event.preventDefault()">&#11015; Install the App</a>
       </div>
       <div class="footer-col">
         <h4>Service Times</h4>
@@ -254,8 +262,37 @@
     </div>
   </footer>
 
+
+  <!-- ===== Prayer request modal ===== -->
+  <div class="pr-overlay" id="prOverlay" hidden>
+    <form class="pr-modal" id="prForm" autocomplete="off">
+      <button type="button" class="pr-close" id="prClose" aria-label="Close">&times;</button>
+      <h3>&#128591; Send a Prayer Request</h3>
+      <p class="pr-sub">Our prayer team will stand with you in faith. Your request is private and seen only by the prayer team.</p>
+      <label>Your name <small>(optional)</small><input name="name" maxlength="80" placeholder="Leave blank to stay anonymous"></label>
+      <div class="pr-row">
+        <label>City / Country <small>(optional)</small><input name="location" maxlength="80"></label>
+        <label>Topic
+          <select name="category">
+            <option>Healing</option><option>Deliverance</option><option>Family</option><option>Finances</option>
+            <option>Salvation</option><option>Guidance</option><option>Thanksgiving</option><option selected>General</option>
+          </select>
+        </label>
+      </div>
+      <label>WhatsApp / phone / email <small>(optional, if you want us to reach you)</small><input name="contact" maxlength="120"></label>
+      <label>Your prayer request
+        <textarea name="request" rows="5" maxlength="1500" required placeholder="Tell us how we can pray with you…"></textarea>
+      </label>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div class="pr-msg" id="prMsg"></div>
+      <button class="btn-gold pr-submit" type="submit" id="prSubmit">Send Request</button>
+    </form>
+  </div>
+
+  <script src="js/pwa.js"></script>
   <script src="js/player.js"></script>
   <script src="js/tv.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/prayer.js"></script>
 </body>
 </html>
