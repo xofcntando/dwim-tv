@@ -4860,13 +4860,31 @@
         "healing",
         "solo yahweh"
       ]
+    },
+    {
+      "id": "gc-yeshua",
+      "title": "Yeshua — Jesus Image | Michael Koulianos",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ivUb1K0B0zE",
+      "duration": "19:08",
+      "thumb": "https://i.ytimg.com/vi/ivUb1K0B0zE/hqdefault.jpg",
+      "desc": "\"Yeshua\" by Jesus Image, recorded live at Jesus '19 in Orlando. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "yeshua",
+        "jesus image"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 14,
+  "seedVersion": 15,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
