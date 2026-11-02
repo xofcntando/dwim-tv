@@ -767,6 +767,13 @@ async function init() {
         const seedDur = new Map((fileCat.videos || []).map(v => [v.id, v.duration]));
         for (const v of cat.videos) if (!/^\d+(:\d+)+$/.test(v.duration || '') && seedDur.get(v.id)) v.duration = seedDur.get(v.id);
         if (!cat.schedule && fileCat.schedule) cat.schedule = fileCat.schedule;
+        // shuffle all versions of the signature song (e.g. every "Let It Rain") instead of a single video
+        const fs_ = fileCat.schedule && fileCat.schedule.signature;
+        if (fs_ && fs_.category && cat.schedule && cat.schedule.signature && !cat.schedule.signature.category) {
+          cat.schedule.signature.category = fs_.category; cat.schedule.signature.maxMinutes = fs_.maxMinutes || 14;
+        }
+        // keep the original "Let It Rain" in the same category as its new versions
+        for (const v of cat.videos) if (v.id === 'gc-rain' && fs_ && fs_.category) v.category = fs_.category;
         cat.seedVersion = fileCat.seedVersion;
         await db.saveCatalog(cat);
         console.log(`🌱 Seed v${cat.seedVersion} merged into MongoDB (+${added} videos)`);
