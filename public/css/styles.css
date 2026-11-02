@@ -1293,3 +1293,23 @@ img { max-width: 100%; }
   .hero-portrait img { aspect-ratio: 1; border-radius: 50%; }
   .hero-portrait figcaption { display: none; }
 }
+
+/* ============ Purpose of DWIM TV ============ */
+.purpose-wrap { padding: 46px 28px; background: linear-gradient(180deg, var(--bg-2), var(--bg)); }
+.purpose-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; max-width: 1100px; margin: 32px auto 0; }
+.purpose-card { background: var(--card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 22px 20px; transition: transform 0.2s, border-color 0.2s; }
+.purpose-card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.35); }
+.purpose-card .p-ico { font-size: 28px; display: block; margin-bottom: 8px; }
+.purpose-card h3 { font-size: 17px; font-weight: 800; margin: 0 0 8px; color: var(--gold-2); }
+.purpose-card p { color: var(--text-dim); font-size: 13.5px; line-height: 1.6; margin: 0; }
+.purpose-vh { text-align: center; font-size: 22px; font-weight: 800; margin: 44px 0 6px; }
+.purpose-vsub { text-align: center; color: var(--text-dim); font-size: 14px; max-width: 640px; margin: 0 auto 22px; }
+.purpose-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; max-width: 1100px; margin: 0 auto; }
+.purpose-videos figure { margin: 0; background: var(--card); border: 1px solid var(--border-soft); border-radius: 14px; overflow: hidden; }
+.purpose-videos video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; }
+.purpose-videos figcaption { padding: 10px 14px; font-size: 13px; font-weight: 700; color: var(--gold-2); }
+.builder-card { max-width: 720px; margin: 40px auto 0; text-align: center; padding: 26px 22px; border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 18px; background: rgba(212, 175, 55, 0.06); }
+.builder-card h3 { font-size: 22px; font-weight: 800; margin: 6px 0 10px; }
+.builder-card p { color: var(--text-dim); font-size: 14.5px; line-height: 1.7; margin: 0; }
+.builder-card b { color: var(--gold-2); }
+@media (max-width: 700px) { .purpose-wrap { padding: 36px 14px 40px; } }

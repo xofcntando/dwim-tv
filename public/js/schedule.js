@@ -100,17 +100,35 @@ const DwimSchedule = (function () {
     return pool.map(v => ({ v, k: mix(hashStr(salt + '|' + v.id)) })).sort((a, b) => a.k - b.k)[0].v;
   }
 
-  // Short fixed "breaks" (e.g. the DWIM TV 1 Year clip): sc.breaks = [{ label, videoId, times: ["08:00", ...] }]
+  // DWIM TV "breaks": short branded videos that play between the programme, WITHOUT cutting the sermon short.
+  // The sermon is paused on the clock and resumes exactly where it stopped (see resolve()).
+  // sc.breaks = [{ label, videoId | videoIds:[...], times:["08:00",...] | everyMinutes:10 }]
+  //   - times: fixed clock times;  everyMinutes: a break at every N minutes (00:00, 00:10, 00:20, ...)
+  //   - videoIds: the breaks take turns, so viewers see different DWIM TV videos
   function breakSlots(sc) {
     const out = [];
-    (sc.breaks || []).forEach(b => (b.times || []).forEach(t => out.push({ t: hmToSec(t), b })));
+    (sc.breaks || []).forEach(b => {
+      const ids = (b.videoIds && b.videoIds.length) ? b.videoIds : [b.videoId];
+      let n = 0; // the DWIM TV videos take turns, one after another
+      const add = (t) => out.push({ t, b, videoId: ids[n++ % ids.length] });
+      (b.times || []).map(hmToSec).sort((x, y) => x - y).forEach(add);
+      const every = (+b.everyMinutes || 0) * 60;
+      if (every >= 60) for (let t = 0; t < DAY; t += every) add(t);
+    });
     return out;
   }
   // Every timed insert for a day: signature song versions + breaks, sorted by time
   function slotsFor(catalog, sc, dayKey) {
     const list = [];
     if (sc.signature) sigSlots(sc).forEach(t => { const v = sigVideoAt(catalog, sc, dayKey, t); if (v) list.push({ t, v, label: sc.signature.label || v.title }); });
-    breakSlots(sc).forEach(({ t, b }) => { const v = (catalog.videos || []).find(x => x.id === b.videoId); if (v) list.push({ t, v, label: b.label || 'DWIM TV Break' }); });
+    const sigs = list.filter(x => durSec(x.v) > 0).map(x => [x.t, x.t + durSec(x.v)]);
+    breakSlots(sc).forEach(({ t, b, videoId }) => {
+      const v = (catalog.videos || []).find(x => x.id === videoId); if (!v) return;
+      const len = durSec(v);
+      // a break never lands on top of a signature song (e.g. Let It Rain)
+      if (sigs.some(([a, z]) => t < z && t + len > a)) return;
+      list.push({ t, v, label: b.label || 'DWIM TV Break' });
+    });
     return list.filter(x => durSec(x.v) > 0).sort((a, b) => a.t - b.t);
   }
 

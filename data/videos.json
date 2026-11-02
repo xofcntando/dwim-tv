@@ -4778,13 +4778,77 @@
         "anniversary",
         "break"
       ]
+    },
+    {
+      "id": "brk-purpose",
+      "title": "DWIM TV — Our Purpose",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-purpose.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-purpose.jpg",
+      "desc": "The Word, worship and prayer, around the clock from Destiny Word International Ministries.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "brk-distance",
+      "title": "DWIM TV — Distance Is Not a Barrier",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-distance.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-distance.jpg",
+      "desc": "Taking the gospel from Zimbabwe to the whole world. Join from anywhere.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "brk-worship",
+      "title": "DWIM TV — Worship, the Word and Prayer",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-worship.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-worship.jpg",
+      "desc": "Sermons, songs and deliverance, around the clock.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "brk-builder",
+      "title": "DWIM TV — Built in Zimbabwe",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-builder.mp4",
+      "duration": "0:04",
+      "thumb": "/breaks/dwimtv-builder.jpg",
+      "desc": "DWIM TV was built in Zimbabwe by Ntandomods, age 20, for the glory of God.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 8,
+  "seedVersion": 9,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -4963,13 +5027,15 @@
     ],
     "breaks": [
       {
-        "label": "DWIM TV · 1 Year",
-        "videoId": "brk-1year",
-        "times": [
-          "08:00",
-          "16:00",
-          "20:00"
-        ]
+        "label": "DWIM TV",
+        "videoIds": [
+          "brk-purpose",
+          "brk-distance",
+          "brk-worship",
+          "brk-builder",
+          "brk-1year"
+        ],
+        "everyMinutes": 10
       }
     ]
   },

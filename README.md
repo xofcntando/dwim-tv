@@ -12,6 +12,20 @@ Built in the spirit of platforms like Emmanuel TV, DWIM TV lets the whole world 
 - **Giving & Partnership** — sow into destiny, become a DWIM Partner
 - **Admin Panel** (`/admin.html`) — add videos by YouTube URL straight from the browser; changes auto-commit back to the GitHub repo
 
+## Purpose
+
+DWIM TV exists so the Word, worship and prayer of Destiny Word International Ministries reach every home and phone in the world, day and night. **Distance is not a barrier.** DWIM TV was **built in Zimbabwe by Ntandomods (age 20)**.
+
+### DWIM TV breaks (every 10 minutes)
+
+Short branded DWIM TV videos (`public/breaks/`, channel `ch-breaks`) play on air **every 10 minutes**, taking turns. They never remove the sermon: the programme clock pauses during the break and the sermon resumes exactly where it stopped. Breaks never land on top of the Let It Rain signature slots.
+
+```json
+"breaks": [{ "label": "DWIM TV", "videoIds": ["brk-purpose", "brk-distance", "brk-worship", "brk-builder", "brk-1year"], "everyMinutes": 10 }]
+```
+
+Use `times: ["08:00", "16:00"]` instead of `everyMinutes` for fixed clock times. To add a new break video, add it to `ch-breaks` and list its id in `videoIds`.
+
 ## The Big Idea (read this first!)
 
 Render's free tier has **ephemeral storage** — any video file uploaded to the server gets wiped on every redeploy. **DWIM TV solves this differently:** the app stores *no video files*. It streams everything from external sources:

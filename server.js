@@ -575,8 +575,11 @@ function validateSchedule(sc, cat) {
   if (sc.breaks !== undefined) {
     if (!Array.isArray(sc.breaks)) return 'Schedule "breaks" must be a list';
     for (const b of sc.breaks) {
-      if (!(cat.videos || []).some(v => v.id === b.videoId)) return `Break "${b.label || ''}": videoId not found in the catalog`;
-      if (!Array.isArray(b.times) || b.times.some(t => !hm.test(t))) return 'Break times must look like ["08:00","16:00"]';
+      const ids = (Array.isArray(b.videoIds) && b.videoIds.length) ? b.videoIds : [b.videoId];
+      for (const id of ids) if (!(cat.videos || []).some(v => v.id === id)) return `Break "${b.label || ''}": video "${id}" not found in the catalog`;
+      if (b.times !== undefined && (!Array.isArray(b.times) || b.times.some(t => !hm.test(t)))) return 'Break times must look like ["08:00","16:00"]';
+      if (b.everyMinutes !== undefined && !(+b.everyMinutes >= 1 && +b.everyMinutes <= 720)) return 'Break "everyMinutes" must be between 1 and 720';
+      if (b.times === undefined && b.everyMinutes === undefined) return 'Break needs "times" or "everyMinutes"';
     }
   }
   try { new Intl.DateTimeFormat('en-US', { timeZone: sc.timezone || 'Africa/Harare' }); } catch (e) { return 'Unknown timezone'; }
@@ -785,7 +788,7 @@ async function init() {
           cat.schedule.signature.category = fs_.category; cat.schedule.signature.maxMinutes = fs_.maxMinutes || 14;
         }
         // install new timed breaks (e.g. DWIM TV 1 Year) if the live schedule has none yet
-        if (cat.schedule && fileCat.schedule && fileCat.schedule.breaks && !cat.schedule.breaks) cat.schedule.breaks = fileCat.schedule.breaks;
+        if (cat.schedule && fileCat.schedule && fileCat.schedule.breaks) cat.schedule.breaks = fileCat.schedule.breaks; // seed v9: DWIM TV breaks every 10 minutes
         // keep the original "Let It Rain" in the same category as its new versions
         for (const v of cat.videos) if (v.id === 'gc-rain' && fs_ && fs_.category) v.category = fs_.category;
         cat.seedVersion = fileCat.seedVersion;
