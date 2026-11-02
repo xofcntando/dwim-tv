@@ -39,7 +39,7 @@ try {
 function getLive() {
   if (liveNow && Date.now() - liveNow.startedAt >= LIVE_MAX_MS) { liveNow = null; persistLive(); }
   return liveNow
-    ? { title: liveNow.title, type: 'youtube', source: liveNow.source }
+    ? { title: liveNow.title, type: liveNow.type || 'youtube', source: liveNow.source }
     : { title: 'DWIM TV Live — Sunday Service', type: 'youtube', source: '' };
 }
 function persistLive() {
@@ -390,6 +390,43 @@ app.post('/api/admin/videos', requireAdmin, async (req, res) => {
   res.json({ ok: true, video, github: gh, channels: cat.channels });
 });
 
+// Add one of our OWN videos (direct MP4/WebM or HLS .m3u8 link) - plays in the DWIM TV player
+app.post('/api/admin/videos/own', requireAdmin, async (req, res) => {
+  const body = req.body || {};
+  const source = String(body.source || '').trim();
+  const title = String(body.title || '').trim();
+  if (!title) return res.status(400).json({ ok: false, error: 'Please give the video a title' });
+  if (!/^https:\/\/\S+$/i.test(source)) return res.status(400).json({ ok: false, error: 'Video link must be a full https:// URL' });
+  const type = /\.m3u8(\?.*)?$/i.test(source) ? 'hls' : 'direct';
+  if (type === 'direct' && !/\.(mp4|webm|m4v|mov)(\?.*)?$/i.test(source)) {
+    return res.status(400).json({ ok: false, error: 'Link must end in .mp4, .webm or .m3u8' });
+  }
+  const thumb = String(body.thumb || '').trim();
+  if (thumb && !/^https:\/\/\S+$/i.test(thumb)) return res.status(400).json({ ok: false, error: 'Thumbnail must be a full https:// image URL' });
+
+  const cat = readCatalog();
+  if ((cat.videos || []).some(v => v.source === source)) return res.status(409).json({ ok: false, error: 'That video is already in the catalog' });
+  const channelObj = cat.channels.find(c => c.id === body.channel);
+  if (!channelObj) return res.status(400).json({ ok: false, error: 'Unknown channel' });
+
+  const video = {
+    id: nextVideoId(cat),
+    title,
+    channel: channelObj.id,
+    category: String(body.category || channelObj.name).trim(),
+    type,
+    source,
+    duration: String(body.duration || '—').trim(),
+    thumb: thumb || '/img/hero-worship.jpg',
+    desc: String(body.desc || '').trim(),
+    tags: String(body.tags || '').split(',').map(s => s.trim()).filter(Boolean)
+  };
+  cat.videos.push(video);
+  writeCatalog(cat);
+  const gh = await syncCatalogToGitHub();
+  res.json({ ok: true, video, github: gh });
+});
+
 // Delete a video
 app.delete('/api/admin/videos/:id', requireAdmin, async (req, res) => {
   const cat = readCatalog();
@@ -494,14 +531,16 @@ app.post('/api/admin/live', requireAdmin, (req, res) => {
   if (!url) {
     liveNow = null; // End Live
   } else {
-    const m = url.match(/(?:youtu\.be\/|v=|\/embed\/|\/live\/|\/shorts\/)([\w-]{11})/);
-    const id = /^[\w-]{11}$/.test(url) ? url : (m ? m[1] : null);
-    if (!id) return res.status(400).json({ ok: false, error: 'Please paste a valid YouTube live URL or 11-character ID' });
-    liveNow = {
-      title: String((req.body || {}).title || 'DWIM TV Live — Sunday Service').slice(0, 120),
-      source: 'https://www.youtube.com/watch?v=' + id,
-      startedAt: Date.now()
-    };
+    const title = String((req.body || {}).title || 'DWIM TV Live — Sunday Service').slice(0, 120);
+    if (/^https:\/\/.+\.m3u8(\?.*)?$/i.test(url)) {
+      // our own HLS live stream (plays in the DWIM TV player)
+      liveNow = { title, type: 'hls', source: url, startedAt: Date.now() };
+    } else {
+      const m = url.match(/(?:youtu\.be\/|v=|\/embed\/|\/live\/|\/shorts\/)([\w-]{11})/);
+      const id = /^[\w-]{11}$/.test(url) ? url : (m ? m[1] : null);
+      if (!id) return res.status(400).json({ ok: false, error: 'Paste an HTTPS .m3u8 stream link, or a valid YouTube live URL' });
+      liveNow = { title, type: 'youtube', source: 'https://www.youtube.com/watch?v=' + id, startedAt: Date.now() };
+    }
   }
   persistLive();
   res.json({ ok: true, live: getLive(), startedAt: liveNow ? liveNow.startedAt : null });

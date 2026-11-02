@@ -19,14 +19,6 @@ function ytId(url) {
 }
 
 /* ---------- Video source builders ---------- */
-function directSrc(video) {
-  return `
-    <video controls autoplay playsinline>
-      <source src="${esc(video.source)}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>`;
-}
-
 function youtubeSrc(video) {
   const id = ytId(video.source);
   if (!id) return `<div style="display:grid;place-items:center;height:100%;color:#9aa3c0;font-weight:700;">&#9888;&#65039; Invalid YouTube link</div>`;
@@ -44,17 +36,13 @@ function youtubeSrc(video) {
     'fs=0',
     `origin=${origin}`
   ].join('&');
-  const watchUrl = `https://www.youtube.com/watch?v=${id}`;
   return `
     <iframe
       src="https://www.youtube-nocookie.com/embed/${id}?${params}${t}"
       title="${esc(video.title)}"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    <div class="yt-fallback">
-      Video not loading? <a href="${watchUrl}" target="_blank" rel="noopener">Watch it directly on YouTube &#8599;</a>
-    </div>`;
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
 }
 
 function embedSrc(video) {
@@ -266,10 +254,11 @@ function watchLive() {
 function playVideo(id) {
   const v = CATALOG.videos.find(x => x.id === id);
   if (!v) return;
-  openPlayer(v.title || 'Now Playing', v.type, v.source, v.duration || '—', v.desc || '', v.category);
+  openPlayer(v.title || 'Now Playing', v.type, v.source, v.duration || '—', v.desc || '', v.category, false, v.thumb, v.id);
 }
 
-function openPlayer(title, type, source, duration, desc, category, isLive) {
+let activePlayer = null;
+function openPlayer(title, type, source, duration, desc, category, isLive, thumb, resumeKey) {
   document.getElementById('playerTitle').textContent = title;
   document.getElementById('playerCat').textContent = category || 'DWIM TV';
   document.getElementById('playerDur').textContent = duration || '—';
@@ -277,12 +266,17 @@ function openPlayer(title, type, source, duration, desc, category, isLive) {
 
   const frame = document.getElementById('playerFrame');
   const fake = { source, title };
-  if (type === 'youtube') frame.innerHTML = youtubeSrc(fake);
-  else if (type === 'direct') frame.innerHTML = directSrc(fake);
+  if (activePlayer) { activePlayer.destroy(); activePlayer = null; }
+  frame.classList.remove('dp');
+  const own = (type === 'direct' || type === 'hls');
+  if (own) {
+    // DWIM TV's own player: no third-party branding, own controls + watermark
+    activePlayer = DwimPlayer.mount(frame, { src: source, type, autoplay: true, live: !!isLive, poster: thumb, resumeKey: resumeKey });
+  } else if (type === 'youtube') frame.innerHTML = youtubeSrc(fake);
   else frame.innerHTML = embedSrc(fake);
 
-  // DWIM TV watermark + our own fullscreen button (keeps the logo visible in fullscreen)
-  frame.insertAdjacentHTML('beforeend',
+  // DWIM TV watermark + our own fullscreen button (keeps the logo visible in fullscreen) - embeds only; our own player has these built in
+  if (!own) frame.insertAdjacentHTML('beforeend',
     `<div class="dwim-mark" aria-hidden="true"><span class="dwim-mark-logo"></span><span class="dwim-mark-text">DWIM <b>TV</b></span></div>
      <button class="dwim-fs" type="button" onclick="toggleFrameFullscreen()" title="Fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>`);
 
@@ -313,6 +307,7 @@ function toggleFrameFullscreen() {
 
 function closePlayer() {
   document.getElementById('playerModal').classList.remove('open');
+  if (activePlayer) { activePlayer.destroy(); activePlayer = null; }
   document.getElementById('playerFrame').innerHTML = '';
   document.getElementById('liveChatBody').innerHTML = '';
   document.body.style.overflow = '';

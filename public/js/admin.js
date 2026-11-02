@@ -83,6 +83,8 @@ function renderChannelOptions() {
     .filter(c => c.id !== 'ch-all')
     .map(c => `<option value="${esc(c.id)}">${esc(c.icon || '')} ${esc(c.name)}</option>`)
     .join('');
+  const own = document.getElementById('ownChannel');
+  if (own) own.innerHTML = sel.innerHTML;
 }
 
 function renderTable() {
@@ -559,3 +561,29 @@ document.getElementById('btnAddService').addEventListener('click', () => { SERVI
 (async () => {
   if (await checkSession()) showDash();
 })();
+
+/* ---- Add your own video (MP4 / HLS) ---- */
+document.getElementById('ownForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const msgEl = document.getElementById('ownMsg');
+  const g = (id) => document.getElementById(id).value.trim();
+  try {
+    const r = await fetch('/api/admin/videos/own', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        source: g('ownSource'), title: g('ownTitle'), duration: g('ownDur'),
+        channel: document.getElementById('ownChannel').value,
+        thumb: g('ownThumb'), desc: g('ownDesc'), tags: g('ownTags')
+      })
+    });
+    const j = await r.json();
+    if (j.ok) {
+      const extra = j.github && j.github.ok ? ' · Synced to GitHub ✓' : (j.github && j.github.reason ? ' · ' + j.github.reason : '');
+      msg(msgEl, 'Added: ' + j.video.title + extra, true);
+      document.getElementById('ownForm').reset();
+      loadCatalog();
+      refreshPublicCatalog();
+    } else msg(msgEl, j.error || 'Failed to add', false);
+  } catch (err) { msg(msgEl, 'Add failed: ' + err.message, false); }
+});

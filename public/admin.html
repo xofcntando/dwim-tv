@@ -90,8 +90,30 @@
         <button class="btn-admin-primary" type="submit" id="btnAdd">&#10133; Add Video to DWIM TV</button>
       </form>
 
+      <h2 style="margin-top:38px">&#127909; Add Your Own Video</h2>
+      <p class="hint">Videos you host yourself (an <b>.mp4</b>/<b>.webm</b> file or an <b>.m3u8</b> stream link, e.g. from Cloudflare R2, Bunny or your own server). They play in the DWIM TV player with no third-party branding.</p>
+      <form id="ownForm" class="add-card">
+        <div class="row">
+          <label class="grow">Video link (https://…mp4 or .m3u8)
+            <input id="ownSource" type="text" placeholder="https://videos.example.com/sunday-service.mp4" required>
+          </label>
+        </div>
+        <div class="row two">
+          <label>Title <input id="ownTitle" type="text" required></label>
+          <label>Duration <input id="ownDur" type="text" placeholder="e.g. 1:05:00 (optional)"></label>
+        </div>
+        <div class="row two">
+          <label>Channel <select id="ownChannel"></select></label>
+          <label>Thumbnail image URL <input id="ownThumb" type="text" placeholder="https://… .jpg (optional)"></label>
+        </div>
+        <label>Description <textarea id="ownDesc" rows="2" placeholder="Optional - shown under the video"></textarea></label>
+        <label>Tags <input id="ownTags" type="text" placeholder="comma,separated,tags (optional)"></label>
+        <div class="form-msg" id="ownMsg"></div>
+        <button class="btn-admin-primary" type="submit">&#10133; Add My Video</button>
+      </form>
+
       <h2 style="margin-top:38px">&#128308; Go Live</h2>
-      <p class="hint">Start your stream on YouTube, paste its link here and tap <b>Go Live</b>. Every phone with DWIM TV open switches to <b>ON AIR</b> within 20 seconds. Nothing is saved to GitHub, so the site does not restart. Tap <b>End Live</b> when the service finishes (it also ends by itself after 10 hours).</p>
+      <p class="hint">Start your stream, paste its link here (a YouTube live link or your own <b>.m3u8</b> stream) and tap <b>Go Live</b>. Every phone with DWIM TV open switches to <b>ON AIR</b> within 20 seconds. Nothing is saved to GitHub, so the site does not restart. Tap <b>End Live</b> when the service finishes (it also ends by itself after 10 hours).</p>
       <div class="live-status" id="liveStatus">Status: checking…</div>
       <form id="liveForm" class="add-card">
         <div class="row">
