@@ -124,7 +124,7 @@ const TV = (function () {
     if (r && cat && cat.schedule) {
       const sig = r.kind === 'signature';
       el('tvTitle').textContent = v.title || '';
-      el('tvCat').textContent = (r.block ? r.block.icon + ' ' + r.block.name : 'Now playing') + (sig ? ' · Let It Rain' : '');
+      el('tvCat').textContent = (r.block ? r.block.icon + ' ' + r.block.name : 'Now playing') + (sig ? ' · ' + (r.label || 'Let It Rain') : '');
       const up = DwimSchedule.upNext(cat, r, Date.now());
       el('tvNext').textContent = up ? 'Up next: ' + up.title + (up.atBoundary && up.block ? ' · ' + up.block.name : '') : '';
     } else {

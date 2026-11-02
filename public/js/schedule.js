@@ -100,6 +100,20 @@ const DwimSchedule = (function () {
     return pool.map(v => ({ v, k: mix(hashStr(salt + '|' + v.id)) })).sort((a, b) => a.k - b.k)[0].v;
   }
 
+  // Short fixed "breaks" (e.g. the DWIM TV 1 Year clip): sc.breaks = [{ label, videoId, times: ["08:00", ...] }]
+  function breakSlots(sc) {
+    const out = [];
+    (sc.breaks || []).forEach(b => (b.times || []).forEach(t => out.push({ t: hmToSec(t), b })));
+    return out;
+  }
+  // Every timed insert for a day: signature song versions + breaks, sorted by time
+  function slotsFor(catalog, sc, dayKey) {
+    const list = [];
+    if (sc.signature) sigSlots(sc).forEach(t => { const v = sigVideoAt(catalog, sc, dayKey, t); if (v) list.push({ t, v, label: sc.signature.label || v.title }); });
+    breakSlots(sc).forEach(({ t, b }) => { const v = (catalog.videos || []).find(x => x.id === b.videoId); if (v) list.push({ t, v, label: b.label || 'DWIM TV Break' }); });
+    return list.filter(x => durSec(x.v) > 0).sort((a, b) => a.t - b.t);
+  }
+
   function sigSlots(sc) { return sc.signature ? (sc.signature.times || []).map(hmToSec).sort((a, b) => a - b) : []; }
 
   // What is on air at instant `ms`?
@@ -109,13 +123,13 @@ const DwimSchedule = (function () {
     const tz = sc.timezone || 'Africa/Harare';
     const parts = zoneParts(ms, tz);
     const sec = parts.sec + (ms % 1000) / 1000;
-    const slotList = sc.signature ? sigSlots(sc).map(t => ({ t, v: sigVideoAt(catalog, sc, parts.key, t) })).filter(x => x.v && durSec(x.v) > 0) : [];
+    const slotList = slotsFor(catalog, sc, parts.key);
 
     // 1) signature song (e.g. "Let It Rain", a different version each slot) due right now
-    for (const { t, v: sigVideo } of slotList) {
+    for (const { t, v: sigVideo, label: slotLabel } of slotList) {
       const sigLen = durSec(sigVideo);
       if (sec >= t && sec < t + sigLen) {
-        return { kind: 'signature', token: 'sig:' + parts.key + '@' + t, block: findBlock(sc, parts, sec), video: sigVideo, offset: sec - t, remaining: t + sigLen - sec, label: sc.signature.label || sigVideo.title, parts, sec };
+        return { kind: 'signature', token: 'sig:' + parts.key + '@' + t, block: findBlock(sc, parts, sec), video: sigVideo, offset: sec - t, remaining: t + sigLen - sec, label: slotLabel, parts, sec };
       }
     }
     // 2) the block playlist
@@ -140,6 +154,7 @@ const DwimSchedule = (function () {
     const cands = [];
     (sc.blocks || []).filter(b => blockApplies(b, parts.dow)).forEach(b => { cands.push(hmToSec(b.start), hmToSec(b.end)); });
     sigSlots(sc).forEach(t => cands.push(t));
+    breakSlots(sc).forEach(x => cands.push(x.t));
     const later = cands.filter(t => t > sec).sort((a, b) => a - b)[0];
     return later === undefined ? DAY : later; // midnight rolls into the next day
   }

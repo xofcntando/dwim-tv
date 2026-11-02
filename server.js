@@ -572,6 +572,13 @@ function validateSchedule(sc, cat) {
     if (!inCat && !inCategory) return 'Signature videoId (or category) not found in the catalog';
     if (!Array.isArray(sc.signature.times) || sc.signature.times.some(t => !hm.test(t))) return 'Signature times must look like ["06:00","18:00"]';
   }
+  if (sc.breaks !== undefined) {
+    if (!Array.isArray(sc.breaks)) return 'Schedule "breaks" must be a list';
+    for (const b of sc.breaks) {
+      if (!(cat.videos || []).some(v => v.id === b.videoId)) return `Break "${b.label || ''}": videoId not found in the catalog`;
+      if (!Array.isArray(b.times) || b.times.some(t => !hm.test(t))) return 'Break times must look like ["08:00","16:00"]';
+    }
+  }
   try { new Intl.DateTimeFormat('en-US', { timeZone: sc.timezone || 'Africa/Harare' }); } catch (e) { return 'Unknown timezone'; }
   return null;
 }
@@ -777,6 +784,8 @@ async function init() {
         if (fs_ && fs_.category && cat.schedule && cat.schedule.signature && !cat.schedule.signature.category) {
           cat.schedule.signature.category = fs_.category; cat.schedule.signature.maxMinutes = fs_.maxMinutes || 14;
         }
+        // install new timed breaks (e.g. DWIM TV 1 Year) if the live schedule has none yet
+        if (cat.schedule && fileCat.schedule && fileCat.schedule.breaks && !cat.schedule.breaks) cat.schedule.breaks = fileCat.schedule.breaks;
         // keep the original "Let It Rain" in the same category as its new versions
         for (const v of cat.videos) if (v.id === 'gc-rain' && fs_ && fs_.category) v.category = fs_.category;
         cat.seedVersion = fileCat.seedVersion;

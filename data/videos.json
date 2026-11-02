@@ -81,6 +81,11 @@
       "id": "ch-gospel",
       "name": "Gospel Music · Jesus Culture & Zimbabwe",
       "icon": "🎶"
+    },
+    {
+      "id": "ch-breaks",
+      "name": "DWIM TV Breaks",
+      "icon": "✨"
     }
   ],
   "videos": [
@@ -4756,13 +4761,30 @@
         "tb joshua",
         "anointed"
       ]
+    },
+    {
+      "id": "brk-1year",
+      "title": "DWIM TV — 1 Year",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-1year.mp4",
+      "duration": "0:06",
+      "thumb": "/breaks/dwimtv-1year.png",
+      "desc": "Celebrating one year of DWIM TV. Thank you for watching.",
+      "tags": [
+        "dwim tv",
+        "1 year",
+        "anniversary",
+        "break"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 7,
+  "seedVersion": 8,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -4937,6 +4959,17 @@
         ],
         "maxMinutes": 120,
         "desc": "Close the day with the Word and prayer."
+      }
+    ],
+    "breaks": [
+      {
+        "label": "DWIM TV · 1 Year",
+        "videoId": "brk-1year",
+        "times": [
+          "08:00",
+          "16:00",
+          "20:00"
+        ]
       }
     ]
   },
