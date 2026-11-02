@@ -5431,13 +5431,30 @@
         "minstrel myra",
         "new"
       ]
+    },
+    {
+      "id": "gc-myra-9ZOV05",
+      "title": "Oh Adullam, The Secret Place — Minstrel Myra",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9ZOV05b2gdI",
+      "duration": "6:31",
+      "thumb": "https://i.ytimg.com/vi/9ZOV05b2gdI/hqdefault.jpg",
+      "desc": "Oh Adullam, the Secret Place, by Minstrel Myra. Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "intl",
+        "minstrel myra"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 17,
+  "seedVersion": 18,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
