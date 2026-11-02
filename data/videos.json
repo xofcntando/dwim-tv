@@ -63,6 +63,11 @@
       "icon": "🎵"
     },
     {
+      "id": "ch-fwm",
+      "name": "Archbishop Manjoro · Faith World",
+      "icon": "🌍"
+    },
+    {
       "id": "ch-archive",
       "name": "Ministry Archive",
       "icon": "🎞️"
@@ -665,6 +670,706 @@
         "documentary",
         "biography",
         "life story"
+      ]
+    },
+    {
+      "id": "tj1",
+      "title": "Trusting God - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Dt75XDSJBoM",
+      "duration": "18:42",
+      "thumb": "https://i.ytimg.com/vi/Dt75XDSJBoM/hqdefault.jpg",
+      "desc": "\"Trusting God\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj2",
+      "title": "Our Confession Gives Us Possession (Part 1) - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=CCgMu0cgBmw",
+      "duration": "49:00",
+      "thumb": "https://i.ytimg.com/vi/CCgMu0cgBmw/hqdefault.jpg",
+      "desc": "\"Our Confession Gives Us Possession (Part 1)\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj3",
+      "title": "Making Jesus a Reality to You - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=OvjPR5gkNzk",
+      "duration": "43:20",
+      "thumb": "https://i.ytimg.com/vi/OvjPR5gkNzk/hqdefault.jpg",
+      "desc": "\"Making Jesus a Reality to You\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj4",
+      "title": "Your Future Will Answer Your Critics - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=cEA4ZDDpEAU",
+      "duration": "39:57",
+      "thumb": "https://i.ytimg.com/vi/cEA4ZDDpEAU/hqdefault.jpg",
+      "desc": "\"Your Future Will Answer Your Critics\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj5",
+      "title": "Prophet T.B. Joshua's Most Powerful Sermon - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=zFmKILuDoH4",
+      "duration": "17:27",
+      "thumb": "https://i.ytimg.com/vi/zFmKILuDoH4/hqdefault.jpg",
+      "desc": "\"Prophet T.B. Joshua's Most Powerful Sermon\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj6",
+      "title": "A Life Full of Choices - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=S4IJ_DdPHNE",
+      "duration": "25:51",
+      "thumb": "https://i.ytimg.com/vi/S4IJ_DdPHNE/hqdefault.jpg",
+      "desc": "\"A Life Full of Choices\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj7",
+      "title": "The Key to Becoming Spiritual - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=3YuXTC_6TyM",
+      "duration": "52:01",
+      "thumb": "https://i.ytimg.com/vi/3YuXTC_6TyM/hqdefault.jpg",
+      "desc": "\"The Key to Becoming Spiritual\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj8",
+      "title": "Everyone Has Been Tempted - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=039hqNGVUJk",
+      "duration": "40:02",
+      "thumb": "https://i.ytimg.com/vi/039hqNGVUJk/hqdefault.jpg",
+      "desc": "\"Everyone Has Been Tempted\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj9",
+      "title": "Silence Is the Best Answer for Your Enemy - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=5Aj4yRsM584",
+      "duration": "42:55",
+      "thumb": "https://i.ytimg.com/vi/5Aj4yRsM584/hqdefault.jpg",
+      "desc": "\"Silence Is the Best Answer for Your Enemy\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj10",
+      "title": "Believing First and Seeing - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=UoKJeQY6ze8",
+      "duration": "44:06",
+      "thumb": "https://i.ytimg.com/vi/UoKJeQY6ze8/hqdefault.jpg",
+      "desc": "\"Believing First and Seeing\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj11",
+      "title": "Where Is Your Faith? - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=AOdDaMSoz5c",
+      "duration": "21:49",
+      "thumb": "https://i.ytimg.com/vi/AOdDaMSoz5c/hqdefault.jpg",
+      "desc": "\"Where Is Your Faith?\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj12",
+      "title": "The Origin of Faith - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=MvODjFHvwtQ",
+      "duration": "17:03",
+      "thumb": "https://i.ytimg.com/vi/MvODjFHvwtQ/hqdefault.jpg",
+      "desc": "\"The Origin of Faith\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj13",
+      "title": "Refuse to Be Offended - Prophet T.B. Joshua",
+      "channel": "ch-sermons",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=m4YJlyy1T4I",
+      "duration": "46:10",
+      "thumb": "https://i.ytimg.com/vi/m4YJlyy1T4I/hqdefault.jpg",
+      "desc": "\"Refuse to Be Offended\" - a sermon from Prophet T.B. Joshua, as broadcast by Emmanuel TV.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sermon",
+        "teaching"
+      ]
+    },
+    {
+      "id": "tj14",
+      "title": "How to Pray Effectively - Prophet T.B. Joshua",
+      "channel": "ch-prayer",
+      "category": "Prayer",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=X9tafjCeDFQ",
+      "duration": "30:19",
+      "thumb": "https://i.ytimg.com/vi/X9tafjCeDFQ/hqdefault.jpg",
+      "desc": "A prayer session with Prophet T.B. Joshua. Pray along from wherever you are.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "prayer"
+      ]
+    },
+    {
+      "id": "tj15",
+      "title": "An Anointed Prayer with Prophet T.B. Joshua - Prophet T.B. Joshua",
+      "channel": "ch-prayer",
+      "category": "Prayer",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=t4AoTQzaig8",
+      "duration": "41:20",
+      "thumb": "https://i.ytimg.com/vi/t4AoTQzaig8/hqdefault.jpg",
+      "desc": "A prayer session with Prophet T.B. Joshua. Pray along from wherever you are.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "prayer"
+      ]
+    },
+    {
+      "id": "tj16",
+      "title": "Prayer for Healing - Prophet T.B. Joshua",
+      "channel": "ch-prayer",
+      "category": "Prayer",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=QPaZtPbQp8s",
+      "duration": "18:54",
+      "thumb": "https://i.ytimg.com/vi/QPaZtPbQp8s/hqdefault.jpg",
+      "desc": "A prayer session with Prophet T.B. Joshua. Pray along from wherever you are.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "prayer"
+      ]
+    },
+    {
+      "id": "tj17",
+      "title": "Receive Solution - Mass Prayer - Prophet T.B. Joshua",
+      "channel": "ch-prayer",
+      "category": "Prayer",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=oCS98JRyzdw",
+      "duration": "28:13",
+      "thumb": "https://i.ytimg.com/vi/oCS98JRyzdw/hqdefault.jpg",
+      "desc": "A prayer session with Prophet T.B. Joshua. Pray along from wherever you are.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "prayer"
+      ]
+    },
+    {
+      "id": "tj18",
+      "title": "Anointed Prayer with Prophet T.B. Joshua - Prophet T.B. Joshua",
+      "channel": "ch-prayer",
+      "category": "Prayer",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=CJHTO3641qg",
+      "duration": "27:50",
+      "thumb": "https://i.ytimg.com/vi/CJHTO3641qg/hqdefault.jpg",
+      "desc": "A prayer session with Prophet T.B. Joshua. Pray along from wherever you are.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "prayer"
+      ]
+    },
+    {
+      "id": "tj19",
+      "title": "Full Live Sunday Service - 19 June 2016 - SCOAN, T.B. Joshua",
+      "channel": "ch-services",
+      "category": "Sunday Service",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=cAQQKlB07N4",
+      "duration": "3:51:58",
+      "thumb": "https://i.ytimg.com/vi/cAQQKlB07N4/hqdefault.jpg",
+      "desc": "A full Sunday service from the Synagogue, Church Of All Nations (SCOAN) with Prophet T.B. Joshua: worship, the Word, prayer and ministry.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sunday service"
+      ]
+    },
+    {
+      "id": "tj20",
+      "title": "Full Live Sunday Service - 3 July 2016 - SCOAN, T.B. Joshua",
+      "channel": "ch-services",
+      "category": "Sunday Service",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=VAXKvoJl48E",
+      "duration": "3:18:46",
+      "thumb": "https://i.ytimg.com/vi/VAXKvoJl48E/hqdefault.jpg",
+      "desc": "A full Sunday service from the Synagogue, Church Of All Nations (SCOAN) with Prophet T.B. Joshua: worship, the Word, prayer and ministry.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sunday service"
+      ]
+    },
+    {
+      "id": "tj21",
+      "title": "Live Sunday Service - 13 April 2014 - SCOAN, T.B. Joshua",
+      "channel": "ch-services",
+      "category": "Sunday Service",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=G0wOAsu91uQ",
+      "duration": "2:06:51",
+      "thumb": "https://i.ytimg.com/vi/G0wOAsu91uQ/hqdefault.jpg",
+      "desc": "A full Sunday service from the Synagogue, Church Of All Nations (SCOAN) with Prophet T.B. Joshua: worship, the Word, prayer and ministry.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sunday service"
+      ]
+    },
+    {
+      "id": "tj22",
+      "title": "Sunday Service Message - 1 July 2018 (Part 3) - SCOAN, T.B. Joshua",
+      "channel": "ch-services",
+      "category": "Sunday Service",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=e_e47Lex3zM",
+      "duration": "1:16:13",
+      "thumb": "https://i.ytimg.com/vi/e_e47Lex3zM/hqdefault.jpg",
+      "desc": "A full Sunday service from the Synagogue, Church Of All Nations (SCOAN) with Prophet T.B. Joshua: worship, the Word, prayer and ministry.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sunday service"
+      ]
+    },
+    {
+      "id": "tj23",
+      "title": "Full Live Sunday Service - 15 June 2014 - SCOAN, T.B. Joshua",
+      "channel": "ch-services",
+      "category": "Sunday Service",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=zcpzVvpeYqg",
+      "duration": "2:41:21",
+      "thumb": "https://i.ytimg.com/vi/zcpzVvpeYqg/hqdefault.jpg",
+      "desc": "A full Sunday service from the Synagogue, Church Of All Nations (SCOAN) with Prophet T.B. Joshua: worship, the Word, prayer and ministry.",
+      "tags": [
+        "tb joshua",
+        "scoan",
+        "sunday service"
+      ]
+    },
+    {
+      "id": "fw1",
+      "title": "Stop Limiting God, the Holy One of Israel - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=mEg_zhoIVL0",
+      "duration": "1:36:21",
+      "thumb": "https://i.ytimg.com/vi/mEg_zhoIVL0/hqdefault.jpg",
+      "desc": "\"Stop Limiting God, the Holy One of Israel\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw2",
+      "title": "It Ends With You - Breaking Generational Curses - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=_ey4wWWwxQY",
+      "duration": "1:19:20",
+      "thumb": "https://i.ytimg.com/vi/_ey4wWWwxQY/hqdefault.jpg",
+      "desc": "\"It Ends With You - Breaking Generational Curses\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw3",
+      "title": "Time Is Running Out, Come Back to Life - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=91xLWeXy-0c",
+      "duration": "1:21:10",
+      "thumb": "https://i.ytimg.com/vi/91xLWeXy-0c/hqdefault.jpg",
+      "desc": "\"Time Is Running Out, Come Back to Life\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw4",
+      "title": "Dealing With the Spirit of Deception - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ULaeNSvmh1Q",
+      "duration": "1:33:05",
+      "thumb": "https://i.ytimg.com/vi/ULaeNSvmh1Q/hqdefault.jpg",
+      "desc": "\"Dealing With the Spirit of Deception\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw5",
+      "title": "Altar vs Altars - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=WK5o9Nrh2-g",
+      "duration": "1:51:23",
+      "thumb": "https://i.ytimg.com/vi/WK5o9Nrh2-g/hqdefault.jpg",
+      "desc": "\"Altar vs Altars\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw6",
+      "title": "The Grace to Wait Upon the Lord - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=MBI1Xrce1g0",
+      "duration": "1:45:03",
+      "thumb": "https://i.ytimg.com/vi/MBI1Xrce1g0/hqdefault.jpg",
+      "desc": "\"The Grace to Wait Upon the Lord\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw7",
+      "title": "The Gifts of God Are for Everyone - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=xvD3xistqiE",
+      "duration": "1:15:42",
+      "thumb": "https://i.ytimg.com/vi/xvD3xistqiE/hqdefault.jpg",
+      "desc": "\"The Gifts of God Are for Everyone\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw8",
+      "title": "The Secret and What to Do After 21 Days of Prayer and Fasting - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=f6sC6OSYaM4",
+      "duration": "46:53",
+      "thumb": "https://i.ytimg.com/vi/f6sC6OSYaM4/hqdefault.jpg",
+      "desc": "\"The Secret and What to Do After 21 Days of Prayer and Fasting\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw9",
+      "title": "The Anointing (Exodus 30:23-25) - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=7Gmv2x9veK0",
+      "duration": "1:58:19",
+      "thumb": "https://i.ytimg.com/vi/7Gmv2x9veK0/hqdefault.jpg",
+      "desc": "\"The Anointing (Exodus 30:23-25)\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw10",
+      "title": "Four Types of People to Run Away From When You Are Offended - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=MM8CZ85bKoo",
+      "duration": "1:02:47",
+      "thumb": "https://i.ytimg.com/vi/MM8CZ85bKoo/hqdefault.jpg",
+      "desc": "\"Four Types of People to Run Away From When You Are Offended\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw11",
+      "title": "The Gift of God Is Like Dynamite - 10 Minutes of Impartation - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Sermon",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=IDFyXxd8rzU",
+      "duration": "10:02",
+      "thumb": "https://i.ytimg.com/vi/IDFyXxd8rzU/hqdefault.jpg",
+      "desc": "\"The Gift of God Is Like Dynamite - 10 Minutes of Impartation\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "sermon",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw12",
+      "title": "My Journey From a Tender Age - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Testimony",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=X_-wirZzL9U",
+      "duration": "11:27",
+      "thumb": "https://i.ytimg.com/vi/X_-wirZzL9U/hqdefault.jpg",
+      "desc": "\"My Journey From a Tender Age\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "testimony",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw13",
+      "title": "How the Angel of the Lord Visited Archbishop Manjoro - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Testimony",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=2AoFZ2dJo2U",
+      "duration": "16:17",
+      "thumb": "https://i.ytimg.com/vi/2AoFZ2dJo2U/hqdefault.jpg",
+      "desc": "\"How the Angel of the Lord Visited Archbishop Manjoro\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "testimony",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw14",
+      "title": "Healing and Deliverance - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Deliverance",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=bBINuZx5dTY",
+      "duration": "1:21:16",
+      "thumb": "https://i.ytimg.com/vi/bBINuZx5dTY/hqdefault.jpg",
+      "desc": "\"Healing and Deliverance\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "deliverance",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw15",
+      "title": "Deliverance - Archbishop Dr. B. Manjoro",
+      "channel": "ch-fwm",
+      "category": "Deliverance",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=938OklnrawY",
+      "duration": "29:35",
+      "thumb": "https://i.ytimg.com/vi/938OklnrawY/hqdefault.jpg",
+      "desc": "\"Deliverance\" - a message by Archbishop Dr. B. Manjoro, founder of Faith World Ministries, Harare, Zimbabwe.",
+      "tags": [
+        "archbishop manjoro",
+        "faith world ministries",
+        "deliverance",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw16",
+      "title": "Ndinoda Jesu - Faith World Ministries",
+      "channel": "ch-fwm",
+      "category": "Worship",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=1DG3drH9Wi0",
+      "duration": "10:34",
+      "thumb": "https://i.ytimg.com/vi/1DG3drH9Wi0/hqdefault.jpg",
+      "desc": "Worship from the Faith World Ministries choir, Harare, Zimbabwe.",
+      "tags": [
+        "faith world ministries",
+        "worship",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw17",
+      "title": "Ndinomutenda - Faith World Ministries",
+      "channel": "ch-fwm",
+      "category": "Worship",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=S1BkRbXz6ws",
+      "duration": "7:12",
+      "thumb": "https://i.ytimg.com/vi/S1BkRbXz6ws/hqdefault.jpg",
+      "desc": "Worship from the Faith World Ministries choir, Harare, Zimbabwe.",
+      "tags": [
+        "faith world ministries",
+        "worship",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw18",
+      "title": "How Great Thou Art - Faith World Ministries",
+      "channel": "ch-fwm",
+      "category": "Worship",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=3-2butOs0uI",
+      "duration": "5:14",
+      "thumb": "https://i.ytimg.com/vi/3-2butOs0uI/hqdefault.jpg",
+      "desc": "Worship from the Faith World Ministries choir, Harare, Zimbabwe.",
+      "tags": [
+        "faith world ministries",
+        "worship",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "fw19",
+      "title": "Kana Jehovha - Faith World Ministries",
+      "channel": "ch-fwm",
+      "category": "Worship",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=rI5dbc-bE5w",
+      "duration": "4:58",
+      "thumb": "https://i.ytimg.com/vi/rI5dbc-bE5w/hqdefault.jpg",
+      "desc": "Worship from the Faith World Ministries choir, Harare, Zimbabwe.",
+      "tags": [
+        "faith world ministries",
+        "worship",
+        "zimbabwe"
       ]
     }
   ],
