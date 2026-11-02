@@ -1271,3 +1271,13 @@ img { max-width: 100%; }
 .tv-sched li small em { font-style: normal; color: #9aa3c0; font-weight: 500; }
 .tv-sched li p { margin: 5px 0 0; font-size: 12.5px; color: #9aa3c0; }
 .ts-note { margin: 14px 0 0; font-size: 12px; color: #9aa3c0; }
+
+/* ===== Legacy: Prophet T.B. Joshua ===== */
+.legacy-block { background: linear-gradient(135deg, var(--card), var(--bg)); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 18px; padding: 28px; }
+.legacy-grid { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 32px; align-items: center; max-width: 960px; margin: 0 auto; }
+.legacy-photo { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5), 0 18px 40px rgba(0, 0, 0, 0.45); }
+.legacy-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.legacy-text h2 { margin: 8px 0 4px; }
+.legacy-years { color: var(--gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 14px; }
+.legacy-text p { color: var(--text-dim); line-height: 1.7; margin-bottom: 20px; }
+@media (max-width: 720px) { .legacy-grid { grid-template-columns: 1fr; text-align: center; } .legacy-photo { max-width: 260px; margin: 0 auto; } }

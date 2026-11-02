@@ -4,7 +4,7 @@
    - Page navigations: network first, fall back to cached shell when offline
    - /api/catalog: network first, cached copy when offline (so the video list still shows)
    - Everything else under /api/, admin and video streams: never cached (live status must be fresh) */
-const VERSION = 'dwim-tv-v3';
+const VERSION = 'dwim-tv-v4';
 const SHELL = [
   '/', '/css/styles.css', '/js/app.js', '/js/tv.js', '/js/schedule.js', '/js/pwa.js', '/js/prayer.js', '/js/player.js',
   '/img/logo-64.png', '/img/logo-192.png', '/img/logo-512.png', '/img/favicon-32.png',

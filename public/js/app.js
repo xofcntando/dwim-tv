@@ -505,3 +505,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 tickCountdown();
 setInterval(tickCountdown, 1000);
 loadCatalog().then(() => { initContactButtons(); schedulePolling(); });
+
+/* Legacy section: jump to T.B. Joshua's messages via the search box */
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#legacyBtn')) return;
+  const q = document.getElementById('search');
+  if (!q) return;
+  q.value = 'T.B. Joshua';
+  q.dispatchEvent(new Event('input', { bubbles: true }));
+  const main = document.getElementById('main') || q;
+  main.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
