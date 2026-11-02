@@ -21,7 +21,7 @@ DWIM TV exists so the Word, worship and prayer of Destiny Word International Min
 Short branded DWIM TV videos (`public/breaks/`, channel `ch-breaks`) play on air **every 10 minutes**, taking turns. They never remove the sermon: the programme clock pauses during the break and the sermon resumes exactly where it stopped. Breaks never land on top of the Let It Rain signature slots.
 
 ```json
-"breaks": [{ "label": "DWIM TV", "videoIds": ["brk-prayer", "brk-sunday", "brk-1year"], "everyMinutes": 10 }]
+"breaks": [{ "label": "DWIM TV", "videoIds": ["brk-reel"], "everyMinutes": 10 }]
 ```
 
 Use `times: ["08:00", "16:00"]` instead of `everyMinutes` for fixed clock times. To add a new break video, add it to `ch-breaks` and list its id in `videoIds`.

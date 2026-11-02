@@ -4827,13 +4827,45 @@
         "break",
         "zimbabwe"
       ]
+    },
+    {
+      "id": "brk-reel",
+      "title": "DWIM TV — Station Break",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-reel.mp4",
+      "duration": "0:14",
+      "thumb": "/breaks/dwimtv-reel.jpg",
+      "desc": "Prayer & Deliverance, Join Us Every Sunday and DWIM TV 1 Year, in one short break.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "brk-reel",
+      "title": "DWIM TV — Station Break",
+      "channel": "ch-breaks",
+      "category": "DWIM TV Break",
+      "type": "direct",
+      "source": "/breaks/dwimtv-reel.mp4",
+      "duration": "0:14",
+      "thumb": "/breaks/dwimtv-reel.jpg",
+      "desc": "Prayer & Deliverance, Join Us Every Sunday and DWIM TV 1 Year, in one short break.",
+      "tags": [
+        "dwim tv",
+        "break",
+        "zimbabwe"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 12,
+  "seedVersion": 14,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
@@ -5014,9 +5046,7 @@
       {
         "label": "DWIM TV",
         "videoIds": [
-          "brk-prayer",
-          "brk-sunday",
-          "brk-1year"
+          "brk-reel"
         ],
         "everyMinutes": 10
       }
