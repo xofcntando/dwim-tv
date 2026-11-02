@@ -4843,13 +4843,30 @@
         "break",
         "zimbabwe"
       ]
+    },
+    {
+      "id": "gc-healing-chant",
+      "title": "The Healing Chant — Solo Yahweh (Cover)",
+      "channel": "ch-gospel",
+      "category": "Worship Music",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=xXcmkoRNKm8",
+      "duration": "4:07",
+      "thumb": "https://i.ytimg.com/vi/xXcmkoRNKm8/hqdefault.jpg",
+      "desc": "\"The Healing Chant\" by Solo Yahweh (cover). Anointed worship for the DWIM TV Worship Hour.",
+      "tags": [
+        "worship",
+        "gospel",
+        "healing",
+        "solo yahweh"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 13,
+  "seedVersion": 14,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",
