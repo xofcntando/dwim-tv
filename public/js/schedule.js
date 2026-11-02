@@ -42,9 +42,9 @@ const DwimSchedule = (function () {
   }
 
   function eligible(catalog, sc, channels, maxMin, usedIds) {
-    const sigId = sc.signature && sc.signature.videoId;
+    const sigIds = new Set(sigPool(catalog, sc).map(v => v.id));
     return (catalog.videos || []).filter(v =>
-      v.id !== sigId && !usedIds.has(v.id) && channels.indexOf(v.channel) >= 0 &&
+      !sigIds.has(v.id) && !usedIds.has(v.id) && channels.indexOf(v.channel) >= 0 &&
       v.source && (v.type === 'youtube' || v.type === 'direct' || v.type === 'hls') &&
       durSec(v) > 0 && durSec(v) <= maxMin * 60);
   }
@@ -78,6 +78,28 @@ const DwimSchedule = (function () {
     return list;
   }
 
+  // The signature "pool": a single video (signature.videoId) or, when signature.category is set,
+  // every playable video in that category (e.g. all versions of "Let It Rain") up to maxMinutes long.
+  function sigPool(catalog, sc) {
+    const sig = sc && sc.signature; if (!sig) return [];
+    const vids = catalog.videos || [];
+    const single = vids.find(v => v.id === sig.videoId);
+    if (!sig.category) return single ? [single] : [];
+    const maxSec = (sig.maxMinutes || 14) * 60;
+    const pool = vids.filter(v => v.category === sig.category && v.source && (v.type === 'youtube' || v.type === 'direct' || v.type === 'hls') && durSec(v) > 0 && durSec(v) <= maxSec)
+      .sort((a, b) => (a.id < b.id ? -1 : 1));
+    return pool.length ? pool : (single ? [single] : []);
+  }
+  // Shuffled but identical for every viewer: which version plays in a given slot on a given day
+  function sigVideoAt(catalog, sc, dayKey, t) {
+    const pool = sigPool(catalog, sc);
+    if (!pool.length) return null;
+    // extra bit-mixing so neighbouring slots/days do not favour the same version
+    const mix = (n) => { n ^= n >>> 16; n = Math.imul(n, 0x85ebca6b); n ^= n >>> 13; n = Math.imul(n, 0xc2b2ae35); return (n ^ (n >>> 16)) >>> 0; };
+    const salt = dayKey + '|sig|' + t;
+    return pool.map(v => ({ v, k: mix(hashStr(salt + '|' + v.id)) })).sort((a, b) => a.k - b.k)[0].v;
+  }
+
   function sigSlots(sc) { return sc.signature ? (sc.signature.times || []).map(hmToSec).sort((a, b) => a - b) : []; }
 
   // What is on air at instant `ms`?
@@ -87,12 +109,11 @@ const DwimSchedule = (function () {
     const tz = sc.timezone || 'Africa/Harare';
     const parts = zoneParts(ms, tz);
     const sec = parts.sec + (ms % 1000) / 1000;
-    const sigVideo = sc.signature ? (catalog.videos || []).find(v => v.id === sc.signature.videoId) : null;
-    const sigLen = sigVideo ? durSec(sigVideo) : 0;
-    const slots = sigVideo && sigLen ? sigSlots(sc) : [];
+    const slotList = sc.signature ? sigSlots(sc).map(t => ({ t, v: sigVideoAt(catalog, sc, parts.key, t) })).filter(x => x.v && durSec(x.v) > 0) : [];
 
-    // 1) signature song (e.g. "Let It Rain") due right now
-    for (const t of slots) {
+    // 1) signature song (e.g. "Let It Rain", a different version each slot) due right now
+    for (const { t, v: sigVideo } of slotList) {
+      const sigLen = durSec(sigVideo);
       if (sec >= t && sec < t + sigLen) {
         return { kind: 'signature', token: 'sig:' + parts.key + '@' + t, block: findBlock(sc, parts, sec), video: sigVideo, offset: sec - t, remaining: t + sigLen - sec, label: sc.signature.label || sigVideo.title, parts, sec };
       }
@@ -103,7 +124,7 @@ const DwimSchedule = (function () {
     const pl = playlistFor(catalog, sc, block, parts.key);
     if (!pl.length) return null;
     let elapsed = sec - hmToSec(block.start);
-    for (const t of slots) if (t >= hmToSec(block.start) && t + sigLen <= sec) elapsed -= sigLen;
+    for (const { t, v: sv } of slotList) if (t >= hmToSec(block.start) && t + durSec(sv) <= sec) elapsed -= durSec(sv);
     elapsed = Math.max(0, elapsed);
     const total = pl.reduce((a, v) => a + durSec(v), 0);
     let pos = elapsed % total, i = 0;

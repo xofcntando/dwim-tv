@@ -567,7 +567,9 @@ function validateSchedule(sc, cat) {
     if (bad) return `Block "${b.name}": unknown channel "${bad}"`;
   }
   if (sc.signature) {
-    if (!(cat.videos || []).some(v => v.id === sc.signature.videoId)) return 'Signature videoId not found in the catalog';
+    const inCat = (cat.videos || []).some(v => v.id === sc.signature.videoId);
+    const inCategory = sc.signature.category && (cat.videos || []).some(v => v.category === sc.signature.category);
+    if (!inCat && !inCategory) return 'Signature videoId (or category) not found in the catalog';
     if (!Array.isArray(sc.signature.times) || sc.signature.times.some(t => !hm.test(t))) return 'Signature times must look like ["06:00","18:00"]';
   }
   try { new Intl.DateTimeFormat('en-US', { timeZone: sc.timezone || 'Africa/Harare' }); } catch (e) { return 'Unknown timezone'; }

@@ -4758,7 +4758,9 @@
         "06:00",
         "14:00",
         "18:00"
-      ]
+      ],
+      "category": "Let It Rain",
+      "maxMinutes": 14
     },
     "blocks": [
       {
