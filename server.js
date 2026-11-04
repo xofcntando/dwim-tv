@@ -800,6 +800,12 @@ async function init() {
         if (cat.schedule && fileCat.schedule && fileCat.schedule.breaks) cat.schedule.breaks = fileCat.schedule.breaks; // seed v9: DWIM TV breaks every 10 minutes
         // seed v19: add the daily "Kids Moment" block (and the split afternoon) if the live schedule lacks it
         if (cat.schedule && fileCat.schedule && fileCat.schedule.blocks && !(cat.schedule.blocks || []).some(b => b.id === 'kids')) cat.schedule.blocks = fileCat.schedule.blocks;
+        // seed v21: curated song playlists ("DWIM TV Best Songs" and more). Add the ones the live catalog lacks, never overwrite admin edits.
+        if (Array.isArray(fileCat.playlists)) {
+          cat.playlists = cat.playlists || [];
+          const havePl = new Set(cat.playlists.map(p => p.id));
+          for (const p of fileCat.playlists) if (!havePl.has(p.id)) cat.playlists.push(p);
+        }
         // keep the original "Let It Rain" in the same category as its new versions
         for (const v of cat.videos) if (v.id === 'gc-rain' && fs_ && fs_.category) v.category = fs_.category;
         cat.seedVersion = fileCat.seedVersion;

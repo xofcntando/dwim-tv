@@ -49,6 +49,8 @@
     });
   }
 
+  App.wireCommon = wireCommon;
+
   /* ---------- On Demand ---------- */
   let stats = { trending: [], watching: 0 }, statsAt = 0;
   async function loadStats() {
@@ -120,6 +122,7 @@
     if (trend.length < 4) trend = [];
     const recent = all.slice(-16).reverse();
     let html = heroHTML();
+    if (App.plRow) html += App.plRow();
     html += row('Continue Watching', cont) + row('My List', mine) + row('Trending Now', trend);
     html += row('Recently Added', recent);
     App.channels().forEach(c => {
@@ -288,7 +291,14 @@
   /* ---------- Watch modal ---------- */
   let wm = null, ytp = null, own = null, progT = null, nextT = null, wmId = null, prevFocus = null;
 
+  // Playlist queue: while a playlist is playing, "up next" follows the playlist order (and loops).
+  function queueList(v) {
+    const q = App.state.queue; if (!q || !v) return null;
+    const i = q.ids.indexOf(v.id); if (i < 0) return null;
+    return q.ids.slice(i + 1).concat(q.ids.slice(0, i)).map(App.video).filter(Boolean);
+  }
   function relatedFor(v) {
+    const ql = queueList(v); if (ql) return ql;
     const all = App.videos();
     const same = all.filter(x => x.channel === v.channel && x.id !== v.id);
     const i = all.filter(x => x.channel === v.channel).findIndex(x => x.id === v.id);
@@ -297,7 +307,7 @@
     const alike = all.filter(x => x.channel !== v.channel && (x.tags || []).some(t => tags.has(t)));
     return ordered.concat(alike).slice(0, 16);
   }
-  function nextFor(v) { return relatedFor(v).filter(x => x.channel === v.channel)[0] || relatedFor(v)[0] || null; }
+  function nextFor(v) { const ql = queueList(v); if (ql) return ql[0] || null; return relatedFor(v).filter(x => x.channel === v.channel)[0] || relatedFor(v)[0] || null; }
 
   function sideItem(x) {
     return `<div class="side-item" tabindex="0" role="button" data-open="${esc(x.id)}" aria-label="Play ${esc(x.title)}"><div class="dthumb"><img data-thumb src="${esc(App.thumb(x))}" data-fallback="https://i.ytimg.com/vi/${esc(App.ytId(x.source) || '')}/mqdefault.jpg" alt="" loading="lazy">${x.duration ? `<span class="ddur">${esc(x.duration)}</span>` : ''}</div><div><h4>${esc(x.title)}</h4><small>${esc((App.channel(x.channel) || {}).name || x.category || '')}</small></div></div>`;
@@ -307,6 +317,7 @@
     const v = App.video(id);
     if (!v) { App.toast('That video is not available'); App.closeVideo(); return; }
     if (wm && wmId === id) return;
+    if (App.state.queue && App.state.queue.ids.indexOf(id) < 0) App.state.queue = null; // left the playlist
     teardownPlayer();
     wmId = id;
     prevFocus = prevFocus || document.activeElement;
@@ -321,7 +332,7 @@
     document.body.classList.add('watch-open');
     const rel = relatedFor(v), fav = App.isFav(id), ch = App.channel(v.channel);
     wm.setAttribute('aria-label', v.title);
-    wm.innerHTML = `<div class="wm-top"><button type="button" class="wm-back" data-wm-close>&lsaquo; Back</button><span class="wm-brand">DWIM <b>TV</b> On Demand</span></div>
+    wm.innerHTML = `<div class="wm-top"><button type="button" class="wm-back" data-wm-close>&lsaquo; Back</button><span class="wm-brand">DWIM <b>TV</b> On Demand</span><span class="nm-credit nm-mini">by <b>Ntandomods</b></span></div>
       <div class="wm-body"><div class="wm-main"><div class="wm-stage" id="wmStage"><div id="wmPlayer"></div><div class="wm-next" id="wmNext" hidden></div></div>
         <div class="wm-info"><span class="hero-badge">${esc(v.category || (ch && ch.name) || 'Video')}</span><h2>${esc(v.title)}</h2>
           <div class="wm-meta">${ch ? esc(ch.name) : ''}${v.duration ? ' &middot; ' + esc(v.duration) : ''}${viewsLabel(id)}</div>
@@ -329,7 +340,7 @@
             <button type="button" class="wm-btn" data-wm-share>&#10150; Share</button>
             <label class="wm-auto"><input type="checkbox" id="wmAuto" ${App.store.get('autoplay', true) ? 'checked' : ''}> Autoplay next</label></div>
           ${v.desc ? `<p class="wm-desc">${esc(v.desc)}</p>` : ''}</div></div>
-        <aside class="wm-side"><h3>More to watch</h3>${rel.map(sideItem).join('')}</aside></div>`;
+        <aside class="wm-side"><h3>${App.state.queue ? '&#9835; Up next: ' + esc(App.state.queue.name) : 'More to watch'}</h3>${(App.state.queue ? rel.slice(0, 40) : rel).map(sideItem).join('')}</aside></div>`;
     wm.hidden = false;
     $('.wm-back', wm).focus();
     startPlayer(v);

@@ -9,6 +9,9 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/logo-192.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta name="theme-color" content="#070b18">
+  <meta name="author" content="Ntandomods">
+  <meta name="generator" content="Ntandomods">
+  <meta property="og:site_name" content="DWIM TV by Ntandomods">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,6 +27,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/ui-v2.css">
   <link rel="stylesheet" href="css/tv-app.css">
+  <link rel="stylesheet" href="css/playlists.css">
   <meta property="og:image" content="/img/hero-worship.jpg">
   <meta property="og:site_name" content="DWIM TV">
   <script type="application/ld+json">
@@ -44,6 +48,7 @@
       <a href="#/live" data-route="live">Live TV</a>
       <a href="#/guide" data-route="guide">Guide</a>
       <a href="#/ondemand" data-route="ondemand">On Demand</a>
+      <a href="#/songs" data-route="songs">Songs</a>
       <a href="#/mylist" data-route="mylist">My List</a>
       <a href="#prayer">Prayer</a>
       <a href="#testimonies">Testimonies</a>
@@ -224,8 +229,9 @@
       <figure><video controls preload="none" playsinline poster="breaks/dwimtv-1year.png" src="breaks/dwimtv-1year.mp4"></video><figcaption>DWIM TV 1 Year</figcaption></figure>
     </div>
     <div class="builder-card">
+      <img class="nm-logo" src="img/ntandomods-mark.svg" alt="Ntandomods logo" width="64" height="64">
       <span class="block-kicker gold-kicker">&#128187; Built in Zimbabwe</span>
-      <h3>Built by Ntandomods</h3>
+      <h3>Built by <span class="nm-word">NTANDO<b>MODS</b></span></h3>
       <p>DWIM TV was designed and built in Zimbabwe by <b>Ntandomods</b>, a 20-year-old developer, as a gift to the house and to the kingdom of God. A young Zimbabwean using his skill to put the gospel in every pocket.</p>
     </div>
   </section>
@@ -329,7 +335,7 @@
     </div>
     <div class="footer-bottom">
       <p>© <span id="year">2026</span> Destiny Word International Ministries. All rights reserved. DWIM TV is the official media channel of DWIM.</p>
-      <p>Built in Zimbabwe by <b>Ntandomods</b>, age 20. <a href="#purpose">Why DWIM TV exists</a></p>
+      <p class="nm-footer"><img src="img/ntandomods-mark.svg" alt="" width="26" height="26"><span>Designed &amp; built in Zimbabwe by <b>Ntandomods</b>, age 20. <a href="#purpose">Why DWIM TV exists</a></span></p>
       <p>Videos are streamed from external sources (e.g. YouTube) with full credit to the ministry. <span class="admin-link"><a href="admin.html">Admin Panel</a></span></p>
     </div>
   </footer>
@@ -365,6 +371,7 @@
     <a href="#/live" data-route="live"><span>&#128250;</span>Live</a>
     <a href="#/guide" data-route="guide"><span>&#128197;</span>Guide</a>
     <a href="#/ondemand" data-route="ondemand"><span>&#9654;</span>On Demand</a>
+    <a href="#/songs" data-route="songs"><span>&#127925;</span>Songs</a>
     <a href="#/mylist" data-route="mylist"><span>&#10084;</span>My List</a>
     <a href="#prayer"><span>&#128591;</span>Prayer</a>
   </nav>
@@ -379,5 +386,6 @@
   <script src="js/app-core.js"></script>
   <script src="js/app-views.js"></script>
   <script src="js/app-live.js"></script>
+  <script src="js/playlists.js"></script>
 </body>
 </html>

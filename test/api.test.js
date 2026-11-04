@@ -41,3 +41,19 @@ test('robots and sitemap exist', async () => {
   assert.match(await (await fetch(url('/robots.txt'))).text(), /Sitemap:/);
   assert.match(await (await fetch(url('/sitemap.xml'))).text(), /<urlset/);
 });
+
+test('best songs playlists are served and only reference real videos', async () => {
+  const j = await (await fetch(url('/api/catalog'))).json();
+  assert.ok(Array.isArray(j.playlists) && j.playlists.length >= 3);
+  assert.ok(j.playlists.some(p => p.id === 'pl-best' && p.featured));
+  const ids = new Set(j.videos.map(v => v.id));
+  for (const p of j.playlists) {
+    assert.ok(p.name && p.videoIds.length > 3, p.id);
+    for (const id of p.videoIds) assert.ok(ids.has(id), `${p.id} references missing video ${id}`);
+  }
+});
+test('Ntandomods brand is present on the site', async () => {
+  const html = await (await fetch(url('/'))).text();
+  assert.ok(/Ntandomods/i.test(html) && html.includes('name="author" content="Ntandomods"'));
+  assert.strictEqual((await fetch(url('/img/ntandomods-mark.svg'))).status, 200);
+});

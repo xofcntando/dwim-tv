@@ -7,6 +7,8 @@
 - [x] Events, announcements, Verse of the Day, admin editor, audience stats
 - [x] HD quality requests, PWA shortcuts, tab bar, media session, SEO files, tests
 
+- [x] Songs & Playlists (Best Songs + 6 playlists, Play all / Shuffle, queue), Ntandomods brand mark
+
 ## Next
 - [ ] Real push notifications (web-push + VAPID keys) so reminders work with the app closed
 - [ ] Live chat / prayer wall with moderation

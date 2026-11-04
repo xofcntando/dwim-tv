@@ -40,6 +40,7 @@ DWIM TV is now a complete TV app, not only a live channel. Everything below work
 | **TV mode** - big-screen lean-back UI with on-screen menu, D-pad / remote friendly; Smart TV browsers and `?tv=1` open in it automatically | key **T** or the TV mode button |
 | **Events, announcements, Verse of the Day** - managed in the admin panel (**Events & Announcements**), events have Add to calendar | Home page + Guide |
 | **Audience stats** - live viewers and most watched videos, shown in the admin panel under **Audience** | `/api/stats` |
+| **Songs & Playlists** - Best Songs, Zimbabwe Gospel, Mahendere, Jesus Culture and more, with Play all and Shuffle | `#/songs` or key **P** |
 | **Mobile app navigation** - bottom tab bar, lock-screen media controls, update notice | phones |
 | **SEO/PWA** - `robots.txt`, `sitemap.xml`, structured data, new app shortcuts (Live, Guide, On Demand) | - |
 
@@ -48,6 +49,30 @@ Keyboard / remote: **L** live, **G** guide, **O** on demand, **S** or **/** sear
 **Picture quality:** the player asks YouTube for the highest quality available (1080p when the video has it) on both the live channel and On Demand. YouTube can still lower the quality on a slow connection.
 
 **Reminders** are shown as notifications while DWIM TV is open or installed. True background push (notifications with the app closed) needs a push server and is not included yet.
+
+### Songs & Playlists (v3)
+
+**DWIM TV Best Songs** and six more curated playlists live in the `playlists` array of `data/videos.json`: Best of Zimbabwe Gospel, Minister Michael Mahendere Collection, Jesus Culture Essentials, Global Worship Favourites, Soaking & Prayer Worship, and Praise & Celebration.
+
+| Feature | Where |
+|---|---|
+| Playlist hub with a featured playlist, **Play all** and **Shuffle** | `#/songs` or key **P**, "Songs" in the top bar and tab bar |
+| One playlist with numbered tracks, durations, Save and Share | `#/songs/pl-best` |
+| Playlist row at the top of On Demand | `#/ondemand` |
+| Songs play one after another and loop; the watch page shows "Up next" from the playlist | any playlist |
+
+Add or edit a playlist:
+
+```json
+{ "id": "pl-my-favourites", "name": "My Favourites", "icon": "💛", "desc": "Short description.",
+  "videoIds": ["gc65", "gc43", "gc16"] }
+```
+
+`videoIds` must be ids of videos already in the catalog (`npm test` checks this). Set `"featured": true` on the one playlist to show on top of the Songs page. Existing MongoDB databases receive new playlists automatically once (seed v21); playlists you edited are never overwritten.
+
+### Ntandomods brand
+
+DWIM TV is designed and built in Zimbabwe by **Ntandomods**. The brand mark is `public/img/ntandomods-mark.svg` and appears in the footer, the "Built by Ntandomods" card, the watch page header, the playlist pages, the admin panel, the page metadata (`author`) and the browser console. Please keep these credits when you fork or redeploy.
 
 ### Quality tools
 

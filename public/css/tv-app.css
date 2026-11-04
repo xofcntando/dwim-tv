@@ -28,8 +28,8 @@ button { font-family: inherit; }
 .tabbar { display: none; }
 @media (max-width: 860px) {
   :root { --tabbar-h: 62px; }
-  .tabbar { position: fixed; z-index: 150; left: 0; right: 0; bottom: 0; height: var(--tabbar-h); padding-bottom: env(safe-area-inset-bottom); display: grid; grid-template-columns: repeat(5, 1fr); background: rgba(7,11,24,.96); backdrop-filter: blur(16px); border-top: 1px solid var(--border); }
-  .tabbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--text-dim); text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .2px; }
+  .tabbar { position: fixed; z-index: 150; left: 0; right: 0; bottom: 0; height: var(--tabbar-h); padding-bottom: env(safe-area-inset-bottom); display: grid; grid-template-columns: repeat(6, 1fr); background: rgba(7,11,24,.96); backdrop-filter: blur(16px); border-top: 1px solid var(--border); }
+  .tabbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--text-dim); text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 0; }
   .tabbar a span { font-size: 19px; line-height: 1; filter: grayscale(.6); }
   .tabbar a.route-on { color: var(--gold-2); }
   .tabbar a.route-on span { filter: none; }

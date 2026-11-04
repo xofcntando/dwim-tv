@@ -4,10 +4,10 @@
    - Page navigations: network first, fall back to cached shell when offline
    - /api/catalog: network first, cached copy when offline (so the video list still shows)
    - Everything else under /api/, admin and video streams: never cached (live status must be fresh) */
-const VERSION = 'dwim-tv-v11';
+const VERSION = 'dwim-tv-v12';
 const SHELL = [
-  '/', '/css/styles.css', '/css/ui-v2.css', '/css/tv-app.css', '/js/ui-v2.js', '/js/app-core.js', '/js/app-views.js', '/js/app-live.js', '/js/app.js', '/js/tv.js', '/js/schedule.js', '/js/pwa.js', '/js/prayer.js', '/js/player.js',
-  '/img/logo-64.png', '/img/logo-192.png', '/img/logo-512.png', '/img/favicon-32.png',
+  '/', '/css/styles.css', '/css/ui-v2.css', '/css/tv-app.css', '/css/playlists.css', '/js/ui-v2.js', '/js/app-core.js', '/js/app-views.js', '/js/app-live.js', '/js/playlists.js', '/js/app.js', '/js/tv.js', '/js/schedule.js', '/js/pwa.js', '/js/prayer.js', '/js/player.js',
+  '/img/ntandomods-mark.svg', '/img/logo-64.png', '/img/logo-192.png', '/img/logo-512.png', '/img/favicon-32.png',
   '/img/apple-touch-icon.png', '/offline.html', '/manifest.webmanifest'
 ];
 

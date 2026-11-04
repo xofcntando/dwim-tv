@@ -21,6 +21,7 @@
     const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
     return h ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`;
   };
+  try { console.log('%cDWIM TV%c built by Ntandomods, Zimbabwe', 'background:#d4af37;color:#111;font-weight:800;padding:3px 8px;border-radius:4px 0 0 4px', 'background:#0c1226;color:#f0d478;padding:3px 8px;border-radius:0 4px 4px 0'); } catch (e) { /* ignore */ }
   App.cat = () => (typeof CATALOG !== 'undefined' ? CATALOG : { videos: [], channels: [] });
   App.videos = () => (App.cat().videos || []).filter(v => v.source && v.channel !== 'ch-breaks');
   App.video = (id) => (App.cat().videos || []).find(v => v.id === id) || null;
@@ -165,7 +166,7 @@
 
   function route() {
     const h = location.hash || '';
-    const m = h.match(/^#\/(live|guide|ondemand|mylist|watch)(?:\/([^?]*))?/);
+    const m = h.match(/^#\/(live|guide|ondemand|mylist|songs|watch)(?:\/([^?]*))?/);
     if (!m) { App.closeWatch && App.closeWatch(); App.closeLayer(); markNav(''); return; }
     const name = m[1], arg = m[2] ? decodeURIComponent(m[2]) : '';
     if (name === 'watch') {
@@ -183,6 +184,7 @@
       markNav('live');
       return;
     }
+    App.state.arg = arg;
     App.openLayer(name);
   }
   window.addEventListener('hashchange', route);
@@ -226,7 +228,7 @@
   }
 
   function helpHTML() {
-    const rows = [['L', 'Live TV'], ['G', 'TV Guide'], ['O', 'On Demand'], ['S or /', 'Search'], ['+', 'Save the selected video to My List'], ['M', 'Mute / unmute'], ['F', 'Fullscreen'], ['T', 'TV mode (big screen)'], ['Arrow keys', 'Move around (TV remote friendly)'], ['Esc', 'Close / go back'], ['?', 'This help']];
+    const rows = [['L', 'Live TV'], ['G', 'TV Guide'], ['O', 'On Demand'], ['P', 'Songs & Playlists'], ['S or /', 'Search'], ['+', 'Save the selected video to My List'], ['M', 'Mute / unmute'], ['F', 'Fullscreen'], ['T', 'TV mode (big screen)'], ['Arrow keys', 'Move around (TV remote friendly)'], ['Esc', 'Close / go back'], ['?', 'This help']];
     return `<div class="help-card" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts"><h3>Keyboard &amp; remote</h3><dl>${rows.map(r => `<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl><button type="button" class="btn-gold" data-close-help>Close</button></div>`;
   }
   App.toggleHelp = () => {
@@ -262,6 +264,7 @@
     const lk = k.length === 1 ? k.toLowerCase() : k;
     if (lk === 'g') { e.preventDefault(); App.go('#/guide'); }
     else if (lk === 'o') { e.preventDefault(); App.go('#/ondemand'); }
+    else if (lk === 'p') { e.preventDefault(); App.go('#/songs'); }
     else if (lk === 'l') { e.preventDefault(); App.go('#/live'); }
     else if (lk === 'm' && (typeof TV !== 'undefined' && TV) && !wm) { e.preventDefault(); TV.toggleMute(); }
     else if (lk === 'f' && (typeof TV !== 'undefined' && TV) && !wm && (!layer || layer.hidden)) { e.preventDefault(); TV.fullscreen(); }

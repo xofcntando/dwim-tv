@@ -95,7 +95,7 @@
     let m = $('#tvMenu'); if (m) return m;
     m = document.createElement('nav'); m.id = 'tvMenu'; m.className = 'tv-menu'; m.setAttribute('aria-label', 'TV menu');
     m.innerHTML = `<div class="tvm-now"><small>Now on DWIM TV</small><b id="tvmNow"></b></div>
-      <div class="tvm-btns"><button type="button" data-go="#/live">&#128250; Live</button><button type="button" data-go="#/guide">&#128197; Guide</button><button type="button" data-go="#/ondemand">&#9654; On Demand</button><button type="button" data-go="#/mylist">&#10084; My List</button>
+      <div class="tvm-btns"><button type="button" data-go="#/live">&#128250; Live</button><button type="button" data-go="#/guide">&#128197; Guide</button><button type="button" data-go="#/ondemand">&#9654; On Demand</button><button type="button" data-go="#/songs">&#127925; Songs</button><button type="button" data-go="#/mylist">&#10084; My List</button>
       <button type="button" data-tv="sound">&#128266; Sound</button><button type="button" data-tv="exit">&#10005; Exit TV mode</button></div>`;
     document.body.appendChild(m);
     m.addEventListener('click', (e) => {
