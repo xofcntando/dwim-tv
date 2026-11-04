@@ -7,6 +7,8 @@ A small native Android app (Java, no extra libraries) that opens **DWIM TV** ful
 - Live TV starts by itself (no tap needed), the screen stays awake, offline screen with a Try again button.
 - Package id: `tv.dwim.app`. To point the app at another address, change `HOST` in `app/src/main/java/tv/dwim/app/MainActivity.java`.
 
+**[⬇ Download DWIM-TV.apk](https://github.com/xofcntando/dwim-tv/releases/download/android-tv-latest/DWIM-TV.apk)**
+
 ## Get the APK (no Android Studio needed)
 
 1. On GitHub open the repo, **Actions**, **Build Android TV app**, **Run workflow**. (It also runs when anything in `android-tv/` changes.)
