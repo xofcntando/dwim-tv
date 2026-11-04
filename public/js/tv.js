@@ -7,6 +7,8 @@ const TV = (function () {
   let started = false, paused = false, errStreak = 0, muted = true, nowId = null, lowerT = null;
   let cat = null, curToken = null, watchT = null, uiT = null, cur = null;
   const KEY = 'dwimtv:tv:last';
+  let vol = 100; const listeners = [];
+  try { const sv = +localStorage.getItem('dwimtv:vol'); if (sv >= 0 && sv <= 100 && localStorage.getItem('dwimtv:vol') !== null) vol = sv; } catch (e) {}
 
   function el(id) { return document.getElementById(id); }
   function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
@@ -133,6 +135,7 @@ const TV = (function () {
       const nx = queue[(idx + 1) % queue.length];
       el('tvNext').textContent = queue.length > 1 && nx ? 'Up next: ' + nx.title : '';
     }
+    emit('change');
     const low = el('tvLower'); low.classList.remove('hide');
     clearTimeout(lowerT); lowerT = setTimeout(() => low.classList.add('hide'), 9000);
   }
@@ -202,12 +205,12 @@ const TV = (function () {
       yt = new YT.Player('tvPlayer', {
         host: 'https://www.youtube-nocookie.com',
         videoId: ytIdOf(v.source),
-        playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, iv_load_policy: 3, modestbranding: 1, playsinline: 1, mute: muted ? 1 : 0, start: t, origin: location.origin },
+        playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, iv_load_policy: 3, modestbranding: 1, playsinline: 1, vq: 'hd1080', mute: muted ? 1 : 0, start: t, origin: location.origin },
         events: {
-          onReady: (e) => { if (muted) e.target.mute(); else e.target.unMute(); e.target.playVideo(); },
+          onReady: (e) => { if (muted) e.target.mute(); else { e.target.unMute(); e.target.setVolume(vol); } hd(e.target); e.target.playVideo(); },
           onStateChange: (e) => {
             if (nowId !== v.id) return;
-            if (e.data === YT.PlayerState.PLAYING) { clearTimeout(stuckT); errStreak = 0; startTick(); updSoundBtn(); }
+            if (e.data === YT.PlayerState.PLAYING) { clearTimeout(stuckT); errStreak = 0; startTick(); updSoundBtn(); hd(e.target); emit('playing'); }
             else if (e.data === YT.PlayerState.ENDED) advance(false);
             else if (e.data === YT.PlayerState.PAUSED && !paused) { try { yt.playVideo(); } catch (er) {} }
           },
@@ -234,12 +237,37 @@ const TV = (function () {
     }, 400);
   }
 
+  // Ask YouTube for the best picture. YouTube may still adapt to the viewer's connection, but this
+  // makes 1080p (or the highest available) the target instead of the low-res default for small embeds.
+  function hd(p) {
+    try {
+      const lv = (p.getAvailableQualityLevels && p.getAvailableQualityLevels()) || [];
+      const best = ['hd2160', 'hd1440', 'hd1080', 'hd720'].find(q => lv.indexOf(q) >= 0) || 'hd1080';
+      const pick = lv.indexOf('hd1080') >= 0 ? 'hd1080' : best;
+      if (p.setPlaybackQualityRange) p.setPlaybackQualityRange(pick, pick);
+      if (p.setPlaybackQuality) p.setPlaybackQuality(pick);
+    } catch (e) {}
+  }
+  function emit(type) { listeners.forEach(fn => { try { fn(type, info()); } catch (e) {} }); }
+  function info() { return { video: cur ? cur.video : (queue[idx] || null), block: cur ? cur.block : null, kind: cur ? cur.kind : 'queue', muted, volume: vol, paused }; }
+  function setVolume(n) {
+    vol = Math.max(0, Math.min(100, Math.round(n)));
+    try { localStorage.setItem('dwimtv:vol', String(vol)); } catch (e) {}
+    if (vol === 0) { muteNow(); return; }
+    if (muted) muted = false;
+    try { if (yt) { yt.unMute(); yt.setVolume(vol); } } catch (e) {}
+    if (own) { own.video.muted = false; own.video.volume = vol / 100; }
+    updSoundBtn(); emit('volume');
+  }
+  function muteNow() { muted = true; try { if (yt) yt.mute(); } catch (e) {} if (own) own.video.muted = true; updSoundBtn(); emit('volume'); }
+  function toggleMute() { if (muted) { if (vol === 0) vol = 60; unmute(); } else muteNow(); }
+
   function updSoundBtn() { el('tvSound').hidden = !muted; }
   function unmute() {
     muted = false;
-    try { if (yt) { yt.unMute(); yt.setVolume(100); } } catch (e) {}
-    if (own) own.video.muted = false;
-    updSoundBtn();
+    try { if (yt) { yt.unMute(); yt.setVolume(vol || 100); } } catch (e) {}
+    if (own) { own.video.muted = false; own.video.volume = (vol || 100) / 100; }
+    updSoundBtn(); emit('volume');
   }
   function fullscreen() {
     const s = el('tvStage');
@@ -247,8 +275,8 @@ const TV = (function () {
     else (s.requestFullscreen || s.webkitRequestFullscreen).call(s);
   }
   function nudge() { try { if (yt && yt.getPlayerState() !== 1) yt.playVideo(); if (own && own.video.paused) own.video.play(); } catch (e) {} }
-  function pause() { paused = true; try { if (yt) yt.pauseVideo(); if (own) own.video.pause(); } catch (e) {} }
-  function resume() { paused = false; if (scheduleOn()) sync(false); nudge(); }
+  function pause() { paused = true; try { if (yt) yt.pauseVideo(); if (own) own.video.pause(); } catch (e) {} emit('pause'); }
+  function resume() { paused = false; if (scheduleOn()) sync(false); nudge(); emit('resume'); }
 
-  return { mount, pause, resume };
+  return { mount, pause, resume, info, setVolume, toggleMute, fullscreen, on: (fn) => listeners.push(fn), isMuted: () => muted };
 })();

@@ -187,6 +187,22 @@
       <p class="hint">Requests sent from the website's prayer form. Tap <b>Prayed</b> once the team has prayed. <span id="prStorage"></span></p>
       <div id="prList" class="add-card"><p class="hint">Loading…</p></div>
 
+      <h2 style="margin-top:38px">&#128226; Events &amp; Announcements</h2>
+      <p class="hint">Events appear in the <b>Coming up</b> section and the TV Guide with an Add to calendar button. Announcements show as a banner at the top of the site. Times are Zimbabwe time (CAT).</p>
+      <form id="eventsForm" class="add-card">
+        <h3>Events</h3>
+        <div id="evList"></div>
+        <button type="button" class="btn-admin-ghost" id="evAdd">&#10133; Add event</button>
+        <h3 style="margin-top:22px">Announcements</h3>
+        <div id="anList"></div>
+        <button type="button" class="btn-admin-ghost" id="anAdd">&#10133; Add announcement</button>
+        <div class="form-msg" id="evMsg"></div>
+        <button class="btn-admin-primary" type="submit">&#128190; Save Events &amp; Announcements</button>
+      </form>
+
+      <h2 style="margin-top:38px">&#128200; Audience</h2>
+      <div id="audience" class="add-card"><p class="hint">Loading…</p></div>
+
       <h2 style="margin-top:38px">&#9962; Church Info</h2>
       <p class="hint">Edit service times, the theme banner, contact details and giving info shown across the site — no JSON editing required.</p>
       <form id="churchForm" class="add-card">
@@ -238,5 +254,6 @@
   </div>
 
   <script src="js/admin.js"></script>
+  <script src="js/admin-events.js"></script>
 </body>
 </html>

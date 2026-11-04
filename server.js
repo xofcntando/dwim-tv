@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const db = require('./db');
+const compression = require('compression');
 
 const app = express();
 app.set('trust proxy', 1); // behind Render's proxy, so req.ip is the real visitor
@@ -14,8 +15,13 @@ console.log('⏳ DWIM TV (Destiny Word International Ministries) starting…');
 // Serve frontend
 // Service worker + manifest must always be revalidated so app updates reach installed phones/PCs
 app.get(['/sw.js', '/manifest.webmanifest'], (req, res, next) => { res.set('Cache-Control', 'no-cache'); next(); });
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+app.use((req, res, next) => { // light security headers
+  res.set({ 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-Frame-Options': 'SAMEORIGIN' });
+  next();
+});
+app.use(compression());
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1h', etag: true }));
+app.use(express.json({ limit: '100kb' }));
 
 // ---- API: the catalog (this is our "storage") ----
 const CATALOG_PATH = path.join(__dirname, 'data', 'videos.json');
@@ -745,6 +751,9 @@ async function syncCatalogToGitHub() {
     return { ok: false, error: e.message };
   }
 }
+
+// App routes: stats (views, live viewers), events & announcements, robots/sitemap
+require('./lib/app-routes').register(app, { db, readCatalog, writeCatalog, syncCatalogToGitHub, requireAdmin });
 
 // SPA fallback
 app.get('*', (req, res) => {

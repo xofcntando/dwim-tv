@@ -63,6 +63,7 @@ async function loadCatalog() {
     if (!CATALOG.channels) CATALOG.channels = [];
     applyChurchConfig();
     render();
+    document.dispatchEvent(new Event('dwim:catalog'));
   } catch (err) {
     // static-preview fallback (no server): try local data file
     try {
@@ -72,6 +73,7 @@ async function loadCatalog() {
       if (!CATALOG.channels) CATALOG.channels = [];
       applyChurchConfig();
       render();
+      document.dispatchEvent(new Event('dwim:catalog'));
       return;
     } catch (e2) { /* ignore */ }
     document.getElementById('main').innerHTML =
@@ -118,7 +120,7 @@ function render() {
 
 function renderChannels() {
   const wrap = document.getElementById('channels');
-  if (tvEnabled()) { wrap.style.display = 'none'; const sw = document.querySelector('.searchwrap'); if (sw) sw.style.display = 'none'; return; }
+  if (tvEnabled()) { wrap.style.display = 'none'; return; }
   const chips = CATALOG.channels.map(ch => `
     <button class="chip ${ch.id === activeChannel ? 'active' : ''}" onclick="setChannel('${esc(ch.id)}')">
       <span>${esc(ch.icon || '&#128250;')}</span> ${esc(ch.name)}
@@ -212,6 +214,7 @@ function cardHTML(v) {
 
 /* ---------- Interactions ---------- */
 function setChannel(id) {
+  if (tvEnabled() && window.DwimApp) { DwimApp.openChannel(id); return; }
   if (tvEnabled()) { const w = document.getElementById('watch'); if (w) w.scrollIntoView({ behavior: 'smooth' }); return; }
   activeChannel = id;
   render();
@@ -231,11 +234,13 @@ function goHome(e) {
 
 document.getElementById('search').addEventListener('input', (e) => {
   searchQuery = e.target.value.trim();
+  if (tvEnabled() && window.DwimApp) { DwimApp.search(searchQuery); return; }
   renderMain();
 });
 
 /* Play the first video of a given channel (e.g. "Pray Along Now") */
 function playFirstOf(channelId) {
+  if (tvEnabled() && window.DwimApp) { DwimApp.openChannel(channelId); return; }
   if (tvEnabled()) { const w = document.getElementById('watch'); if (w) w.scrollIntoView({ behavior: 'smooth' }); return; }
   const v = (CATALOG.videos || []).find(x => x.channel === channelId);
   if (v) playVideo(v.id);

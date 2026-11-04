@@ -26,6 +26,40 @@ Short branded DWIM TV videos (`public/breaks/`, channel `ch-breaks`) play on air
 
 Use `times: ["08:00", "16:00"]` instead of `everyMinutes` for fixed clock times. To add a new break video, add it to `ch-breaks` and list its id in `videoIds`.
 
+## The full TV app (v2)
+
+DWIM TV is now a complete TV app, not only a live channel. Everything below works on phones, PCs and Smart TV browsers, and installs as a PWA.
+
+| Feature | Where |
+|---|---|
+| **Live TV** with volume, mute, sleep timer, "watching now" counter, Save, "From start", Share | Live section (control bar under the player) |
+| **TV Guide** - 7-day schedule in CAT and the viewer's own time, ON NOW progress, **Remind me** (notifications 5 min before) | `#/guide` or key **G** |
+| **On Demand** - hero, Continue Watching, My List, Trending, Recently Added, a row per channel, search and channel filters | `#/ondemand` or key **O** |
+| **Watch page** - HD player, resumes where you stopped, autoplay next, related videos, Share, deep links like `/#/watch/<id>` | opens from any card |
+| **My List** and watch history (saved on the device) | `#/mylist` |
+| **TV mode** - big-screen lean-back UI with on-screen menu, D-pad / remote friendly; Smart TV browsers and `?tv=1` open in it automatically | key **T** or the TV mode button |
+| **Events, announcements, Verse of the Day** - managed in the admin panel (**Events & Announcements**), events have Add to calendar | Home page + Guide |
+| **Audience stats** - live viewers and most watched videos, shown in the admin panel under **Audience** | `/api/stats` |
+| **Mobile app navigation** - bottom tab bar, lock-screen media controls, update notice | phones |
+| **SEO/PWA** - `robots.txt`, `sitemap.xml`, structured data, new app shortcuts (Live, Guide, On Demand) | - |
+
+Keyboard / remote: **L** live, **G** guide, **O** on demand, **S** or **/** search, **M** mute, **F** fullscreen, **T** TV mode, arrow keys move around, **+** saves the selected video, **Esc** goes back, **?** shows help.
+
+**Picture quality:** the player asks YouTube for the highest quality available (1080p when the video has it) on both the live channel and On Demand. YouTube can still lower the quality on a slow connection.
+
+**Reminders** are shown as notifications while DWIM TV is open or installed. True background push (notifications with the app closed) needs a push server and is not included yet.
+
+### Quality tools
+
+```bash
+npm test                         # schedule engine + API tests
+node scripts/check-videos.js     # finds private/deleted/non-embeddable YouTube videos in the catalog
+```
+
+New API endpoints: `POST /api/view`, `POST /api/heartbeat`, `GET /api/stats`, `GET/PUT /api/admin/events`. Views are stored in MongoDB (`views` collection) when `MONGODB_URI` is set.
+
+> Security: the admin panel defaults to the username/password `ntando`/`ntando` when `ADMIN_USER`/`ADMIN_PASS` are not set. Always set both in Render.
+
 ## The Big Idea (read this first!)
 
 Render's free tier has **ephemeral storage** — any video file uploaded to the server gets wiped on every redeploy. **DWIM TV solves this differently:** the app stores *no video files*. It streams everything from external sources:

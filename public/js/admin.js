@@ -66,6 +66,7 @@ function showDash() {
   loadLiveStatus();
   loadPrayers();
   loadSchedule();
+  if (window.loadEventsAdmin) window.loadEventsAdmin();
 }
 
 /* ---------- catalog ---------- */

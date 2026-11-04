@@ -23,8 +23,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/ui-v2.css">
+  <link rel="stylesheet" href="css/tv-app.css">
+  <meta property="og:image" content="/img/hero-worship.jpg">
+  <meta property="og:site_name" content="DWIM TV">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BroadcastService","name":"DWIM TV","alternateName":"Destiny Word International Ministries TV","description":"Live Sunday services, sermons, worship and prayer from Destiny Word International Ministries, Gweru, Zimbabwe.","broadcastDisplayName":"DWIM TV","inLanguage":"en","logo":"/img/logo-512.png","broadcaster":{"@type":"Church","name":"Destiny Word International Ministries","address":{"@type":"PostalAddress","addressLocality":"Old Ascot, Gweru","addressCountry":"ZW"}}}
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ===== Top Bar ===== -->
   <header class="topbar">
@@ -34,22 +41,26 @@
     </a>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="topnav"><span></span><span></span><span></span></button>
     <nav class="topnav" id="topnav">
-      <a href="#watch">Watch</a>
+      <a href="#/live" data-route="live">Live TV</a>
+      <a href="#/guide" data-route="guide">Guide</a>
+      <a href="#/ondemand" data-route="ondemand">On Demand</a>
+      <a href="#/mylist" data-route="mylist">My List</a>
       <a href="#prayer">Prayer</a>
       <a href="#testimonies">Testimonies</a>
       <a href="#giving">Give</a>
-      <a href="#purpose">Purpose</a>
       <a href="#about">About</a>
       <a href="#visit">Visit Us</a>
     </nav>
     <div class="live-dot" id="liveDot"><span class="pulse"></span><span class="word">LIVE SUNDAYS</span></div>
     <div class="searchwrap">
       <span class="icon">&#9903;</span>
-      <input id="search" type="text" placeholder="Search sermons, songs, prayers…" autocomplete="off">
+      <input id="search" type="text" placeholder="Search videos" autocomplete="off">
     </div>
     <button class="btn-install" data-install-app hidden title="Install DWIM TV on this device">&#11015; Install App</button>
     <button class="btn-live-sm" onclick="watchLive()">&#9654; Watch Live</button>
   </header>
+
+  <div class="notice-bar" id="noticeBar" role="region" aria-label="Announcements" hidden></div>
 
   <!-- ===== Hero: Next Service + Live ===== -->
   <section class="hero-church" id="hero">
@@ -106,9 +117,18 @@
   <nav class="channels" id="channels"></nav>
 
   <!-- ===== Main Video Area ===== -->
-  <main id="main">
+  <main id="main" tabindex="-1">
     <div class="loading" id="loading"><div class="spinner"></div>Loading the channel…</div>
   </main>
+
+  <!-- ===== Events + Verse of the Day ===== -->
+  <section class="section-block events-wrap" id="events" hidden>
+    <div class="testi-head">
+      <span class="block-kicker gold-kicker">&#10022; This week at DWIM</span>
+      <h2>Events &amp; Verse of the Day</h2>
+    </div>
+    <div class="ev-grid"><div id="verseCard"></div><div id="eventsMount"></div></div>
+  </section>
 
   <!-- ===== Prayer Request ===== -->
   <section class="section-block prayer-block" id="prayer">
@@ -341,6 +361,14 @@
     </form>
   </div>
 
+  <nav class="tabbar" aria-label="App navigation">
+    <a href="#/live" data-route="live"><span>&#128250;</span>Live</a>
+    <a href="#/guide" data-route="guide"><span>&#128197;</span>Guide</a>
+    <a href="#/ondemand" data-route="ondemand"><span>&#9654;</span>On Demand</a>
+    <a href="#/mylist" data-route="mylist"><span>&#10084;</span>My List</a>
+    <a href="#prayer"><span>&#128591;</span>Prayer</a>
+  </nav>
+
   <script src="js/pwa.js"></script>
   <script src="js/player.js"></script>
   <script src="js/schedule.js"></script>
@@ -348,5 +376,8 @@
   <script src="js/app.js"></script>
   <script src="js/prayer.js"></script>
   <script src="js/ui-v2.js"></script>
+  <script src="js/app-core.js"></script>
+  <script src="js/app-views.js"></script>
+  <script src="js/app-live.js"></script>
 </body>
 </html>

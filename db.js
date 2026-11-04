@@ -61,6 +61,17 @@ async function deletePrayer(id) {
   return r.deletedCount > 0;
 }
 
+/* ---- View counts: collection "views" -> { _id: videoId, n } ---- */
+async function loadViews() {
+  const out = {};
+  for (const d of await db.collection('views').find({}).toArray()) out[d._id] = d.n || 0;
+  return out;
+}
+async function incViews(batch) {
+  const ops = Object.entries(batch).map(([id, n]) => ({ updateOne: { filter: { _id: id }, update: { $inc: { n } }, upsert: true } }));
+  if (ops.length) await db.collection('views').bulkWrite(ops);
+}
+
 async function close() { if (client) await client.close(); }
 
-module.exports = { connect, isConnected, loadCatalog, saveCatalog, loadLive, saveLive, addPrayer, listPrayers, setPrayerPrayed, deletePrayer, close };
+module.exports = { connect, isConnected, loadCatalog, saveCatalog, loadLive, saveLive, addPrayer, listPrayers, setPrayerPrayed, deletePrayer, loadViews, incViews, close };

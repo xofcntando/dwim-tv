@@ -4,9 +4,9 @@
    - Page navigations: network first, fall back to cached shell when offline
    - /api/catalog: network first, cached copy when offline (so the video list still shows)
    - Everything else under /api/, admin and video streams: never cached (live status must be fresh) */
-const VERSION = 'dwim-tv-v9';
+const VERSION = 'dwim-tv-v10';
 const SHELL = [
-  '/', '/css/styles.css', '/css/ui-v2.css', '/js/ui-v2.js', '/js/app.js', '/js/tv.js', '/js/schedule.js', '/js/pwa.js', '/js/prayer.js', '/js/player.js',
+  '/', '/css/styles.css', '/css/ui-v2.css', '/css/tv-app.css', '/js/ui-v2.js', '/js/app-core.js', '/js/app-views.js', '/js/app-live.js', '/js/app.js', '/js/tv.js', '/js/schedule.js', '/js/pwa.js', '/js/prayer.js', '/js/player.js',
   '/img/logo-64.png', '/img/logo-192.png', '/img/logo-512.png', '/img/favicon-32.png',
   '/img/apple-touch-icon.png', '/offline.html', '/manifest.webmanifest'
 ];
@@ -67,3 +67,13 @@ function staleWhileRevalidate(req) {
     })
   );
 }
+
+// Tapping a reminder notification opens (or focuses) DWIM TV on the live channel
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const target = (event.notification.data && event.notification.data.url) || '/#/live';
+  event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+    for (const c of list) { if ('focus' in c) { c.navigate && c.navigate(target).catch(() => {}); return c.focus(); } }
+    return self.clients.openWindow(target);
+  }));
+});

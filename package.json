@@ -1,15 +1,17 @@
 {
   "name": "dwim-tv",
   "version": "1.0.0",
-  "description": "DWIM TV — a TV-style streaming app deployable on Render free tier with external video storage",
+  "description": "DWIM TV \u2014 a TV-style streaming app deployable on Render free tier with external video storage",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test test/"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "compression": "^1.8.2",
     "express": "^4.19.2",
     "mongodb": "^6.21.0"
   }

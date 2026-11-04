@@ -103,7 +103,7 @@
       } else {
         loadHls().then((Hls) => {
           if (!Hls || !Hls.isSupported()) return showError('Your browser cannot play this stream.');
-          hls = new Hls({ enableWorker: true, lowLatencyMode: isLive });
+          hls = new Hls({ enableWorker: true, lowLatencyMode: isLive, capLevelToPlayerSize: false, startLevel: -1, abrEwmaDefaultEstimate: 5000000 });
           hls.loadSource(src);
           hls.attachMedia(video);
           hls.on(Hls.Events.MANIFEST_PARSED, (_e, d) => {
