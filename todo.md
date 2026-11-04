@@ -14,5 +14,6 @@
 - [ ] Real push notifications (web-push + VAPID keys) so reminders work with the app closed
 - [ ] Live chat / prayer wall with moderation
 - [ ] Captions / language tracks for own-hosted videos
-- [ ] Android TV / Apple TV wrapper (Capacitor or TWA)
+- [x] Android TV app (native WebView wrapper + GitHub Action APK build)
+- [ ] Apple TV (tvOS has no web view, needs a native Swift app)
 - [ ] Set ADMIN_USER / ADMIN_PASS on Render (default login is public in the README)

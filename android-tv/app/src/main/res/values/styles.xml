@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.DwimTv" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#070B18</item>
+        <item name="android:statusBarColor">#070B18</item>
+        <item name="android:navigationBarColor">#070B18</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

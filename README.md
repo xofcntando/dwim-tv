@@ -74,6 +74,10 @@ Add or edit a playlist:
 
 The **Christian Movies & Teaching Films** channel (`ch-movies`) in On Demand holds full-length films that teach: the Jesus Film (English, **Shona** and **Ndebele**), The Story of Jesus for Children, Gospel of John, church history from Vision Video, Heroes of the Faith (Luther, Wesley, Wycliffe, Torchlighters), Billy Graham Evangelistic Association films and Mount Zion Faith Ministries gospel films. Every film streams from its YouTube upload with credit; none are stored on the server. Run `node scripts/check-videos.js` regularly because uploaders can remove or restrict films.
 
+### Android TV app
+
+`android-tv/` is a native Android app that opens DWIM TV full screen on Android TV, Google TV, Fire TV, phones and tablets. A GitHub Action builds the APK for you: **Actions > Build Android TV app > Run workflow**, then download `DWIM-TV.apk` from **Releases**. See `android-tv/README.md`.
+
 ### Ntandomods brand
 
 DWIM TV is designed and built in Zimbabwe by **Ntandomods**. The brand mark is `public/img/ntandomods-mark.svg` and appears in the footer, the "Built by Ntandomods" card, the watch page header, the playlist pages, the admin panel, the page metadata (`author`) and the browser console. Please keep these credits when you fork or redeploy.
