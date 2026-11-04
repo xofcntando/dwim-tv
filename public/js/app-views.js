@@ -74,6 +74,7 @@
     const all = App.videos().filter(x => x.desc && App.dur(x) > 600 && App.ytId(x.source));
     const d = new Date(), seed = d.getUTCFullYear() * 400 + d.getUTCMonth() * 31 + d.getUTCDate();
     const cands = []; for (let i = 0; i < 10 && all.length; i++) cands.push(all[(seed * 7 + i * 13) % all.length]);
+    if (!cands.length) { heroProbing = false; return; } // catalog not loaded yet
     let done = false, pending = cands.length;
     cands.forEach((v, idx) => {
       const im = new Image();
