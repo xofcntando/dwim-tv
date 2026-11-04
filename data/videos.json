@@ -88,6 +88,11 @@
       "icon": "🧒"
     },
     {
+      "id": "ch-movies",
+      "name": "Christian Movies & Teaching Films",
+      "icon": "🎬"
+    },
+    {
       "id": "ch-breaks",
       "name": "DWIM TV Breaks",
       "icon": "✨"
@@ -5893,13 +5898,507 @@
         "mahendere",
         "shona"
       ]
+    },
+    {
+      "id": "mv-o-o2JH",
+      "title": "JESUS: The Jesus Film (English) - Official Full Movie",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=o-o2JHhHXys",
+      "duration": "2:07:54",
+      "thumb": "https://i.ytimg.com/vi/o-o2JHhHXys/hqdefault.jpg",
+      "desc": "The life, teaching, death and resurrection of Jesus Christ, told word for word from the Gospel of Luke. From the Jesus Film Project.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "gospel",
+        "luke",
+        "teaching"
+      ]
+    },
+    {
+      "id": "mv-E4o7xW",
+      "title": "The Jesus Film in Shona (Chishona)",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=E4o7_WcLomY",
+      "duration": "2:01:44",
+      "thumb": "https://i.ytimg.com/vi/E4o7_WcLomY/hqdefault.jpg",
+      "desc": "The Jesus Film in Shona, according to the Gospel of Luke. Watch the story of Jesus in our own language.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "shona",
+        "chishona",
+        "gospel",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "mv-Sg7IIG",
+      "title": "The Jesus Film in Ndebele (Isindebele)",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=Sg7IIGvEKts",
+      "duration": "2:01:44",
+      "thumb": "https://i.ytimg.com/vi/Sg7IIGvEKts/hqdefault.jpg",
+      "desc": "The Jesus Film in Ndebele, according to the Gospel of Luke. Watch the story of Jesus in our own language.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "ndebele",
+        "gospel",
+        "zimbabwe"
+      ]
+    },
+    {
+      "id": "mv-H6u9eR",
+      "title": "The Story of Jesus for Children - Official Full Movie",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=H6u9eRxMbeE",
+      "duration": "1:01:35",
+      "thumb": "https://i.ytimg.com/vi/H6u9eRxMbeE/hqdefault.jpg",
+      "desc": "A live-action film that tells the story of Jesus through the eyes of the children who lived in His time. Good for the whole family. From the Jesus Film Project.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "children",
+        "family",
+        "gospel"
+      ]
+    },
+    {
+      "id": "mv-TGwlXd",
+      "title": "Life of Jesus (Gospel of John) - Official Full Movie",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=TGwlXdNewnM",
+      "duration": "3:03:14",
+      "thumb": "https://i.ytimg.com/vi/TGwlXdNewnM/hqdefault.jpg",
+      "desc": "The Gospel of John on screen: the life of Jesus told by His closest friends, with the words taken straight from Scripture. From the Jesus Film Project.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "john",
+        "gospel",
+        "teaching"
+      ]
+    },
+    {
+      "id": "mv-sXs2r3",
+      "title": "The Story of Jesus - The Life of Jesus in 90 Minutes",
+      "channel": "ch-movies",
+      "category": "The Life of Jesus",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=sXs2r3ubw3I",
+      "duration": "1:30:07",
+      "thumb": "https://i.ytimg.com/vi/sXs2r3ubw3I/hqdefault.jpg",
+      "desc": "A 90-minute version of The Life of Jesus (the Gospel of John), told by His closest friends.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "jesus",
+        "john",
+        "gospel"
+      ]
+    },
+    {
+      "id": "mv-syEGev",
+      "title": "The Rise of the Church - How a Persecuted Movement Changed the World",
+      "channel": "ch-movies",
+      "category": "Church History",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=syEGevYKFNs",
+      "duration": "1:02:44",
+      "thumb": "https://i.ytimg.com/vi/syEGevYKFNs/hqdefault.jpg",
+      "desc": "How a small group of believers carried the message of Jesus across the Roman world in the face of opposition. From Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "church history",
+        "early church",
+        "acts",
+        "teaching"
+      ]
+    },
+    {
+      "id": "mv-WhLKH9",
+      "title": "History of Christianity - Full Course with Dr. Timothy George",
+      "channel": "ch-movies",
+      "category": "Church History",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=WhLKH9WkMyc",
+      "duration": "2:33:12",
+      "thumb": "https://i.ytimg.com/vi/WhLKH9WkMyc/hqdefault.jpg",
+      "desc": "A survey of the pivotal events in the spread of Christianity and the great Christian figures who shaped its history. A teaching series from Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "church history",
+        "teaching",
+        "documentary"
+      ]
+    },
+    {
+      "id": "mv-lQauUU",
+      "title": "Martin Luther: A Return to Grace",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=lQauUUhoIKg",
+      "duration": "1:45:53",
+      "thumb": "https://i.ytimg.com/vi/lQauUUhoIKg/hqdefault.jpg",
+      "desc": "The story of the monk whose search for truth and grace reshaped the church and the world. From Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "luther",
+        "reformation",
+        "grace",
+        "biography"
+      ]
+    },
+    {
+      "id": "mv-9R16Pr",
+      "title": "Wesley: A Heart Transformed Can Change the World",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=9R16PrhqK_Y",
+      "duration": "1:57:14",
+      "thumb": "https://i.ytimg.com/vi/9R16PrhqK_Y/hqdefault.jpg",
+      "desc": "The life of John Wesley, whose search for peace with God became a revival that changed England. From Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "wesley",
+        "revival",
+        "biography"
+      ]
+    },
+    {
+      "id": "mv-t1V2cF",
+      "title": "John Wycliffe: The Morningstar",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=t1V2cFsVUOM",
+      "duration": "1:15:09",
+      "thumb": "https://i.ytimg.com/vi/t1V2cFsVUOM/hqdefault.jpg",
+      "desc": "The dramatic life of the scholar who first translated the Bible into English. From Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "wycliffe",
+        "bible",
+        "biography"
+      ]
+    },
+    {
+      "id": "mv-ceP4fZ",
+      "title": "The Fanny Crosby Story",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ceP4fZTVUYA",
+      "duration": "44:29",
+      "thumb": "https://i.ytimg.com/vi/ceP4fZTVUYA/hqdefault.jpg",
+      "desc": "The biography of the blind hymn writer Fanny Crosby, who wrote more than 10,000 hymns. From Vision Video.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "fanny crosby",
+        "hymns",
+        "biography"
+      ]
+    },
+    {
+      "id": "mv-r3jhYR",
+      "title": "Torchlighters: Corrie ten Boom",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=r3jhYRVOuvc",
+      "duration": "33:18",
+      "thumb": "https://i.ytimg.com/vi/r3jhYRVOuvc/hqdefault.jpg",
+      "desc": "An animated Torchlighters story of Corrie ten Boom, who hid Jews from the Nazis and taught the world to forgive. Good for children and families.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "torchlighters",
+        "corrie ten boom",
+        "forgiveness",
+        "family"
+      ]
+    },
+    {
+      "id": "mv-UvQpvL",
+      "title": "Torchlighters: Richard Wurmbrand",
+      "channel": "ch-movies",
+      "category": "Heroes of the Faith",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=UvQpvLh0F58",
+      "duration": "36:26",
+      "thumb": "https://i.ytimg.com/vi/UvQpvLh0F58/hqdefault.jpg",
+      "desc": "An animated Torchlighters story of Richard Wurmbrand, who stayed faithful to Christ through years of prison. Good for children and families.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "torchlighters",
+        "wurmbrand",
+        "persecution",
+        "family"
+      ]
+    },
+    {
+      "id": "mv-AefAny",
+      "title": "Come the Morning - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=AefAnye-xIM",
+      "duration": "1:00:07",
+      "thumb": "https://i.ytimg.com/vi/AefAnye-xIM/hqdefault.jpg",
+      "desc": "A struggling mother and her three children find hope when they meet a Christian missionary. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "peace with god",
+        "family"
+      ]
+    },
+    {
+      "id": "mv-kmAIiE",
+      "title": "Cry From the Mountain - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=kmAIiElezok",
+      "duration": "1:15:46",
+      "thumb": "https://i.ytimg.com/vi/kmAIiElezok/hqdefault.jpg",
+      "desc": "A father and son's Alaskan adventure turns into a journey of faith and forgiveness. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "forgiveness",
+        "family"
+      ]
+    },
+    {
+      "id": "mv-qsWZU8",
+      "title": "The Restless Ones - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=qsWZU8GPS4w",
+      "duration": "1:41:43",
+      "thumb": "https://i.ytimg.com/vi/qsWZU8GPS4w/hqdefault.jpg",
+      "desc": "A reporter investigating troubled teens finds his own son headed down the wrong path. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "youth",
+        "family"
+      ]
+    },
+    {
+      "id": "mv-AWLXO6",
+      "title": "The Climb - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=AWLXO6GxPr8",
+      "duration": "1:39:39",
+      "thumb": "https://i.ytimg.com/vi/AWLXO6GxPr8/hqdefault.jpg",
+      "desc": "A climb in the Chilean Andes becomes a test of character and sacrifice. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "character",
+        "faith"
+      ]
+    },
+    {
+      "id": "mv-53OTlY",
+      "title": "The Prodigal - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=53OTlYzwId0",
+      "duration": "1:46:03",
+      "thumb": "https://i.ytimg.com/vi/53OTlYzwId0/hqdefault.jpg",
+      "desc": "A modern retelling of the parable of the prodigal son: nothing can satisfy apart from Jesus Christ. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "prodigal son",
+        "parable",
+        "teaching"
+      ]
+    },
+    {
+      "id": "mv-GfqLBW",
+      "title": "The Heart Is a Rebel - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=GfqLBWL09mE",
+      "duration": "1:22:10",
+      "thumb": "https://i.ytimg.com/vi/GfqLBWL09mE/hqdefault.jpg",
+      "desc": "A family under strain meets a Christian nurse whose faith changes the home. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "family",
+        "faith"
+      ]
+    },
+    {
+      "id": "mv-h-zOz0",
+      "title": "The Home Coming - A Billy Graham Film",
+      "channel": "ch-movies",
+      "category": "Billy Graham Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=h-zOz0-iS1s",
+      "duration": "1:02:43",
+      "thumb": "https://i.ytimg.com/vi/h-zOz0-iS1s/hqdefault.jpg",
+      "desc": "A tough kid with a history of bad decisions learns what it really means to belong. A film from the Billy Graham Evangelistic Association.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "billy graham",
+        "youth",
+        "belonging"
+      ]
+    },
+    {
+      "id": "mv-ZV3JCO",
+      "title": "Back to Eden - Mount Zion Film",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=ZV3JCOIoDG0",
+      "duration": "2:07:39",
+      "thumb": "https://i.ytimg.com/vi/ZV3JCOIoDG0/hqdefault.jpg",
+      "desc": "A Christian drama exploring humanity's fall, God's redemptive love and the journey back to Him. A Mount Zion Faith Ministries production (Mike Bamiloye).",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film",
+        "redemption"
+      ]
+    },
+    {
+      "id": "mv-zJFeVv",
+      "title": "Legion - Mount Zion Film",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=zJFeVvwTsK0",
+      "duration": "1:33:18",
+      "thumb": "https://i.ytimg.com/vi/zJFeVvwTsK0/hqdefault.jpg",
+      "desc": "A gospel film from Mount Zion Faith Ministries, written, produced and directed by Damilola Mike-Bamiloye.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film",
+        "deliverance"
+      ]
+    },
+    {
+      "id": "mv-vuCoPH",
+      "title": "Stormed - Mount Zion Film",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=vuCoPHVBVZM",
+      "duration": "1:38:44",
+      "thumb": "https://i.ytimg.com/vi/vuCoPHVBVZM/hqdefault.jpg",
+      "desc": "A gospel film from Mount Zion Faith Ministries, written by Emmanuela Mike-Bamiloye.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film"
+      ]
+    },
+    {
+      "id": "mv-NLuxkh",
+      "title": "Labels - Mount Zion Film",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=NLu_khJyva8",
+      "duration": "1:30:47",
+      "thumb": "https://i.ytimg.com/vi/NLu_khJyva8/hqdefault.jpg",
+      "desc": "A gospel film from Mount Zion Faith Ministries (Mike Bamiloye).",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film"
+      ]
+    },
+    {
+      "id": "mv-vmb8yC",
+      "title": "Captives of the Mighty - Mount Zion Film",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=vmb8yCktBQY",
+      "duration": "1:35:37",
+      "thumb": "https://i.ytimg.com/vi/vmb8yCktBQY/hqdefault.jpg",
+      "desc": "A gospel film from Mount Zion Faith Ministries (Mike Bamiloye).",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film"
+      ]
+    },
+    {
+      "id": "mv-z7odq6",
+      "title": "New Wine, Part 1 - A True Story (Mount Zion)",
+      "channel": "ch-movies",
+      "category": "African Gospel Films",
+      "type": "youtube",
+      "source": "https://www.youtube.com/watch?v=z7odq6HkO3s",
+      "duration": "1:18:59",
+      "thumb": "https://i.ytimg.com/vi/z7odq6HkO3s/hqdefault.jpg",
+      "desc": "The first part of the New Wine series, a true story from Mount Zion Faith Ministries, written by Tunde Badru.",
+      "tags": [
+        "christian movie",
+        "teaching",
+        "mount zion",
+        "nigerian gospel film",
+        "true story"
+      ]
     }
   ],
   "testimonies": [],
   "tv": {
     "enabled": true
   },
-  "seedVersion": 21,
+  "seedVersion": 22,
   "schedule": {
     "version": 1,
     "timezone": "Africa/Harare",

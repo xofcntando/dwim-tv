@@ -57,3 +57,9 @@ test('Ntandomods brand is present on the site', async () => {
   assert.ok(/Ntandomods/i.test(html) && html.includes('name="author" content="Ntandomods"'));
   assert.strictEqual((await fetch(url('/img/ntandomods-mark.svg'))).status, 200);
 });
+
+test('Christian movies channel has films', async () => {
+  const j = await (await fetch(url('/api/catalog'))).json();
+  assert.ok(j.channels.some(c => c.id === 'ch-movies'));
+  assert.ok(j.videos.filter(v => v.channel === 'ch-movies').length >= 20);
+});

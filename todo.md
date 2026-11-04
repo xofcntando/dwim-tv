@@ -8,6 +8,7 @@
 - [x] HD quality requests, PWA shortcuts, tab bar, media session, SEO files, tests
 
 - [x] Songs & Playlists (Best Songs + 6 playlists, Play all / Shuffle, queue), Ntandomods brand mark
+- [x] Christian Movies & Teaching Films channel (Jesus Film incl. Shona + Ndebele, Billy Graham films, Vision Video, Mount Zion)
 
 ## Next
 - [ ] Real push notifications (web-push + VAPID keys) so reminders work with the app closed
