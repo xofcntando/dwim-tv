@@ -81,6 +81,17 @@ Add or edit a playlist:
 
 The **Christian Movies & Teaching Films** channel (`ch-movies`) in On Demand holds full-length films that teach: the Jesus Film (English, **Shona** and **Ndebele**), The Story of Jesus for Children, Gospel of John, church history from Vision Video, Heroes of the Faith (Luther, Wesley, Wycliffe, Torchlighters), Billy Graham Evangelistic Association films and Mount Zion Faith Ministries gospel films. Every film streams from its YouTube upload with credit; none are stored on the server. Run `node scripts/check-videos.js` regularly because uploaders can remove or restrict films.
 
+### Apps (Android TV and PC)
+
+| App | Download | Folder |
+|---|---|---|
+| Android TV, phones, tablets | [DWIM-TV.apk](https://github.com/xofcntando/dwim-tv/releases/download/android-tv-latest/DWIM-TV.apk) | `android-tv/` |
+| Windows | [DWIM-TV-Setup.exe](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV-Setup.exe) | `desktop/` |
+| Mac | [DWIM-TV.dmg](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV.dmg) | `desktop/` |
+| Linux | [DWIM-TV.AppImage](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV.AppImage) | `desktop/` |
+
+Both apps open the live website, so new content never needs a new install. Rebuild from **Actions** on GitHub.
+
 ### Android TV app
 
 `android-tv/` is a native Android app that opens DWIM TV full screen on Android TV, Google TV, Fire TV, phones and tablets. A GitHub Action builds the APK for you: **Actions > Build Android TV app > Run workflow**, then download `DWIM-TV.apk` from **Releases**. See `android-tv/README.md`.
@@ -269,7 +280,10 @@ dwim-tv/
 ├── render.yaml          # Render blueprint (free plan)
 ├── Procfile             # Fallback for other hosts (Heroku-style)
 ├── data/
-│   └── videos.json      # ⭐ YOUR CATALOG — church info, live stream, channels & videos
+│   └── videos.json      # ⭐ YOUR CATALOG — church info, live stream, channels, videos & playlists
+├── android-tv/          # Android TV / phone app (APK built by GitHub Actions)
+├── desktop/             # Windows, Mac & Linux app (Electron, built by GitHub Actions)
+├── .github/workflows/   # android-tv.yml and desktop.yml build the apps
 └── public/
     ├── index.html       # Church site (hero + countdown, watch, prayer, testimonies, giving, about, visit)
     ├── admin.html       # 🔒 Admin panel (login + add/delete videos + live stream control)
@@ -277,6 +291,8 @@ dwim-tv/
     ├── css/admin.css    # Admin panel styles
     ├── js/app.js        # Countdown, live stream, channels, search, player logic
     ├── js/admin.js      # Admin panel logic
+    ├── js/playlists.js  # Songs & Playlists (Best Songs, Play all, Shuffle)
+    ├── css/playlists.css # Playlist + Ntandomods brand styles
     └── img/             # Logo, favicons, hero & apostles' photos
 ```
 
