@@ -1,0 +1,57 @@
+name: Build desktop apps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'desktop/**'
+      - '.github/workflows/desktop.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build
+        working-directory: desktop
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: |
+          npm install
+          npm run dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-${{ matrix.os }}
+          path: |
+            desktop/dist/DWIM-TV-Setup.exe
+            desktop/dist/DWIM-TV.AppImage
+            desktop/dist/DWIM-TV.dmg
+          if-no-files-found: error
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - name: Publish to a GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          ls -la out
+          gh release delete desktop-latest --yes --cleanup-tag || true
+          gh release create desktop-latest out/* --title "DWIM TV for Windows, Mac and Linux" \
+            --notes "Desktop app for DWIM TV (opens dwim-tv.onrender.com). Built by Ntandomods. Windows: DWIM-TV-Setup.exe. Mac: DWIM-TV.dmg. Linux: DWIM-TV.AppImage."

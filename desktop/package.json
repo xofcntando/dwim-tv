@@ -1,0 +1,43 @@
+{
+  "name": "dwim-tv-desktop",
+  "version": "1.0.0",
+  "description": "DWIM TV desktop app for Windows, Mac and Linux. Built by Ntandomods.",
+  "author": "Ntandomods <ntandomods@users.noreply.github.com>",
+  "homepage": "https://dwim-tv.onrender.com",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "tv.dwim.desktop",
+    "productName": "DWIM TV",
+    "copyright": "DWIM TV, built by Ntandomods",
+    "files": ["main.js", "offline.html", "package.json"],
+    "directories": { "buildResources": "build" },
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "artifactName": "DWIM-TV-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "linux": {
+      "target": [{ "target": "AppImage", "arch": ["x64"] }],
+      "category": "AudioVideo",
+      "artifactName": "DWIM-TV.${ext}"
+    },
+    "mac": {
+      "target": [{ "target": "dmg", "arch": ["universal"] }],
+      "category": "public.app-category.entertainment",
+      "artifactName": "DWIM-TV.${ext}"
+    }
+  }
+}

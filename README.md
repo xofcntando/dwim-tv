@@ -3,6 +3,9 @@
 > ### 📺 Download the Android TV app
 > **[⬇ Download DWIM-TV.apk](https://github.com/xofcntando/dwim-tv/releases/download/android-tv-latest/DWIM-TV.apk)** &nbsp;|&nbsp; [All releases](https://github.com/xofcntando/dwim-tv/releases/tag/android-tv-latest) &nbsp;|&nbsp; [Install steps](android-tv/README.md)
 > Works on Android TV, Google TV, Fire TV, phones and tablets. Built by **Ntandomods**.
+>
+> ### 💻 Download the PC app
+> **[⬇ Windows (.exe)](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV-Setup.exe)** &nbsp;|&nbsp; **[⬇ Mac (.dmg)](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV.dmg)** &nbsp;|&nbsp; **[⬇ Linux (.AppImage)](https://github.com/xofcntando/dwim-tv/releases/download/desktop-latest/DWIM-TV.AppImage)** &nbsp;|&nbsp; [Install steps](desktop/README.md)
 
 **DWIM TV** is the official media channel of **Destiny Word International Ministries (DWIM)** — a Spirit-filled ministry in Old Ascot, Gweru, Zimbabwe, led by **Apostle Godfrey** and **Apostle Teckla**.
 
